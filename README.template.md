@@ -79,19 +79,6 @@ Neighbouring collections, each with a different centre of gravity:
 Corrections are as welcome as additions. If an annotation misreads your paper, say so in an issue and it will
 be fixed or removed.
 
-## Citation
-
-If this list is useful, a star is plenty. If you need to cite it:
-
-```bibtex
-@misc{awesome-medical-reasoning,
-  title  = {Awesome Medical Reasoning},
-  author = {Liu, Jiaxiang},
-  year   = {2026},
-  url    = {https://github.com/JXLiu-AI/Awesome-Medical-Reasoning}
-}
-```
-
 ## License
 
 [CC0-1.0](LICENSE) — public domain. The papers themselves belong to their authors.

@@ -18,6 +18,27 @@ TEMPLATE = os.path.join(common.ROOT, "README.template.md")
 OUTPUT = os.path.join(common.ROOT, "README.md")
 
 
+_VENUES = None
+
+
+def short_venue(name):
+    """把 S2 的全称换成通行简称；未收录的原样显示，超长截断。"""
+    global _VENUES
+    if _VENUES is None:
+        _VENUES = common.load_config("venues")
+    if not name:
+        return ""
+    exact = {k.lower(): v for k, v in _VENUES.get("exact", {}).items()}
+    hit = exact.get(name.strip().lower())
+    if hit:
+        return hit
+    for needle, short in _VENUES.get("contains", []):
+        if needle.lower() in name.lower():
+            return short
+    cap = _VENUES.get("max_length", 38)
+    return name if len(name) <= cap else name[:cap - 1].rstrip() + "…"
+
+
 def slug(title):
     """GitHub 的标题锚点规则：小写、去标点、空格转连字符（中文字符保留）。"""
     s = title.lower()
@@ -26,18 +47,16 @@ def slug(title):
 
 
 def fmt_paper(p):
-    """一行一篇：标题是唯一的主元素，其余信息用 <sub> 下沉，避免整页糊成粗体块。
-    读过并写了注释的条目自带注释行，未读过的没有——这个区别本身就是标记，
-    不必再在每一行重复 unreviewed。"""
+    """一行一篇。发表处用正文字号加粗，让已正式发表的和预印本一眼分得开；
+    日期与引用数用 <sub> 下沉。有注释行的表示已逐篇读过。"""
     bits = ["- [%s](%s)" % (p["title"].replace("|", "\\|"), p["url"])]
-    meta = [p["date"][:7]]
     if p.get("venue"):
-        meta.append(p["venue"])
+        bits.append("— **%s**" % short_venue(p["venue"]))
+    meta = [p["date"][:7]]
     c = p.get("citations") or 0
     if c:
         meta.append("%d citation%s" % (c, "" if c == 1 else "s"))
-    tags = [t for t in (p.get("tags") or []) if t != "ours"]
-    meta.extend(tags)
+    meta.extend(t for t in (p.get("tags") or []) if t != "ours")
     bits.append("<sub>%s</sub>" % " · ".join(meta))
     line = " ".join(bits)
     if p.get("note"):
