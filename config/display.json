@@ -1,0 +1,10 @@
+{
+  "_comment": "README 呈现相关的开关。GitHub 会剥掉内联 CSS，无法给条目加真正的底色，因此\"新增\"用 shields.io 的淡粉色徽章图片表示。baseline_date 之后加入的条目才算新增——首批入库的 303 篇不算，否则整页都是粉的。",
+  "new_badge": {
+    "enabled": true,
+    "baseline_date": "2026-08-20",
+    "days": 21,
+    "color": "ffc9d4",
+    "label": "new"
+  }
+}

@@ -19,6 +19,29 @@ OUTPUT = os.path.join(common.ROOT, "README.md")
 
 
 _VENUES = None
+_DISPLAY = None
+
+
+def is_new(p):
+    """baseline_date 之后、且在 days 窗口内加入的条目算新增。
+    首批入库的不算，否则整页都会挂满徽章。"""
+    global _DISPLAY
+    if _DISPLAY is None:
+        _DISPLAY = common.load_config("display")
+    cfg = (_DISPLAY or {}).get("new_badge", {})
+    if not cfg.get("enabled"):
+        return False
+    added = p.get("added", "")
+    if not added or added <= cfg.get("baseline_date", ""):
+        return False
+    cutoff = (dt.date.today() - dt.timedelta(days=cfg.get("days", 21))).isoformat()
+    return added >= cutoff
+
+
+def new_badge():
+    cfg = (_DISPLAY or common.load_config("display")).get("new_badge", {})
+    return "![%s](https://img.shields.io/badge/%s-%s)" % (
+        cfg.get("label", "new"), cfg.get("label", "new"), cfg.get("color", "ffc9d4"))
 
 
 def short_venue(name):
@@ -58,6 +81,8 @@ def fmt_paper(p):
         meta.append("%d citation%s" % (c, "" if c == 1 else "s"))
     meta.extend(t for t in (p.get("tags") or []) if t != "ours")
     bits.append("<sub>%s</sub>" % " · ".join(meta))
+    if is_new(p):
+        bits.append(new_badge())
     line = " ".join(bits)
     if p.get("note"):
         line += "\n  <sub>%s</sub>" % p["note"]
@@ -108,9 +133,15 @@ def build_stats(papers, pending, taxonomy):
     for p in papers:
         years[p["date"][:4]] = years.get(p["date"][:4], 0) + 1
     span = " · ".join("%s: %d" % (y, n) for y, n in sorted(years.items()))
-    return ("**%d** papers indexed (%s) across %d sections / %d categories. "
+    line = ("**%d** papers indexed (%s) across %d sections / %d categories. "
             "%d more under consideration."
             % (len(papers), span, len(taxonomy["sections"]), n_cat, len(pending)))
+    fresh = [p for p in papers if is_new(p)]
+    if fresh:
+        since = min(p.get("added", "") for p in fresh)
+        line += ("\n\n%s **%d** added since %s."
+                 % (new_badge(), len(fresh), since))
+    return line
 
 
 def main():
