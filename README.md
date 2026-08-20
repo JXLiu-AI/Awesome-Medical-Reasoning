@@ -18,6 +18,11 @@
 
 Last updated: 2026-08-20.
 
+**Scope** — papers where reasoning itself is the contribution: the chain, the reward, the search, or the
+evaluation of the chain. Medical LLMs reported only as end-task accuracy, and agent frameworks with no
+reasoning mechanism, are out of scope. Entries with a note beneath them have been read and placed by hand;
+the rest are categorized by keyword and should be treated as provisional.
+
 ## Contents
 
 - [🏋️ Training-Time Methods](#training-time-methods--训练期方法) <sub>42</sub>
@@ -27,7 +32,6 @@ Last updated: 2026-08-20.
 - [📊 Evaluation, Benchmarks & Trustworthiness](#evaluation-benchmarks--trustworthiness--评测基准与可信度) <sub>100</sub>
 - [📚 Surveys & Position Papers](#surveys--position-papers--综述与立场文章) <sub>9</sub>
 
-- [Selection criteria](#selection-criteria)
 - [Related lists](#related-lists)
 - [Contributing](#contributing)
 
@@ -415,34 +419,6 @@ Last updated: 2026-08-20.
 
 
 ---
-
-## Selection criteria
-
-**Scope.** A paper belongs here when *reasoning* is the contribution — the chain, the reward, the search, or
-the evaluation of the chain:
-reasoning-chain supervision and distillation · RL with verifiable or process rewards · test-time scaling and
-search · prompting and thought structures evaluated on medical tasks · knowledge-grounded reasoning ·
-multimodal reasoning where the chain is tied to image evidence · benchmarks that probe reasoning quality
-rather than final-answer accuracy · faithfulness, shortcut and contamination analyses · agentic diagnosis
-where the reasoning mechanism, not the plumbing, is what is new.
-
-Out of scope: medical LLMs reported only as end-task accuracy · pure retrieval or summarization systems ·
-clinical deployment studies with no reasoning analysis · agent frameworks that only orchestrate existing
-components · general-domain reasoning work with a medical benchmark bolted on as one table row.
-
-**Quality bar.** A paper enters the list on one of three conditions: at least 10 citations, or at least one
-citation per month since release, or peer-reviewed publication with at least 3 citations. Work from the last
-three months is exempt from the bar — citations have not had time to accumulate — and waits in the queue
-instead of being judged early.
-
-**Which entries have been read.** An entry with a note beneath it has been read, placed, and annotated by
-hand. An entry without one cleared the quality bar but has not yet had a close read — its category is a
-keyword-assigned guess, so treat the placement as provisional. Most of the list is currently in the second
-state; the distinction is left visible rather than smoothed over.
-
-**Annotations.** Notes flag what is worth knowing before citing a number: missing compute-matched baselines,
-benchmark contamination, evaluation by a judge model from the same family as the system under test, or gains
-that disappear on out-of-distribution modalities.
 
 ## Related lists
 
