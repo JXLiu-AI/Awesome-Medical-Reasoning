@@ -2,46 +2,21 @@
 
 # Awesome Medical Reasoning
 
-**A continuously maintained reading list for reasoning in medical LLMs and MLLMs.**
+**Papers on reasoning in medical LLMs and MLLMs.**
 
-医学大模型「推理」方向的持续维护论文列表
+医学大模型推理方向的论文列表
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Papers](https://img.shields.io/badge/papers-303-blue)
 ![Last commit](https://img.shields.io/github/last-commit/JXLiu-AI/Awesome-Medical-Reasoning)
-![Updated weekly](https://img.shields.io/badge/updated-weekly-brightgreen)
 
 </div>
 
 ---
 
-**303** papers indexed (2023: 1 · 2024: 46 · 2025: 180 · 2026: 76) across 6 sections / 14 categories. 1051 more in the triage queue.
+**303** papers indexed (2023: 1 · 2024: 46 · 2025: 180 · 2026: 76) across 6 sections / 14 categories. 1051 more under consideration.
 
-**Last updated: 2026-08-20.** New arXiv papers are crawled daily by a GitHub Action and land in a
-[triage issue](../../issues?q=label%3Atriage). Entries marked *unreviewed* passed the quality gate but have
-not yet had a human pass.
-
-## Why another list?
-
-Medical-AI reading lists are plentiful; ones that stay alive are not. The three closest lists to this one
-([Awesome-LLM-Reasoning-on-Medicine](https://github.com/pqpq17/Awesome-LLM-Reasoning-on-Medicine),
-[medical-llm-reasoning-survey](https://github.com/zzma2/medical-llm-reasoning-survey),
-[Awesome-Medical-LLM-Agent](https://github.com/yczhou001/Awesome-Medical-LLM-Agent))
-were each published alongside a survey and stopped updating once the survey was out. This one is built the other
-way round: an automated crawler feeds a human triage queue, so keeping it current costs ~10 minutes a week.
-
-Three commitments:
-
-1. **Reasoning only.** A paper is in scope when *reasoning* is the contribution — the chain, the reward, the
-   search, the evaluation of the chain. Medical LLMs that merely report an accuracy number are out of scope,
-   as is agent-pipeline engineering with no reasoning mechanism. See the [scope rules](#scope).
-2. **Two-stage curation, stated honestly.** Stage one is a quality gate — a paper enters the list only if it
-   clears a citation/venue bar (≥10 citations, or ≥1 citation/month, or peer-reviewed with ≥3 citations).
-   Stage two is a human pass that fixes the category and writes the annotation. Entries still awaiting
-   stage two are marked *unreviewed*, so you always know which is which. Papers from the last three months
-   are held out of the gate entirely — citations have not had time to accumulate — and wait in the queue.
-3. **Claims get annotated, not repeated.** Where a paper's reasoning gain is confounded (no non-reasoning
-   baseline at matched compute, test-set contamination, judge-model overlap), the entry says so.
+Last updated: 2026-08-20.
 
 ## Contents
 
@@ -52,7 +27,8 @@ Three commitments:
 - [📊 Evaluation, Benchmarks & Trustworthiness](#evaluation-benchmarks--trustworthiness--评测基准与可信度) <sub>100</sub>
 - [📚 Surveys & Position Papers](#surveys--position-papers--综述与立场文章) <sub>9</sub>
 
-- [Scope](#scope)
+- [Selection criteria](#selection-criteria)
+- [Related lists](#related-lists)
 - [Contributing](#contributing)
 
 ---
@@ -440,44 +416,60 @@ Three commitments:
 
 ---
 
-## Scope
+## Selection criteria
 
-**In scope** — the contribution is the reasoning itself:
+**Scope.** A paper belongs here when *reasoning* is the contribution — the chain, the reward, the search, or
+the evaluation of the chain:
 reasoning-chain supervision and distillation · RL with verifiable or process rewards · test-time scaling and
 search · prompting and thought structures evaluated on medical tasks · knowledge-grounded reasoning ·
 multimodal reasoning where the chain is tied to image evidence · benchmarks that probe reasoning quality
 rather than final-answer accuracy · faithfulness, shortcut and contamination analyses · agentic diagnosis
-where the reasoning mechanism (not the plumbing) is novel.
+where the reasoning mechanism, not the plumbing, is what is new.
 
-**Out of scope:**
-medical LLMs reported only as end-task accuracy · pure retrieval or summarization systems · clinical
-deployment studies with no reasoning analysis · agent frameworks that only orchestrate existing components ·
-general-domain reasoning work with a medical benchmark bolted on as one table row.
+Out of scope: medical LLMs reported only as end-task accuracy · pure retrieval or summarization systems ·
+clinical deployment studies with no reasoning analysis · agent frameworks that only orchestrate existing
+components · general-domain reasoning work with a medical benchmark bolted on as one table row.
 
-**Annotation conventions.** `note` fields flag things worth knowing before citing a number: missing
-compute-matched baselines, benchmark contamination, evaluation by a judge model from the same family as the
-system under test, or gains that vanish on out-of-distribution modalities.
+**Quality bar.** A paper enters the list on one of three conditions: at least 10 citations, or at least one
+citation per month since release, or peer-reviewed publication with at least 3 citations. Work from the last
+three months is exempt from the bar — citations have not had time to accumulate — and waits in the queue
+instead of being judged early.
+
+**What *unreviewed* means.** Entries carrying that marker cleared the quality bar but have not yet had a
+close read; their category is a keyword-based guess and they carry no annotation. Entries without the marker
+have been read, placed, and annotated by hand. The distinction is kept visible rather than smoothed over.
+
+**Annotations.** Notes flag what is worth knowing before citing a number: missing compute-matched baselines,
+benchmark contamination, evaluation by a judge model from the same family as the system under test, or gains
+that disappear on out-of-distribution modalities.
+
+## Related lists
+
+Neighbouring collections, each with a different centre of gravity:
+
+- [Awesome-LLM-Reasoning-on-Medicine](https://github.com/pqpq17/Awesome-LLM-Reasoning-on-Medicine) — organized around Miller's Pyramid, accompanies a survey in *Machine Intelligence Research*.
+- [medical-llm-reasoning-survey](https://github.com/zzma2/medical-llm-reasoning-survey) — taxonomy by modality, training-time vs test-time technique, and application.
+- [Awesome-Medical-LLM-Agent](https://github.com/yczhou001/Awesome-Medical-LLM-Agent) — centred on single- and multi-agent medical systems.
+- [Awesome-Specialized-Medical-LLMs](https://github.com/FreedomIntelligence/Awesome-Specialized-Medical-LLMs) — organized by ICD-10 chapter rather than by method.
+- [awesome-multimodal-in-medical-imaging](https://github.com/richard-peng-xia/awesome-multimodal-in-medical-imaging) — multimodal medical imaging broadly, not reasoning-specific.
 
 ## Contributing
 
-Adding a paper takes one of three routes:
-
 - **Open an issue** with the arXiv link — fastest, no setup.
-- **Comment on the weekly [triage issue](../../issues?q=label%3Atriage)** if the paper is already listed there.
-- **Send a PR editing `data/papers.json`** (not `README.md` — it is generated). Then run
+- **Send a PR editing `data/papers.json`** — not `README.md`, which is generated from it. Run
   `python3 scripts/build_readme.py` and commit both files.
 
-Corrections are as welcome as additions. If an annotation misreads your paper, say so in an issue and it
-will be fixed or removed.
+Corrections are as welcome as additions. If an annotation misreads your paper, say so in an issue and it will
+be fixed or removed.
 
 ## Citation
 
-If this list helps your work, a star is plenty. If you need to cite it:
+If this list is useful, a star is plenty. If you need to cite it:
 
 ```bibtex
 @misc{awesome-medical-reasoning,
-  title  = {Awesome Medical Reasoning: A Continuously Maintained Reading List},
-  author = {JXLiu-AI},
+  title  = {Awesome Medical Reasoning},
+  author = {Liu, Jiaxiang},
   year   = {2026},
   url    = {https://github.com/JXLiu-AI/Awesome-Medical-Reasoning}
 }

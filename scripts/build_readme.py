@@ -85,14 +85,13 @@ def build_sections(papers, taxonomy):
 def build_stats(papers, pending, taxonomy):
     n_cat = len(common.all_categories(taxonomy))
     if not papers:
-        return ("**0** papers indexed so far — the list is being seeded from a "
-                "%d-paper triage queue. 仓库刚起步，正在筛选中。" % len(pending))
+        return "**0** papers indexed so far; %d more under consideration." % len(pending)
     years = {}
     for p in papers:
         years[p["date"][:4]] = years.get(p["date"][:4], 0) + 1
     span = " · ".join("%s: %d" % (y, n) for y, n in sorted(years.items()))
     return ("**%d** papers indexed (%s) across %d sections / %d categories. "
-            "%d more in the triage queue."
+            "%d more under consideration."
             % (len(papers), span, len(taxonomy["sections"]), n_cat, len(pending)))
 
 
