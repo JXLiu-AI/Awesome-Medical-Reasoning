@@ -18,7 +18,8 @@
 {{STATS}}
 
 **Last updated: {{UPDATED}}.** New arXiv papers are crawled daily by a GitHub Action and land in a
-[triage issue](../../issues?q=label%3Atriage); every entry in this list has been read and placed by a human.
+[triage issue](../../issues?q=label%3Atriage). Entries marked *unreviewed* passed the quality gate but have
+not yet had a human pass; ⭐ marks work by the maintainer.
 
 ## Why another list?
 
@@ -34,7 +35,11 @@ Three commitments:
 1. **Reasoning only.** A paper is in scope when *reasoning* is the contribution — the chain, the reward, the
    search, the evaluation of the chain. Medical LLMs that merely report an accuracy number are out of scope,
    as is agent-pipeline engineering with no reasoning mechanism. See the [scope rules](#scope).
-2. **Every entry is human-read.** The crawler proposes; a person disposes. Nothing is auto-merged into the list.
+2. **Two-stage curation, stated honestly.** Stage one is a quality gate — a paper enters the list only if it
+   clears a citation/venue bar (≥10 citations, or ≥1 citation/month, or peer-reviewed with ≥3 citations).
+   Stage two is a human pass that fixes the category and writes the annotation. Entries still awaiting
+   stage two are marked *unreviewed*, so you always know which is which. Papers from the last three months
+   are held out of the gate entirely — citations have not had time to accumulate — and wait in the queue.
 3. **Claims get annotated, not repeated.** Where a paper's reasoning gain is confounded (no non-reasoning
    baseline at matched compute, test-set contamination, judge-model overlap), the entry says so.
 

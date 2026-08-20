@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """交互式筛选 data/pending.json：一篇一个按键，决定收录 / 丢弃 / 跳过。
 
-    python3 scripts/triage.py            # 从最新的开始
-    python3 scripts/triage.py --oldest   # 从最旧的开始
-    python3 scripts/triage.py --cat rlvr # 只看建议分类为 rlvr 的
+    python3 scripts/triage.py                 # 默认按引用数降序：先筛最有价值的
+    python3 scripts/triage.py --sort newest   # 按最新
+    python3 scripts/triage.py --cat rlvr      # 只看建议分类为 rlvr 的
 
 按键：
     y  收录（用建议分类）      Y  收录并写一句话点评
@@ -51,7 +51,8 @@ def show(p, idx, total, cats, full_abstract=False):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--oldest", action="store_true")
+    ap.add_argument("--sort", default="citations", choices=["citations", "newest", "oldest"],
+                    help="citations=按引用数降序（默认，先筛高价值的）")
     ap.add_argument("--cat", help="只筛建议分类为该 key 的")
     args = ap.parse_args()
 
@@ -64,7 +65,10 @@ def main():
     rejected = common.load_json(common.REJECTED, [])
 
     queue = [p for p in pending if not args.cat or p.get("suggested_category") == args.cat]
-    queue.sort(key=lambda x: x["date"], reverse=not args.oldest)
+    if args.sort == "citations":
+        queue.sort(key=lambda x: (-(x.get("citations") or 0), x["date"]))
+    else:
+        queue.sort(key=lambda x: x["date"], reverse=(args.sort == "newest"))
     if not queue:
         print("没有待筛的论文。先跑 python3 scripts/fetch_arxiv.py")
         return
@@ -141,7 +145,8 @@ def main():
         papers.append({
             "id": p["id"], "title": p["title"], "authors": p.get("authors", []),
             "date": p["date"], "url": p["url"], "category": cat,
-            "code": "", "venue": "", "note": note, "tags": [], "added": today,
+            "code": "", "venue": p.get("s2_venue", ""), "note": note,
+            "tags": [], "citations": p.get("citations", 0), "added": today,
         })
         del remaining[p["id"]]
         history.append(("add", p))

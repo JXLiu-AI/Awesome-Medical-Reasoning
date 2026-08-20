@@ -26,15 +26,21 @@ def slug(title):
 
 
 def fmt_paper(p):
-    bits = ["- **[%s](%s)**" % (p["title"].replace("|", "\\|"), p["url"])]
+    star = "⭐ " if "ours" in (p.get("tags") or []) else ""
+    bits = ["- %s**[%s](%s)**" % (star, p["title"].replace("|", "\\|"), p["url"])]
     meta = [p["date"][:7]]
     if p.get("venue"):
         meta.append("**%s**" % p["venue"])
+    if p.get("citations"):
+        meta.append("%d cites" % p["citations"])
+    if p.get("reviewed") is False:
+        meta.append("*unreviewed*")
     bits.append("— " + " · ".join(meta))
     if p.get("code"):
         bits.append("· [code](%s)" % p["code"])
-    if p.get("tags"):
-        bits.append("· " + " ".join("`%s`" % t for t in p["tags"]))
+    tags = [t for t in (p.get("tags") or []) if t != "ours"]
+    if tags:
+        bits.append("· " + " ".join("`%s`" % t for t in tags))
     line = " ".join(bits)
     if p.get("note"):
         line += "\n  <sub>%s</sub>" % p["note"]
