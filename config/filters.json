@@ -1,0 +1,54 @@
+{
+  "_comment": "收录规则。命中条件：(标题或摘要命中 reasoning_terms 任一) AND (命中 medical_terms 任一) AND (不命中 exclude 任一)。收窄/放宽只改这里，不用动代码。",
+
+  "arxiv_categories": ["cs.CL", "cs.CV", "cs.AI", "cs.LG", "cs.MA"],
+
+  "queries_comment": "投给 arXiv API 的检索式。宽召回，精确过滤交给下面的本地规则。每条独立请求，结果取并集。",
+  "queries": [
+    "all:\"medical reasoning\"",
+    "all:\"clinical reasoning\"",
+    "all:\"diagnostic reasoning\"",
+    "abs:\"medical\" AND abs:\"chain-of-thought\"",
+    "abs:\"clinical\" AND abs:\"chain-of-thought\"",
+    "abs:\"medical\" AND abs:\"reinforcement learning\" AND abs:\"reasoning\"",
+    "abs:\"medical\" AND abs:\"test-time\"",
+    "abs:\"radiology\" AND abs:\"reasoning\"",
+    "abs:\"pathology\" AND abs:\"reasoning\"",
+    "abs:\"medical\" AND abs:\"vision-language\" AND abs:\"reasoning\"",
+    "abs:\"clinical\" AND abs:\"large language model\" AND abs:\"reasoning\"",
+    "abs:\"medical\" AND abs:\"benchmark\" AND abs:\"reasoning\""
+  ],
+
+  "reasoning_terms_comment": "必须命中一个，否则只是普通医学 LLM 应用，不属于本仓库范围。",
+  "reasoning_terms": [
+    "reasoning", "chain-of-thought", "chain of thought", "rationale", "step-by-step",
+    "thinking", "think step", "deliberat", "inference-time", "test-time",
+    "self-consistency", "self-reflect", "self-correct", "tree of thought",
+    "process reward", "verifiable reward", "GRPO", "RLVR", "long cot",
+    "problem solving", "multi-step", "deduc", "abduc", "differential diagnosis"
+  ],
+
+  "medical_terms_comment": "必须命中一个，排除通用领域的推理工作。",
+  "medical_terms": [
+    "medical", "medicine", "clinical", "clinician", "patient", "health",
+    "diagnos", "hospital", "radiolog", "patholog", "oncolog", "cardiolog",
+    "dermatolog", "ophthalm", "psychiatr", "nurs", "physician", "doctor",
+    "disease", "EHR", "electronic health record", "biomedical", "USMLE",
+    "MedQA", "PubMed", "triage", "surgery", "surgical", "drug", "clinical trial",
+    "X-ray", "radiograph", "CT scan", "MRI", "histopath", "clinical note"
+  ],
+
+  "exclude_comment": "命中任一即丢弃。用来挡掉噪声词形和明显跑题的方向。",
+  "exclude": [
+    "molecular dynamics simulation",
+    "protein folding",
+    "drug-target binding affinity",
+    "wireless network",
+    "recommendation system for e-commerce",
+    "federated learning communication efficiency"
+  ],
+
+  "min_abstract_chars": 200,
+  "default_since": "2024-06-01",
+  "max_results_per_query": 200
+}

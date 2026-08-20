@@ -1,0 +1,284 @@
+{
+  "_comment": "分类体系 = README 的章节结构，也是自动分类器的关键词表。加/改分类只动这个文件，README 会自动跟着变。keywords 用于给新论文猜分类（命中越多分越高），不影响是否收录。",
+  "sections": [
+    {
+      "name": "训练期方法",
+      "emoji": "🏋️",
+      "intro": "把推理能力写进权重：监督微调、推理链蒸馏、强化学习。",
+      "categories": [
+        {
+          "key": "sft-distill",
+          "display": "SFT 与推理链蒸馏",
+          "keywords": [
+            "supervised fine-tuning",
+            "distill",
+            "chain-of-thought data",
+            "synthetic reasoning",
+            "rationale",
+            "instruction tuning",
+            "teacher model",
+            "long cot data"
+          ],
+          "display_en": "SFT & Reasoning-Chain Distillation"
+        },
+        {
+          "key": "rlvr",
+          "display": "强化学习与可验证奖励（RLVR / GRPO）",
+          "keywords": [
+            "reinforcement learning",
+            "GRPO",
+            "RLVR",
+            "verifiable reward",
+            "PPO",
+            "DPO",
+            "policy optimization",
+            "reward model",
+            "rule-based reward",
+            "R1"
+          ],
+          "display_en": "RL with Verifiable Rewards (RLVR / GRPO)"
+        },
+        {
+          "key": "process-reward",
+          "display": "过程奖励与步骤级监督",
+          "keywords": [
+            "process reward",
+            "PRM",
+            "step-level",
+            "stepwise",
+            "intermediate step",
+            "process supervision",
+            "step verifier"
+          ],
+          "display_en": "Process Rewards & Step-Level Supervision"
+        }
+      ],
+      "name_en": "Training-Time Methods",
+      "intro_en": "Baking reasoning into the weights: SFT, CoT distillation, and RL."
+    },
+    {
+      "name": "测试期方法",
+      "emoji": "🧭",
+      "intro": "不改权重，在推理时把答案想得更对：提示结构、搜索与扩展、外部知识。",
+      "categories": [
+        {
+          "key": "prompt-structure",
+          "display": "提示与思维结构",
+          "keywords": [
+            "chain-of-thought",
+            "prompting",
+            "self-consistency",
+            "tree of thought",
+            "graph of thought",
+            "self-reflection",
+            "self-correct",
+            "in-context learning",
+            "few-shot"
+          ],
+          "display_en": "Prompting & Thought Structures"
+        },
+        {
+          "key": "test-time-scaling",
+          "display": "测试期扩展与搜索",
+          "keywords": [
+            "test-time scaling",
+            "test-time compute",
+            "inference-time",
+            "monte carlo tree search",
+            "MCTS",
+            "best-of-n",
+            "beam search",
+            "budget forcing",
+            "sampling strategy"
+          ],
+          "display_en": "Test-Time Scaling & Search"
+        },
+        {
+          "key": "knowledge-grounded",
+          "display": "知识增强推理（RAG / 知识图谱）",
+          "keywords": [
+            "retrieval-augmented",
+            "RAG",
+            "knowledge graph",
+            "guideline",
+            "grounding",
+            "evidence retrieval",
+            "knowledge base",
+            "ontology",
+            "UMLS"
+          ],
+          "display_en": "Knowledge-Grounded Reasoning (RAG / KG)"
+        }
+      ],
+      "name_en": "Test-Time Methods",
+      "intro_en": "No weight updates — think harder at inference: prompting structures, search and scaling, external knowledge."
+    },
+    {
+      "name": "多模态医学推理",
+      "emoji": "🖼️",
+      "intro": "推理链要落在像素、切片、波形上，而不只是文本。",
+      "categories": [
+        {
+          "key": "mllm-imaging",
+          "display": "影像推理 VLM",
+          "keywords": [
+            "vision-language",
+            "VLM",
+            "radiology",
+            "X-ray",
+            "CT",
+            "MRI",
+            "visual question answering",
+            "VQA",
+            "image reasoning",
+            "grounding",
+            "report generation"
+          ],
+          "display_en": "Imaging VLM Reasoning"
+        },
+        {
+          "key": "mllm-pathology",
+          "display": "病理与全切片推理",
+          "keywords": [
+            "pathology",
+            "histopathology",
+            "whole slide",
+            "WSI",
+            "gigapixel",
+            "microscopy",
+            "cytology"
+          ],
+          "display_en": "Pathology & Whole-Slide Reasoning"
+        },
+        {
+          "key": "mllm-multimodal-fusion",
+          "display": "跨模态融合与模态泛化",
+          "keywords": [
+            "multimodal fusion",
+            "cross-modal",
+            "modality generalization",
+            "EHR and image",
+            "signal",
+            "ECG",
+            "waveform",
+            "omics",
+            "unified model"
+          ],
+          "display_en": "Cross-Modal Fusion & Modality Generalization"
+        }
+      ],
+      "name_en": "Multimodal Medical Reasoning",
+      "intro_en": "Reasoning chains that must land on pixels, slides, and waveforms — not just text."
+    },
+    {
+      "key_comment": "只收推理机制本身有创新的 agent 工作；纯 pipeline 编排不收，避免和 Awesome-Medical-LLM-Agent 重叠",
+      "name": "智能体式诊断推理",
+      "emoji": "🩺",
+      "intro": "多轮、多角色、可调用工具的诊断推理。只收推理机制有创新的工作，纯流程编排不收。",
+      "categories": [
+        {
+          "key": "agentic-diagnosis",
+          "display": "交互式与主动式诊断推理",
+          "keywords": [
+            "agent",
+            "multi-agent",
+            "interactive diagnosis",
+            "sequential diagnosis",
+            "information seeking",
+            "history taking",
+            "ask question",
+            "differential diagnosis",
+            "tool use",
+            "debate"
+          ],
+          "display_en": "Interactive & Proactive Diagnostic Reasoning"
+        }
+      ],
+      "name_en": "Agentic Diagnostic Reasoning",
+      "intro_en": "Multi-turn, multi-role, tool-using diagnostic reasoning. Only works with a novel reasoning mechanism — plain pipeline orchestration is out of scope."
+    },
+    {
+      "name": "评测、基准与可信度",
+      "emoji": "📊",
+      "intro": "推理增益是真的吗？这一节是本仓库最想做扎实的部分。",
+      "categories": [
+        {
+          "key": "benchmark",
+          "display": "推理基准与数据集",
+          "keywords": [
+            "benchmark",
+            "dataset",
+            "evaluation suite",
+            "test set",
+            "leaderboard",
+            "exam",
+            "USMLE",
+            "board question",
+            "case report"
+          ],
+          "display_en": "Reasoning Benchmarks & Datasets"
+        },
+        {
+          "key": "faithfulness",
+          "display": "忠实性、幻觉与捷径学习",
+          "keywords": [
+            "faithful",
+            "hallucination",
+            "shortcut",
+            "spurious",
+            "unfaithful",
+            "sycophan",
+            "robustness",
+            "perturbation",
+            "contamination",
+            "memorization"
+          ],
+          "display_en": "Faithfulness, Hallucination & Shortcut Learning"
+        },
+        {
+          "key": "clinical-alignment",
+          "display": "临床对齐与人机协同评估",
+          "keywords": [
+            "clinician",
+            "human evaluation",
+            "reader study",
+            "clinical utility",
+            "workflow",
+            "trust",
+            "deployment",
+            "prospective",
+            "safety",
+            "uncertainty",
+            "calibration"
+          ],
+          "display_en": "Clinical Alignment & Human-AI Evaluation"
+        }
+      ],
+      "name_en": "Evaluation, Benchmarks & Trustworthiness",
+      "intro_en": "Is the reasoning gain real? The section this list most wants to get right."
+    },
+    {
+      "name": "综述与立场文章",
+      "emoji": "📚",
+      "intro": "",
+      "categories": [
+        {
+          "key": "survey",
+          "display": "综述与立场",
+          "keywords": [
+            "survey",
+            "review",
+            "position paper",
+            "perspective",
+            "roadmap",
+            "opportunities and challenges",
+            "systematic review"
+          ],
+          "display_en": "Surveys & Positions"
+        }
+      ],
+      "name_en": "Surveys & Position Papers",
+      "intro_en": ""
+    }
+  ]
+}

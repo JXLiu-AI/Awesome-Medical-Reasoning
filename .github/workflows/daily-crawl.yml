@@ -1,0 +1,68 @@
+name: Daily arXiv crawl
+
+on:
+  schedule:
+    - cron: "0 1 * * *"      # 每天 UTC 01:00 ≈ 北京时间 09:00
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "回看天数"
+        required: false
+        default: "10"
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 记录抓取前的待筛数量
+        id: before
+        run: |
+          n=$(python3 -c "import json,os;p='data/pending.json';print(len(json.load(open(p))) if os.path.exists(p) and open(p).read().strip() else 0)")
+          echo "count=$n" >> "$GITHUB_OUTPUT"
+
+      - name: 抓 arXiv
+        run: python3 scripts/fetch_arxiv.py --days "${{ github.event.inputs.days || '10' }}"
+
+      - name: 统计新增
+        id: after
+        run: |
+          n=$(python3 -c "import json;print(len(json.load(open('data/pending.json'))))")
+          echo "count=$n" >> "$GITHUB_OUTPUT"
+          echo "new=$(( n - ${{ steps.before.outputs.count }} ))" >> "$GITHUB_OUTPUT"
+
+      - name: 重建 README（更新待筛计数）
+        run: python3 scripts/build_readme.py
+
+      - name: 提交变更
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/pending.json README.md
+          git diff --staged --quiet || git commit -m "chore: 每日抓取，新增 ${{ steps.after.outputs.new }} 篇待筛"
+          git push
+
+      - name: 开/更新 triage issue
+        if: steps.after.outputs.new != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 scripts/make_issue_body.py --limit 40 > /tmp/body.md
+          title="📥 待筛论文（${{ steps.after.outputs.count }} 篇）"
+          existing=$(gh issue list --label triage --state open --limit 1 --json number --jq '.[0].number')
+          if [ -n "$existing" ]; then
+            gh issue edit "$existing" --title "$title" --body-file /tmp/body.md
+            echo "已更新 issue #$existing"
+          else
+            gh label create triage --color FBCA04 --description "待人工筛选的论文" 2>/dev/null || true
+            gh issue create --title "$title" --body-file /tmp/body.md --label triage
+          fi
