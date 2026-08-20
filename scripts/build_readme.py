@@ -26,20 +26,19 @@ def slug(title):
 
 
 def fmt_paper(p):
-    bits = ["- **[%s](%s)**" % (p["title"].replace("|", "\\|"), p["url"])]
+    """一行一篇：标题是唯一的主元素，其余信息用 <sub> 下沉，避免整页糊成粗体块。
+    读过并写了注释的条目自带注释行，未读过的没有——这个区别本身就是标记，
+    不必再在每一行重复 unreviewed。"""
+    bits = ["- [%s](%s)" % (p["title"].replace("|", "\\|"), p["url"])]
     meta = [p["date"][:7]]
     if p.get("venue"):
-        meta.append("**%s**" % p["venue"])
-    if p.get("citations"):
-        meta.append("%d cites" % p["citations"])
-    if p.get("reviewed") is False:
-        meta.append("*unreviewed*")
-    bits.append("— " + " · ".join(meta))
-    if p.get("code"):
-        bits.append("· [code](%s)" % p["code"])
+        meta.append(p["venue"])
+    c = p.get("citations") or 0
+    if c:
+        meta.append("%d citation%s" % (c, "" if c == 1 else "s"))
     tags = [t for t in (p.get("tags") or []) if t != "ours"]
-    if tags:
-        bits.append("· " + " ".join("`%s`" % t for t in tags))
+    meta.extend(tags)
+    bits.append("<sub>%s</sub>" % " · ".join(meta))
     line = " ".join(bits)
     if p.get("note"):
         line += "\n  <sub>%s</sub>" % p["note"]

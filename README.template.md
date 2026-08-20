@@ -51,9 +51,10 @@ citation per month since release, or peer-reviewed publication with at least 3 c
 three months is exempt from the bar — citations have not had time to accumulate — and waits in the queue
 instead of being judged early.
 
-**What *unreviewed* means.** Entries carrying that marker cleared the quality bar but have not yet had a
-close read; their category is a keyword-based guess and they carry no annotation. Entries without the marker
-have been read, placed, and annotated by hand. The distinction is kept visible rather than smoothed over.
+**Which entries have been read.** An entry with a note beneath it has been read, placed, and annotated by
+hand. An entry without one cleared the quality bar but has not yet had a close read — its category is a
+keyword-assigned guess, so treat the placement as provisional. Most of the list is currently in the second
+state; the distinction is left visible rather than smoothed over.
 
 **Annotations.** Notes flag what is worth knowing before citing a number: missing compute-matched baselines,
 benchmark contamination, evaluation by a judge model from the same family as the system under test, or gains
