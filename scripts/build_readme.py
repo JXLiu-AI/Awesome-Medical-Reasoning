@@ -26,8 +26,7 @@ def slug(title):
 
 
 def fmt_paper(p):
-    star = "⭐ " if "ours" in (p.get("tags") or []) else ""
-    bits = ["- %s**[%s](%s)**" % (star, p["title"].replace("|", "\\|"), p["url"])]
+    bits = ["- **[%s](%s)**" % (p["title"].replace("|", "\\|"), p["url"])]
     meta = [p["date"][:7]]
     if p.get("venue"):
         meta.append("**%s**" % p["venue"])

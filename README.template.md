@@ -8,7 +8,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Papers](https://img.shields.io/badge/papers-{{COUNT}}-blue)
-![Last commit](https://img.shields.io/github/last-commit/USERNAME/Awesome-Medical-Reasoning)
+![Last commit](https://img.shields.io/github/last-commit/JXLiu-AI/Awesome-Medical-Reasoning)
 ![Updated weekly](https://img.shields.io/badge/updated-weekly-brightgreen)
 
 </div>
@@ -19,7 +19,7 @@
 
 **Last updated: {{UPDATED}}.** New arXiv papers are crawled daily by a GitHub Action and land in a
 [triage issue](../../issues?q=label%3Atriage). Entries marked *unreviewed* passed the quality gate but have
-not yet had a human pass; ⭐ marks work by the maintainer.
+not yet had a human pass.
 
 ## Why another list?
 
@@ -93,9 +93,9 @@ If this list helps your work, a star is plenty. If you need to cite it:
 ```bibtex
 @misc{awesome-medical-reasoning,
   title  = {Awesome Medical Reasoning: A Continuously Maintained Reading List},
-  author = {USERNAME},
+  author = {JXLiu-AI},
   year   = {2026},
-  url    = {https://github.com/USERNAME/Awesome-Medical-Reasoning}
+  url    = {https://github.com/JXLiu-AI/Awesome-Medical-Reasoning}
 }
 ```
 

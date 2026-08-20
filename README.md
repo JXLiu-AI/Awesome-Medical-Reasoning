@@ -8,7 +8,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Papers](https://img.shields.io/badge/papers-303-blue)
-![Last commit](https://img.shields.io/github/last-commit/USERNAME/Awesome-Medical-Reasoning)
+![Last commit](https://img.shields.io/github/last-commit/JXLiu-AI/Awesome-Medical-Reasoning)
 ![Updated weekly](https://img.shields.io/badge/updated-weekly-brightgreen)
 
 </div>
@@ -19,7 +19,7 @@
 
 **Last updated: 2026-08-20.** New arXiv papers are crawled daily by a GitHub Action and land in a
 [triage issue](../../issues?q=label%3Atriage). Entries marked *unreviewed* passed the quality gate but have
-not yet had a human pass; ⭐ marks work by the maintainer.
+not yet had a human pass.
 
 ## Why another list?
 
@@ -73,7 +73,7 @@ Three commitments:
 - **[TrialMatchAI: An End-to-End AI-powered Clinical Trial Recommendation System to Streamline Patient-to-Trial Matching](https://arxiv.org/abs/2505.08508)** — 2025-05 · **Nature Communications** · 10 cites · *unreviewed*
 - **[X-Reasoner: Towards Generalizable Reasoning Across Modalities and Domains](https://arxiv.org/abs/2505.03981)** — 2025-05 · 30 cites · *unreviewed*
 - **[O1 Replication Journey -- Part 3: Inference-time Scaling for Medical Reasoning](https://arxiv.org/abs/2501.06458)** — 2025-01 · 38 cites · *unreviewed*
-- ⭐ **[MedThink: Explaining Medical Visual Question Answering via Multimodal Decision-Making Rationale](https://arxiv.org/abs/2404.12372)** — 2024-04 · **LREC-COLING 2024**
+- **[MedThink: Explaining Medical Visual Question Answering via Multimodal Decision-Making Rationale](https://arxiv.org/abs/2404.12372)** — 2024-04 · **LREC-COLING 2024**
   <sub>Supervises Med-VQA with multimodal decision rationales, so the explanation and the answer share a source instead of being rationalized after the fact.</sub>
 
 ### RL with Verifiable Rewards (RLVR / GRPO) · 强化学习与可验证奖励（RLVR / GRPO） <sub>29</sub>
@@ -141,7 +141,7 @@ Three commitments:
 - **[Large Language Models with Temporal Reasoning for Longitudinal Clinical Summarization and Prediction](https://arxiv.org/abs/2501.18724)** — 2025-01 · **Conference on Empirical Methods in Natural Language Processing** · 17 cites · *unreviewed*
 - **[Layered Chain-of-Thought Prompting for Multi-Agent LLM Systems: A Comprehensive Approach to Explainable Large Language Models](https://arxiv.org/abs/2501.18645)** — 2025-01 · 19 cites · *unreviewed*
 - **[Benchmarking Generative AI for Scoring Medical Student Interviews in Objective Structured Clinical Examinations (OSCEs)](https://arxiv.org/abs/2501.13957)** — 2025-01 · **International Conference on Artificial Intelligence in Education** · 17 cites · *unreviewed*
-- ⭐ **[MedCoT: Medical Chain of Thought via Hierarchical Expert](https://arxiv.org/abs/2412.13736)** — 2024-12 · **EMNLP 2024**
+- **[MedCoT: Medical Chain of Thought via Hierarchical Expert](https://arxiv.org/abs/2412.13736)** — 2024-12 · **EMNLP 2024**
   <sub>Hierarchical experts generate and cross-verify the reasoning chain, rather than one model walking a single chain end to end.</sub>
 - **[Synthetic Data Generation with LLM for Improved Depression Prediction](https://arxiv.org/abs/2411.17672)** — 2024-11 · 26 cites · *unreviewed*
 - **[From Medprompt to o1: Exploration of Run-Time Strategies for Medical Challenge Problems and Beyond](https://arxiv.org/abs/2411.03590)** — 2024-11 · 36 cites · *unreviewed*
@@ -151,7 +151,7 @@ Three commitments:
 - **[IgnitionInnovators at "Discharge Me!": Chain-of-Thought Instruction Finetuning Large Language Models for Discharge Summaries](https://arxiv.org/abs/2407.17636)** — 2024-07 · **Workshop on Biomedical Natural Language Processing** · 5 cites · *unreviewed*
 - **[FZI-WIM at SemEval-2024 Task 2: Self-Consistent CoT for Complex NLI in Biomedical Domain](https://arxiv.org/abs/2406.10040)** — 2024-06 · **International Workshop on Semantic Evaluation** · 3 cites · *unreviewed*
 - **[Chain-of-Though (CoT) prompting strategies for medical error detection and correction](https://arxiv.org/abs/2406.09103)** — 2024-06 · **Clinical Natural Language Processing Workshop** · 11 cites · *unreviewed*
-- ⭐ **[A ChatGPT Aided Explainable Framework for Zero-Shot Medical Image Diagnosis](https://arxiv.org/abs/2307.01981)** — 2023-07
+- **[A ChatGPT Aided Explainable Framework for Zero-Shot Medical Image Diagnosis](https://arxiv.org/abs/2307.01981)** — 2023-07
   <sub>Early work making the decision process of zero-shot medical image diagnosis explicit and inspectable.</sub>
 
 ### Test-Time Scaling & Search · 测试期扩展与搜索 <sub>4</sub>
@@ -193,7 +193,7 @@ Three commitments:
 
 - **[Scaling Up Formal Representation of Clinical Trial Protocols in Ensemble Logic Using LLMs: A Preliminary Study](https://arxiv.org/abs/2607.21307)** — 2026-07 · 1 cites · *unreviewed*
 - **[Med-OPD: Improving Medical Vision-Language Models via Evidence-Aware On-Policy Distillation](https://arxiv.org/abs/2607.16303)** — 2026-07 · 1 cites · *unreviewed*
-- ⭐ **[BioMedVR: Confusion-Aware Mixture-of-Prompt Experts for Biomedical Visual Reprogramming](https://arxiv.org/abs/2606.24740)** — 2026-06 · **ECCV 2026**
+- **[BioMedVR: Confusion-Aware Mixture-of-Prompt Experts for Biomedical Visual Reprogramming](https://arxiv.org/abs/2606.24740)** — 2026-06 · **ECCV 2026**
   <sub>Mixture-of-prompt experts targeted at confusable cases in biomedical visual reasoning.</sub>
 - **[Enhancing Pathological VLMs with Cross-scale Reasoning](https://arxiv.org/abs/2606.17412)** — 2026-06 · 2 cites · *unreviewed*
 - **[Lost in Volume: The CT-SpatialVQA Benchmark for Evaluating Semantic-Spatial Understanding of 3D Medical Vision-Language Models](https://arxiv.org/abs/2605.08787)** — 2026-05 · 4 cites · *unreviewed*
@@ -232,7 +232,7 @@ Three commitments:
 - **[RadAlign: Advancing Radiology Report Generation with Vision-Language Concept Alignment](https://arxiv.org/abs/2501.07525)** — 2025-01 · **International Conference on Medical Image Computing and Computer-Assisted Intervention** · 23 cites · *unreviewed*
 - **[Libra: Leveraging Temporal Images for Biomedical Radiology Analysis](https://arxiv.org/abs/2411.19378)** — 2024-11 · **Annual Meeting of the Association for Computational Linguistics** · 33 cites · *unreviewed*
 - **[MAIRA-Seg: Enhancing Radiology Report Generation with Segmentation-Aware Multimodal Large Language Models](https://arxiv.org/abs/2411.11362)** — 2024-11 · **ML4H@NeurIPS** · 11 cites · *unreviewed*
-- ⭐ **[R-LLaVA: Improving Med-VQA Understanding through Visual Region of Interest](https://arxiv.org/abs/2410.20327)** — 2024-10
+- **[R-LLaVA: Improving Med-VQA Understanding through Visual Region of Interest](https://arxiv.org/abs/2410.20327)** — 2024-10
   <sub>Injects clinician-prior regions of interest into Med-VQA so answers are anchored to specific image regions.</sub>
 - **[CheXalign: Preference fine-tuning in chest X-ray interpretation models without human feedback](https://arxiv.org/abs/2410.07025)** — 2024-10 · **Annual Meeting of the Association for Computational Linguistics** · 8 cites · *unreviewed*
 - **[MC-CoT: A Modular Collaborative CoT Framework for Zero-shot Medical-VQA with LLM and MLLM Integration](https://arxiv.org/abs/2410.04521)** — 2024-10 · 28 cites · *unreviewed*
@@ -330,7 +330,7 @@ Three commitments:
 - **[Medical thinking with multiple images](https://arxiv.org/abs/2604.16506)** — 2026-04 · 6 cites · *unreviewed*
 - **[Finding and Reactivating Post-Trained LLMs' Hidden Safety Mechanisms](https://arxiv.org/abs/2604.00012)** — 2026-03 · **Neural Information Processing Systems** · 3 cites · *unreviewed*
 - **[MediX-R1: Open Ended Medical Reinforcement Learning](https://arxiv.org/abs/2602.23363)** — 2026-02 · 6 cites · *unreviewed*
-- ⭐ **[MM-NeuroOnco: A Multimodal Benchmark and Instruction Dataset for MRI-Based Brain Tumor Diagnosis](https://arxiv.org/abs/2602.22955)** — 2026-02
+- **[MM-NeuroOnco: A Multimodal Benchmark and Instruction Dataset for MRI-Based Brain Tumor Diagnosis](https://arxiv.org/abs/2602.22955)** — 2026-02
   <sub>MRI brain-tumor benchmark that requires reasoning tied to imaging manifestations, not just the diagnostic label.</sub>
 - **[LeafNet: A Large-Scale Dataset and Comprehensive Benchmark for Foundational Vision-Language Understanding of Plant Diseases](https://arxiv.org/abs/2602.13662)** — 2026-02 · 7 cites · *unreviewed*
 - **[LiveMedBench: A Contamination-Free Medical Benchmark for LLMs with Automated Rubric Evaluation](https://arxiv.org/abs/2602.10367)** — 2026-02 · 7 cites · *unreviewed*
@@ -355,7 +355,7 @@ Three commitments:
 - **[Thought Crime: Backdoors and Emergent Misalignment in Reasoning Models](https://arxiv.org/abs/2506.13206)** — 2025-06 · 64 cites · *unreviewed*
 - **[Med-U1: Incentivizing Unified Medical Reasoning in LLMs via Large-scale Reinforcement Learning](https://arxiv.org/abs/2506.12307)** — 2025-06 · 11 cites · *unreviewed*
 - **[ReasonMed: A 370K Multi-Agent Generated Dataset for Advancing Medical Reasoning](https://arxiv.org/abs/2506.09513)** — 2025-06 · **Conference on Empirical Methods in Natural Language Processing** · 28 cites · *unreviewed*
-- ⭐ **[3D-RAD: A Comprehensive 3D Radiology Med-VQA Dataset with Multi-Temporal Analysis and Diverse Diagnostic Tasks](https://arxiv.org/abs/2506.11147)** — 2025-06 · **Neural Information Processing Systems** · 23 cites
+- **[3D-RAD: A Comprehensive 3D Radiology Med-VQA Dataset with Multi-Temporal Analysis and Diverse Diagnostic Tasks](https://arxiv.org/abs/2506.11147)** — 2025-06 · **Neural Information Processing Systems** · 23 cites
   <sub>3D radiology Med-VQA dataset with multi-temporal comparison tasks, moving the reasoning load from a single frame to a time series.</sub>
 - **[Kvasir-VQA-x1: A Multimodal Dataset for Medical Reasoning and Robust MedVQA in Gastrointestinal Endoscopy](https://arxiv.org/abs/2506.09958)** — 2025-06 · **DEMI@MICCAI** · 18 cites · *unreviewed*
 - **[SRPL-SFDA: SAM-Guided Reliable Pseudo-Labels for Source-Free Domain Adaptation in Medical Image Segmentation](https://arxiv.org/abs/2506.09403)** — 2025-06 · **Neurocomputing** · 14 cites · *unreviewed*
@@ -400,7 +400,7 @@ Three commitments:
 ### Faithfulness, Hallucination & Shortcut Learning · 忠实性、幻觉与捷径学习 <sub>9</sub>
 
 - **[Dismantling Pathological Shortcuts: A Causal Framework for Faithful LVLM Decoding](https://arxiv.org/abs/2606.27596)** — 2026-06 · 2 cites · *unreviewed*
-- ⭐ **[Med-R2: An Adversarial Benchmark for Evidence-Grounded Reasoning in Medical VLMs](https://arxiv.org/abs/2605.24492)** — 2026-05
+- **[Med-R2: An Adversarial Benchmark for Evidence-Grounded Reasoning in Medical VLMs](https://arxiv.org/abs/2605.24492)** — 2026-05
   <sub>Adversarial benchmark with hierarchical perturbations: tests whether a VLM's answer rests on image evidence or on spurious priors.</sub>
 - **[Toward Better EHR Reasoning in LLMs: Reinforcement Learning with Expert Attention Guidance](https://arxiv.org/abs/2508.13579)** — 2025-08 · **AAAI Conference on Artificial Intelligence** · 5 cites · *unreviewed*
 - **[Reasoning in Computer Vision: Taxonomy, Models, Tasks, and Methodologies](https://arxiv.org/abs/2508.10523)** — 2025-08 · 25 cites · *unreviewed*
@@ -477,9 +477,9 @@ If this list helps your work, a star is plenty. If you need to cite it:
 ```bibtex
 @misc{awesome-medical-reasoning,
   title  = {Awesome Medical Reasoning: A Continuously Maintained Reading List},
-  author = {USERNAME},
+  author = {JXLiu-AI},
   year   = {2026},
-  url    = {https://github.com/USERNAME/Awesome-Medical-Reasoning}
+  url    = {https://github.com/JXLiu-AI/Awesome-Medical-Reasoning}
 }
 ```
 
