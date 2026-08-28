@@ -1,5 +1,67 @@
 [
   {
+    "id": "2608.26856",
+    "version_id": "2608.26856v1",
+    "title": "From Reasoning to Pixels: Grounded Medical Multimodal LLMs for VQA and Segmentation",
+    "abstract": "Although Multimodal Large Language Models (MLLMs) have demonstrated impressive performance in Medical Visual Question Answering (Med-VQA), their reliance on global image features often lacks precise pixel-level grounding, thereby limiting clinical trustworthiness. To bridge the semantic gap between high-level clinical reasoning and spatial localization, we propose \\textsc{\\textsc{MedREAL}} (\\textbf{Med}ical \\textbf{RE}asoning-driven \\textbf{A}nswering and \\textbf{L}ocalization), a unified framework that seamlessly aligns linguistic reasoning with spatial grounding. Specifically, \\textsc{MedREAL} introduces \\textbf{S}eg \\textbf{A}nchored \\textbf{R}easoning \\textbf{P}ooling (SARP) to distill task-relevant semantic evidence directly from \\texttt{[SEG]} tokens within the MLLM's hidden states. Furthermore, a \\textbf{R}easoning-to-\\textbf{V}isual (R2V) fusion mechanism is proposed to effectively inject these reasoning-aware features into a segmentation pipeline for accurate mask decoding. To facilitate this paradigm, we construct MedRAVS-13K, a comprehensive dataset comprising 13,824 expertly validated samples across four diverse imaging modalities. Extensive experiments demonstrate that \\textsc{MedREAL} significantly outperforms state-of-the-arts, achieving 68.49\\% gIoU and 70.47\\% cIoU on benchmark evaluations. By generating evidence masks that are strictly consistent with textual diagnoses, \\textsc{MedREAL} provides a robust, interpretable framework for reasoning-driven medical image analysis.",
+    "authors": [
+      "Haowen Gu",
+      "Gensheng Pei",
+      "Junzhu Mao",
+      "Qiong Wang",
+      "Mingwu Ren",
+      "Yazhou Yao"
+    ],
+    "date": "2026-08-27",
+    "updated": "2026-08-27",
+    "url": "https://arxiv.org/abs/2608.26856",
+    "primary_category": "cs.CV",
+    "comment": "accepted by ECCV 2026",
+    "suggested_category": "mllm-imaging",
+    "suggest_score": 0.905
+  },
+  {
+    "id": "2608.27110",
+    "version_id": "2608.27110v1",
+    "title": "DocTalkBN: A Novel Dataset of Expert Telemedicine Conversations in Bengali",
+    "abstract": "Reliable medical conversational AI requires authentic expert--patient interaction data, yet such datasets remain scarce, especially for low-resource languages such as Bengali. We present DocTalkBN, a large-scale multimodal dataset of real-world expert telemedicine conversations in Bengali, collected from nationally broadcast telemedicine programs featuring board-certified physicians. DocTalkBN contains 557.63 hours of paired audio and text, 1,515 multi-turn patient calls, 10,274 host--doctor question--answer exchanges, totaling 1.7M tokens, spanning 26 medical specialties. Unlike prior resources derived from medical forums, written health content, or synthetic data, our dataset preserves the spontaneity, contextual richness, and spoken characteristics of authentic medical interactions in a low-resource setting. To support benchmark-driven research, we further construct three downstream tasks from the corpus, medical triage classification, advice safety evaluation, and medical named entity recognition, and benchmark a diverse set of large language models and encoder-based baselines. Our results show that DocTalkBN is a practically useful resource, particularly for clinically grounded reasoning tasks. We release this resource to facilitate future research on reliable medical NLP and safer, more culturally grounded healthcare systems for low-resource languages. Our source codes and dataset are publicly available at https://anonymous.4open.science/r/doctalk.",
+    "authors": [
+      "Anik Saha",
+      "Fahmida Sultana Naznin",
+      "Sadatul Islam Sadi",
+      "Ananya Shahrin Promi",
+      "Wahid Al Azad Navid",
+      "Rifat Shahriyar"
+    ],
+    "date": "2026-08-27",
+    "updated": "2026-08-27",
+    "url": "https://arxiv.org/abs/2608.27110",
+    "primary_category": "cs.CL",
+    "comment": "",
+    "suggested_category": "benchmark",
+    "suggest_score": 0.667
+  },
+  {
+    "id": "2608.26587",
+    "version_id": "2608.26587v1",
+    "title": "Surgical Alignment in Knowledge Graph Training for Clinical Diagnosis with Large Language Models",
+    "abstract": "Biomedical knowledge graphs (KGs) offer structured medical knowledge that can ground large language model (LLM) reasoning in clinical diagnosis application, yet how KG signal should be integrated into LLMs remains an open question. We present a systematic study spanning five KG task formulations, three training paradigms, two KGs, and three base LLMs. At the task level, all paradigms improve over the non-finetuned baseline, but methods with comparable in-domain accuracy show substantially different knowledge transfer behavior. We introduce Gradient Intervention Density (GID) and Gradient Distortion (GD) to measure how broadly an optimizer modifies the pretrained model. GID and GD together reveal a clear divide: KG-judgment training under KL regularization produces sparse, localized updates (a regime we term as surgical alignment), while task-specific SFT produces dense ones. A controlled ablation shows that the objective and KL contribute to sparsity independently, and the paradigms that produce sparse updates also improve reasoning quality, even when their in-domain accuracy is lower than task-specific SFT. Assessing KG-LLM integration thus requires complementing accuracy with optimization-geometry diagnostics. Our implementation can be found at https://github.com/LARK-NLP-Lab/Surgical-Alignment.",
+    "authors": [
+      "Saksham Khatwani",
+      "He Cheng",
+      "Majid Afshar",
+      "Dmitriy Dligach",
+      "Yanjun Gao"
+    ],
+    "date": "2026-08-27",
+    "updated": "2026-08-27",
+    "url": "https://arxiv.org/abs/2608.26587",
+    "primary_category": "cs.CL",
+    "comment": "",
+    "suggested_category": "knowledge-grounded",
+    "suggest_score": 0.333
+  },
+  {
     "id": "2608.25630",
     "version_id": "2608.25630v1",
     "title": "SeVeR: Selective Visual Exposure and Retrieval for 3D Medical Image Question Answering",
