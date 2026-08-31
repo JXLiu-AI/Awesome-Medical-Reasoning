@@ -14,9 +14,9 @@
 
 ---
 
-**303** papers indexed (2023: 1 · 2024: 46 · 2025: 180 · 2026: 76) across 6 sections / 14 categories. 1082 more under consideration.
+**303** papers indexed (2023: 1 · 2024: 46 · 2025: 180 · 2026: 76) across 6 sections / 14 categories. 1083 more under consideration.
 
-Last updated: 2026-08-30.
+Last updated: 2026-08-31.
 
 **Scope** — papers where reasoning itself is the contribution: the chain, the reward, the search, or the
 evaluation of the chain. Medical LLMs reported only as end-task accuracy, and agent frameworks with no
