@@ -1,5 +1,171 @@
 [
   {
+    "id": "2608.30676",
+    "version_id": "2608.30676v1",
+    "title": "MedAgent-R1: Faithfulness-Aware Reinforcement Learning for Evidence-Grounded Medical Reasoning",
+    "abstract": "When medical AI systems hallucinate clinical reasoning, the consequences extend beyond incorrect answers: fabricated justifications that superficially reference retrieved evidence can mislead clinicians into unsafe treatment decisions. Medical reasoning agents must therefore produce not only correct answers but also faithful justifications that clinicians can verify against cited evidence. We identify a systematic failure mode in RL-trained retrieval agents: outcome-only rewards improve accuracy while degrading faithfulness, a phenomenon we term confident hallucination. The agent learns to answer from parametric memory and backfill plausible but unsupported justifications; citation fabrication rates rise from 16.5% to 31.8% even as accuracy improves by 5 points over the supervised baseline. We address this with a faithfulness-gated reward design: accuracy credit is conditioned on evidence grounding via a hard gate, complemented by retrieval validity and conciseness signals that close exploitation paths unique to agentic retrieval. The resulting system, MedAgent-R1, reduces citation fabrication from 31.8% to 4.7% and raises evidence completeness from 58.7 to 82.6 while maintaining 75.1% accuracy, with 13.2-point gains on HealthBench Safety. Under the same agentic retrieval setup, MedAgent-R1 outscores GPT-4o on faithfulness-specific dimensions (Factual Support 4.55 vs. 4.25; Overclaiming 4.40 vs. 4.15) while remaining below GPT-4o in overall accuracy, suggesting that explicit faithfulness training yields evidence-grounding gains not achieved by scaling alone.",
+    "authors": [
+      "Jiangwang Chen",
+      "Chenghao Zhang",
+      "Hengxing Cai"
+    ],
+    "date": "2026-08-31",
+    "updated": "2026-08-31",
+    "url": "https://arxiv.org/abs/2608.30676",
+    "primary_category": "cs.AI",
+    "comment": "",
+    "suggested_category": "rlvr",
+    "suggest_score": 0.632
+  },
+  {
+    "id": "2608.30938",
+    "version_id": "2608.30938v1",
+    "title": "Evidence, Logic, and Compliance: Multi-Agent Structured Graph Reasoning with Expert Arbitration for Medical Referral",
+    "abstract": "Medical referral (directing patients to the appropriate hospital department) is a complex decision-making process requiring the synthesis of multimodal data, including patient narratives, laboratory indicators, and radiology imaging. While Large Language Models (LLMs) have advanced medical dialogue systems, they struggle with real-world referral tasks due to two primary limitations: (1) Information Overload, where models fixate on high-frequency disease terms while overlooking subtle but critical urgency indicators; and (2) Unstructured Collaboration, where existing multi-agent frameworks rely on loose dialogue that leads to semantic drift and confirmation bias. To address these challenges, we introduce MASGR (Multi-Agent Structured Graph Reasoning), a framework that treats referral not as a classification task but as a structured graph construction problem. MASGR deploys specialized agents to extract evidence from distinct modalities and coordinates them through a clinical reasoning graph. This graph forces agents to establish explicit logical connections between conflicting evidence. Furthermore, we integrate a knowledge-guided arbitration mechanism that prioritizes patient safety rules over standard diagnostic classification. Extensive experiments on real-world medical records demonstrate that MASGR significantly outperforms state-of-the-art LLMs and existing multi-agent systems, particularly in complex cases requiring the balancing of chronic disease management and emergency intervention. The AI contribution lies in the Multi-Agent Structured Graph Reasoning framework that transforms unstructured multi-agent dialogue into a verifiable logical graph construction. The engineering application is demonstrated through its deployment in a complex healthcare decision-making system to optimize the precision of complex medical referrals.",
+    "authors": [
+      "Qi Peng",
+      "Yi Cai",
+      "Jialin Cui",
+      "Tong Zhu",
+      "Yujuan Ding",
+      "Qingbao Huang",
+      "Tao Wang",
+      "Jiayuan Xie",
+      "Changmeng Zheng",
+      "Qing Li"
+    ],
+    "date": "2026-08-31",
+    "updated": "2026-08-31",
+    "url": "https://arxiv.org/abs/2608.30938",
+    "primary_category": "cs.MA",
+    "comment": "18 pages",
+    "suggested_category": "agentic-diagnosis",
+    "suggest_score": 0.632
+  },
+  {
+    "id": "2608.31014",
+    "version_id": "2608.31014v1",
+    "title": "Evidence-Bounded Mental Health Reasoning from Heterogeneous Speech Protocols",
+    "abstract": "Computational mental health screening using multimodal speech and text has shown great promise. However, existing models often assume all clinical speech protocols carry equivalent evidentiary validity. In reality, heterogeneous protocols, from free interviews to fixed reading tasks, support fundamentally different evidence. Forcing uniform reasoning flattens these boundaries, causing models to hallucinate symptoms from irrelevant text or overclaim support. Even advanced long chain-of-thought LLMs fail to resolve this issue, as free-form reasoning can exacerbate boundary violations. To address this, we reformulate multimodal screening as an evidence-bounded reasoning problem. We introduce the Evidence Package Benchmark, integrating 1,870 packages across six heterogeneous sources with explicit modality masks and evidence permissions. We further propose EviBound, a protocol-aware evidence control framework. Unlike direct LLM prompting, EviBound uses a profile-aware planner to restrict reasoning scope, orchestrates evidence tools via five-way acoustic consensus, and enforces a boundary critic to suppress unsupported claims. Empirical results show EviBound achieves a held-out test Depression AUROC of 0.8658, exceeding the strongest direct omni-modal baseline by +0.0811 AUROC while maintaining zero claim violations. Our work moves beyond unconstrained accuracy toward evidence-consistent, protocol-aware systems for safer clinical NLP research.",
+    "authors": [
+      "Chengyuan Gao",
+      "Jiang Wu",
+      "Tao Lu",
+      "Jiayan Guo",
+      "Mingkun Xu",
+      "Tianyi Zang",
+      "Shangyang Li"
+    ],
+    "date": "2026-08-31",
+    "updated": "2026-08-31",
+    "url": "https://arxiv.org/abs/2608.31014",
+    "primary_category": "cs.CL",
+    "comment": "Accepted to Findings of the Association for Computational Linguistics: EMNLP 2026. Long paper",
+    "suggested_category": "prompt-structure",
+    "suggest_score": 0.667
+  },
+  {
+    "id": "2608.30758",
+    "version_id": "2608.30758v1",
+    "title": "CheXGround: Anatomical Region Tokens for Grounded Longitudinal Chest X-ray Interpretation",
+    "abstract": "Recent radiology multi-modal language models have made substantial progress in chest X-ray report generation, visual question answering, and temporal reasoning. While longitudinal chest X-ray interpretation compares sequential examinations to describe change, visual grounding aims to connect clinical language with localized image evidence. Although longitudinal modeling and visual grounding have each advanced radiology language models, how localized visual evidence can support longitudinal interpretation remains under-explored. We introduce CheXGround, a region-grounded longitudinal chest X-ray language model that represents paired studies through corresponding anatomical regions. CheXGround extracts anatomical regions from current and prior radiographs, encodes them as temporally enhanced Region-of-Interest (ROI) tokens, and combines them with global temporal image context during generation. To connect these region tokens with clinical text, we propose Temporal Region--Phrase Alignment, a pretraining objective that aligns temporal anatomical representations with localized report phrases. We evaluate CheXGround on single-study and longitudinal Visual Question Answering (VQA), longitudinal findings generation, temporal grounded VQA, and anatomical grounding. Across these tasks, CheXGround improves clinical language quality, temporal reasoning, and localization accuracy over recent baselines. Our results suggest that organizing longitudinal evidence at the anatomical level is a strong representation for grounded radiology language modeling. Project page: https://adonaydem.github.io/chexground-website",
+    "authors": [
+      "Adonay Demewez Gebremedhin",
+      "Wessam Shehieb",
+      "Sara Alansari",
+      "Mohamad Alansari",
+      "Muzammal Naseer",
+      "Sajid Javed",
+      "Naoufel Werghi"
+    ],
+    "date": "2026-08-31",
+    "updated": "2026-08-31",
+    "url": "https://arxiv.org/abs/2608.30758",
+    "primary_category": "cs.CV",
+    "comment": "Accepted for publication at the 37th British Machine Vision Conference (BMVC2026)",
+    "suggested_category": "mllm-imaging",
+    "suggest_score": 1.809
+  },
+  {
+    "id": "2608.29582",
+    "version_id": "2608.29582v1",
+    "title": "SUP-MIMIC: A Multi-Task Clinical Diagnosis Benchmark for Evaluating LLMs' Robustness to Contradictory Evidence",
+    "abstract": "Current evaluations of large language models (LLMs) primarily focus on factual knowledge retrieval, overlooking the fundamental challenge of navigating the complex, non-bijective mappings between clinical indicators and diagnoses. Existing benchmarks fail to assess whether large language models truly possess the reasoning capability required for diagnostic ambiguity scenarios, where identical clinical presentations may correspond to different etiologies, and diagnostic convergence scenarios, where heterogeneous symptoms ultimately indicate the same disease. To address this issue, we propose SUP-MIMIC, a multi-task framework utilizing MIMIC-IV-v3.1 that comprises Basic Assessment (BA), Diagnostic Divergence Task (DDT), and Diagnostic Convergence Task (DCT). Specifically, DDT is designed to evaluate the model's \"one-to-many\" disambiguation capability among phenotypically similar cases, while DCT assesses the model's ability to identify \"many-to-one\" diagnostic patterns across different pathophysiological pathways. Comprehensive evaluation of state-of-the-art LLMs reveals substantial performance degradation on DDT and DCT compared to baseline tasks, exposing a systemic reliance on statistical shortcuts over genuine causal reasoning. Our findings further highlight a conservative bias toward \"healthy\" predictions, implying non-trivial risks for missed diagnoses in realistic medical settings. This work establishes a rigorous methodology for quantifying clinical reasoning robustness and provides a roadmap for enhancing the safety of language models in clinical medicine.",
+    "authors": [
+      "Yi Yu",
+      "Bo Wang",
+      "Chong Feng",
+      "Ge Shi",
+      "Xia Liu",
+      "Ziyi Yang",
+      "Xuewen Shi"
+    ],
+    "date": "2026-08-30",
+    "updated": "2026-08-30",
+    "url": "https://arxiv.org/abs/2608.29582",
+    "primary_category": "cs.CL",
+    "comment": "18 pages, 13 figures, 3 table",
+    "suggested_category": "faithfulness",
+    "suggest_score": 0.632
+  },
+  {
+    "id": "2608.29528",
+    "version_id": "2608.29528v1",
+    "title": "MedCache: Efficient and Temporally Valid Memory for Longitudinal Clinical Agents",
+    "abstract": "Longitudinal clinical agents must maintain an evolving patient state from evidence distributed across visits, time points, and specialties. However, how agent memory should be designed for this setting remains unclear. We introduce a benchmark of multi-visit, multi-specialty patient records that evaluates long-context evidence retrieval, cross-time evidence aggregation, and cross-specialty clinical reasoning. Using this benchmark, we systematically study four memory design choices: curation, organization, retrieval, and memory-augmented reasoning. We find that temporal validity is more important than simply retaining more history; specialty-factorized memory reduces context but can hide shared evidence; and multiple agents help when specialists must reason together, not merely when evidence comes from multiple memories. Guided by these findings, we propose \\textit{MedCache}, a hybrid framework that constructs temporally valid patient memory, organizes evidence into overlapping specialty views, routes each query to relevant memories, and adaptively invokes one or multiple specialists. Experiments show that MedCache improves reasoning accuracy and memory efficiency over strong single-agent and multi-agent baselines, while generalizing across model backbones and external datasets.",
+    "authors": [
+      "Hei Ting",
+      "Chan",
+      "Chenwei Wu",
+      "Xueshen Liu",
+      "Boyuan Zheng",
+      "Liyue Shen",
+      "Jiasi Chen",
+      "Z. Morley Mao"
+    ],
+    "date": "2026-08-30",
+    "updated": "2026-08-30",
+    "url": "https://arxiv.org/abs/2608.29528",
+    "primary_category": "cs.LG",
+    "comment": "",
+    "suggested_category": "benchmark",
+    "suggest_score": 0.667
+  },
+  {
+    "id": "2608.29431",
+    "version_id": "2608.29431v1",
+    "title": "Evaluating the Semantic Specificity of Representation Steering in Language Models",
+    "abstract": "Localized Representation Steering (LRS) is widely used to correct reasoning pathologies in large language models. However, standard benchmark evaluations can easily be fooled by superficial label overrides, creating a false impression of reasoning circuit repairs. In this work, we propose Cross-Rule Transfer (CRT), a diagnostic framework that audits representational interventions by evaluating them on rule families where the model is natively competent. Evaluating late-layer LRS for a widespread logical failure, contradiction blindness, reveals that the intervention merely injects a global label bias: applying the steering vector to rules the model already handles correctly (99.6% baseline) degrades performance to 40.4% by forcing false contradiction predictions. We support this diagnosis with four complementary controls (direct logit bias equivalence, control vector label-flipping, cross-model grafting, and early-layer steering checks), providing a rigorous methodology to distinguish genuine reasoning repairs from superficial label overrides.",
+    "authors": [
+      "Zhangdie Yuan",
+      "Andreas Vlachos"
+    ],
+    "date": "2026-08-29",
+    "updated": "2026-08-29",
+    "url": "https://arxiv.org/abs/2608.29431",
+    "primary_category": "cs.CL",
+    "comment": "",
+    "suggested_category": "benchmark",
+    "suggest_score": 0.333
+  },
+  {
+    "id": "2608.28859",
+    "version_id": "2608.28859v1",
+    "title": "The Halt Vector: Internalizing a Causal Steering Intervention for Efficient Reasoning",
+    "abstract": "Reasoning models do not stop when they know the answer. On DeepSeek-R1-Distill-Qwen-7B the chain of thought runs about twice as long as the model's own answer probability takes to settle, and how much of that excess is removable varies from problem to problem, so a global length penalty cannot take it out. We take it out by internalizing a causal interpretability finding into the weights. The mechanism is a halt vector: a difference-of-means direction at layer 18 of this model whose steering strength controls how long it thinks, while a replicated value axis does nothing. Installing that intervention in the weights is harder than it looks. Maximizing the scalar projection onto the direction corrupts the off-axis dimensions a frozen downstream reader depends on, and generation gets longer instead of shorter; what works is reconstructing the whole steered activation with those dimensions pinned to their natural values. Fit from 24 problems and no reinforcement learning, the halt removes about a quarter of the thinking at held accuracy across five unseen benchmarks, and the cut tracks each problem's own removable slack at 0.70. It also closes a non-termination pathology that grows with difficulty and that a decoding-time confidence hook makes worse. We do not claim to beat a well-tuned length penalty or decoding-time early exit on the raw trade-off; the contribution is how the halt is obtained.",
+    "authors": [
+      "Dylan Jayabahu",
+      "Tinuade Adeleke"
+    ],
+    "date": "2026-08-28",
+    "updated": "2026-08-28",
+    "url": "https://arxiv.org/abs/2608.28859",
+    "primary_category": "cs.LG",
+    "comment": "23 pages, 3 figures. Accepted at the 2nd Workshop on Efficient Reasoning, COLM 2026 (non-archival). Code: https://github.com/dylanjayabahu/halt-vector",
+    "suggested_category": "rlvr",
+    "suggest_score": 0.632
+  },
+  {
     "id": "2608.28373",
     "version_id": "2608.28373v1",
     "title": "AI as Teammate: Rethinking Task Distribution in Medical Training",
@@ -17,6 +183,24 @@
     "comment": "",
     "suggested_category": "survey",
     "suggest_score": 0.378
+  },
+  {
+    "id": "2608.28704",
+    "version_id": "2608.28704v1",
+    "title": "ORDDAR: Observation-Driven Reasoning for Distortion-Resilient Decision, Action, and Cognitive Recovery",
+    "abstract": "AI agents increasingly perform long-term reasoning, planning, tool use, memory integration, and autonomous decision making, yet erroneous intermediate states can propagate and cause inconsistent decisions and unreliable outputs. Existing reasoning approaches mainly rely on iterative planning, self-reflection, augmented memory, or verification, but rarely localize and selectively repair faulty reasoning. We present ORDDAR (Observation-Driven Reasoning for Distortion-Resilient Decision, Action, and Cognitive Recovery), a reasoning framework that models reasoning as cognitive state transitions, detects localized distortions, retrieves related reasoning from prior experiences, and repairs only the affected states. ORDDAR therefore performs recovery at the local reasoning-transition level rather than regenerating the complete trajectory. Experiments across mathematical, commonsense, multi-hop, and clinical reasoning benchmarks demonstrate improved reasoning quality, recovery ability, and interpretability over multiple evaluated reasoning baselines.",
+    "authors": [
+      "Deblina Kar",
+      "Anant Nawalgaria",
+      "Shyamal Kumar Das Mandal"
+    ],
+    "date": "2026-08-27",
+    "updated": "2026-08-27",
+    "url": "https://arxiv.org/abs/2608.28704",
+    "primary_category": "cs.AI",
+    "comment": "",
+    "suggested_category": "agentic-diagnosis",
+    "suggest_score": 0.632
   },
   {
     "id": "2608.26856",
