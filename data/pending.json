@@ -1,5 +1,90 @@
 [
   {
+    "id": "2609.02754",
+    "version_id": "2609.02754v1",
+    "title": "Untangling the Mechanisms of Misleading Context in Medical Question Answering",
+    "abstract": "Large language models now answer medical questions with expert-level performance. However, the context these systems act on can be misleading, and misleading context can corrupt a model's medical judgment. To understand how misleading context corrupts this judgment, we examine the model's susceptibility to the context, disclosure of it, mechanism of corrupted reasoning, and monitorability of the decision. On the medical reasoning subset of MedMisBench, a clinician-reviewed question-answering benchmark of 8,627 questions, we inject two types of misleading context cues, fabricated evidence and a bare assertion. We test three reasoning models, two that expose their full reasoning trace and one frontier model that exposes only its response. All three are more susceptible to the assertion than to the fabricated evidence, adopting the asserted answer 10 to 27 points more often. The misleading cues are disclosed in 81 to 98% of traces but only 7 to 90% of responses, and the assertion is disclosed less often than evidence based cues. Resampling from reasoning traces without disclosure shows the two cues corrupt reasoning differently, evidence entering early and accumulating while the assertion redirects the conclusion near its end. An LLM monitor catches 78% of corrupted decisions at 5% false positives when reading an open model's trace with guidance, against at most 32% from any response. The misleading context that models are most susceptible to is disclosed least, and was caught reliably only from an open reasoning trace, which frontier providers withhold.",
+    "authors": [
+      "Robin Linzmayer",
+      "Noémie Elhadad"
+    ],
+    "date": "2026-09-02",
+    "updated": "2026-09-02",
+    "url": "https://arxiv.org/abs/2609.02754",
+    "primary_category": "cs.CL",
+    "comment": "25 pages, 10 figures. Submitted to ML4H 2026",
+    "suggested_category": "benchmark",
+    "suggest_score": 0.667
+  },
+  {
+    "id": "2609.02191",
+    "version_id": "2609.02191v1",
+    "title": "Examining the Vulnerability of Multi-Agent Medical Systems to Human Interventions for Clinical Reasoning",
+    "abstract": "Human interventions at fault points can alter the diagnostic accuracy of multi-agent medical systems. We defined fault points as moments in AI agent conversations, in which an agent's reasoning became most vulnerable to external influence. Using the MedQA dataset, this study analyzed simulated doctor-patient conversations to measure how interventions shifted reasoning and accuracy. Correct intervention methods showed an improvement in baseline diagnostic accuracy of up to 40%, while incorrect or bias-related interventions degraded performance by up to 6% and increased diagnostic drift and uncertainty. Beyond performance changes, our analysis revealed behavioral similarities between cognitive biases in simulated agent environments and real-world clinical practice. Examples included premature closure and susceptibility to misleading cues. Overall, these findings demonstrate that identifying and guiding fault points with human interventions may provide a mechanism for improving diagnostic robustness in multi-agent medical systems.",
+    "authors": [
+      "Benjamin C Liu",
+      "Dillon Mehta",
+      "Rishi Malhotra",
+      "Adam Zobian",
+      "Yong Ying Tan",
+      "Samir Chopra",
+      "Daniella Rand",
+      "Natalie Pang",
+      "Abhiram Gudimella",
+      "Kevin Zhu"
+    ],
+    "date": "2026-09-02",
+    "updated": "2026-09-02",
+    "url": "https://arxiv.org/abs/2609.02191",
+    "primary_category": "cs.AI",
+    "comment": "",
+    "suggested_category": "benchmark",
+    "suggest_score": 0.667
+  },
+  {
+    "id": "2609.02805",
+    "version_id": "2609.02805v1",
+    "title": "Large Language Models (LLMs) for Telecom Root Cause Analysis (RCA): A Structured Reasoning Framework for Evidence-Grounded Diagnosis",
+    "abstract": "Root cause analysis (RCA) is a critical task in telecom network operations, but diagnosing performance degradations in modern 5G and emerging 6G networks remains challenging due to complex cross-layer dependencies. While large language models (LLMs) offer promising capabilities for reasoning and knowledge integration, directly applying vanilla LLMs to telecom RCA often leads to hallucination, unstable reasoning, and poor alignment with structured network evidence. This work first reviews the evolution of telecom RCA from rule-based and machine learning (ML) approaches to emerging LLM-enabled techniques, and provides an overview of recent paradigms, including structured reasoning, retrieval-augmented knowledge grounding, agentic orchestration, and verifiable reasoning. Building upon these insights, we propose a structured reasoning framework for LLM-enabled telecom RCA that aligns diagnostic reasoning with telecom-specific evidence and domain knowledge. The proposed approach first organizes heterogeneous network telemetry into canonical contexts, and then enforces decision-path reasoning during diagnosis, and finally generates evidence-grounded explanations for reliable fault identification. Experimental results on two 5G RCA datasets, TeleLogs and TelecomTS, demonstrate that the proposed framework consistently improves diagnostic accuracy and decision consistency compared with baseline techniques. These cross-dataset results highlight the importance of structured reasoning design for practical LLM-based RCA systems in next-generation telecom networks.",
+    "authors": [
+      "Hao Zhou",
+      "Mandar Kulkarni",
+      "Hao Chen",
+      "Yan Xin",
+      "Charlie",
+      "Zhang"
+    ],
+    "date": "2026-09-02",
+    "updated": "2026-09-02",
+    "url": "https://arxiv.org/abs/2609.02805",
+    "primary_category": "cs.AI",
+    "comment": "",
+    "suggested_category": "knowledge-grounded",
+    "suggest_score": 0.667
+  },
+  {
+    "id": "2609.02411",
+    "version_id": "2609.02411v1",
+    "title": "The Diagnosis a Reporter Leaves Unspoken: Surfacing Frozen Tumor Features for Brain-Tumor MRI Reporting",
+    "abstract": "A capable brain-MRI report generator can still be, in effect, diagnostically silent. When a multi-chain chain-of-thought (CoT) reporter built on a medical Mistral-7B backbone is evaluated on held-out cohorts, it names most meningiomas and almost all metastases \"glioma\" (diagnosis recall 0.44/0.07). Yet the answer is not absent from the model: a supervised linear probe applied to its frozen segmentation features recovers the three tumour cohorts at 0.82 macro-F$_1$ (5-fold cross-validation; chance $\\approx$0.33). We introduce NeuroFusion, an assistive reporter that surfaces this latent signal rather than overriding it: discriminative field-classifier heads over per-lesion features condition a fast, single-pass draft-then-review decoder on their committed outputs. Built on the identical Mistral backbone, this restores the diagnosis (meningioma 0.92, metastasis 0.75) and wins 8 of 9 prose-content comparisons across three held-out cohorts (RaTEScore, RadGraph-F$_1$, GREEN; Holm-corrected paired BCa), with no significant loss on the ninth, at 5-6x lower latency ($\\approx$80 vs. 457 s/case). A controlled negative result sharpens the mechanism: a learned diagnosis pin that overrides the decoder instead of merely informing it collapses out-of-distribution metastasis recall to 0.03. Grammar-constrained decoding keeps 92.3% of records schema-valid, making every sentence entailment-checkable (7.5% contradicted vs. 36.8% for the direct baseline). In a blinded nine-case pilot, two board-certified neurologists independently rated NeuroFusion highest in every tumour type, the only system with zero critical errors, and gave it the top-rated sign-off in eight of nine cases (six outright, two ties).",
+    "authors": [
+      "Khawaja Murad ul Hassan",
+      "Ruqiyya Adil",
+      "Adil Qayyum",
+      "Rida Hassan",
+      "Asad Mansoor Khan",
+      "Muhammad Usman Akram",
+      "Mehran Ebrahimi"
+    ],
+    "date": "2026-09-02",
+    "updated": "2026-09-02",
+    "url": "https://arxiv.org/abs/2609.02411",
+    "primary_category": "cs.CV",
+    "comment": "10 pages, 2 figures, 3 tables. Accepted at MLCN 2026, a workshop held in conjunction with MICCAI 2026; to appear in Springer LNCS",
+    "suggested_category": "survey",
+    "suggest_score": 0.378
+  },
+  {
     "id": "2609.01111",
     "version_id": "2609.01111v1",
     "title": "ClinTraceBench: Source-Verifiable Longitudinal Clinical Reasoning over EHR-Derived Dialogues",
