@@ -1,5 +1,56 @@
 [
   {
+    "id": "2609.03690",
+    "version_id": "2609.03690v1",
+    "title": "MetaStructAtlas: A Grounded 3D Vision-Language Dataset and Benchmark for Functional and Structural Reasoning in Whole-Body PET/CT",
+    "abstract": "The joint interpretation of metabolic function and anatomical structure is essential for clinical diagnosis in whole-body PET/CT. Although recent advances in 3D medical vision-language models have demonstrated remarkable progress, current efforts are limited to regional CT imaging, leaving a critical void in comprehensive whole-body PET/CT analysis. In this work, we introduce MetaStructAtlas, a large-scale dataset for grounded whole-body PET/CT interpretation that synthesizes multimodal imaging with integrated anatomical, metabolic, and semantic annotations. MetaStructAtlas provides 490 co-registered 3D PET and CT volumes with 50,470 organ-level segmentation masks and grounded radiology reports. To facilitate interactive reasoning, we further developed MetaStructVQA, a standardized 3D grounded visual question-answering benchmark containing 100,565 QA pairs. This framework explicitly links diagnostic queries to visual evidence across modalities, encompassing anatomical, morphological, and metabolic characteristics. Finally, we evaluate state-of-the-art 3D medical VLMs on MetaStructVQA, establishing a robust foundation for multimodal representation learning and integrated whole-body reasoning in nuclear medicine.",
+    "authors": [
+      "Chenguang Zheng",
+      "Le Xue",
+      "Yichi Zhang",
+      "Wenbo Zhang",
+      "Zehui Ling",
+      "Gang Feng",
+      "Xin Gao",
+      "Yuan Qi",
+      "Yuan Cheng",
+      "Zixin Hu",
+      "Mei Tian"
+    ],
+    "date": "2026-09-03",
+    "updated": "2026-09-03",
+    "url": "https://arxiv.org/abs/2609.03690",
+    "primary_category": "cs.CV",
+    "comment": "",
+    "suggested_category": "mllm-imaging",
+    "suggest_score": 1.206
+  },
+  {
+    "id": "2609.03261",
+    "version_id": "2609.03261v1",
+    "title": "MedQA-MM: Shortcuts Behind Medical Visual Reasoning",
+    "abstract": "A benchmark score credits final answers, but not the route by which an item can be answered. In medical multimodal multiple-choice questions (MCQs), this distinction matters because a correct answer can be supported by the intended image finding or by benchmark-preserved cues in the wording of answers, non-visual clinical text, visible image text, artificial annotations, or device/context artifacts. We call the resulting score-level overinterpretation reasoning inflation. Here, a route is an observable input path that can support answer selection, not a claim about the model's hidden cognition. Across six medical multimodal MCQ datasets, we separate candidate cues from behavioral evidence through prompt- and image-side audits, modality ablations, and matched repairs that preserve the medical target and answer key. In a 13-configuration open-model panel, full-input accuracy is 62.63%, while text-only and options-only settings achieve 53.96% and 29.71%, respectively. Removing length-gap, absolute/conspicuous, and spatial/prepositional cues lowers accuracy by 6.58, 3.50, and 4.77 percentage points. We also construct MedQA-MM, a 1,000-item shortcut-mitigated subset, where text-only and options-only accuracy fall to 5.21% and 12.33%. This does not imply that models never use images; it shows that medical image-reasoning claims require route-level evidence.",
+    "authors": [
+      "Benlu Wang",
+      "Yifan Zhang",
+      "Jiaqing Yu",
+      "Chin Siang Ong",
+      "Juncheng Huang",
+      "Zhuohao Li",
+      "Zhenyu Zhang",
+      "Arman Cohan",
+      "Hong Yu",
+      "Zonghai Yao"
+    ],
+    "date": "2026-09-03",
+    "updated": "2026-09-03",
+    "url": "https://arxiv.org/abs/2609.03261",
+    "primary_category": "cs.CV",
+    "comment": "",
+    "suggested_category": "benchmark",
+    "suggest_score": 0.667
+  },
+  {
     "id": "2609.02754",
     "version_id": "2609.02754v1",
     "title": "Untangling the Mechanisms of Misleading Context in Medical Question Answering",
