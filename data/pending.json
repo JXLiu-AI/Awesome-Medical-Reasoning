@@ -1,5 +1,86 @@
 [
   {
+    "id": "2609.05090",
+    "version_id": "2609.05090v1",
+    "title": "Constructing and Evaluating Clinical Reasoning Trajectories for Medical Agent",
+    "abstract": "Evaluation of medical artificial intelligence agents remains predominantly answer-centric, assessing only the correctness of final outputs while overlooking the quality of intermediate reasoning. In clinical settings, however, a correct answer reached through fabricated evidence or incoherent logic is as dangerous as an incorrect one. We propose MedTraj, a framework that treats reasoning trajectories as critical objects for construction, evaluation, and optimization. The pipeline generates structured multi-step reasoning chains from medical reasoning sources. Each trajectory is then parsed into clinical observations, evidence, numbered reasoning steps, and a final conclusion, and scored across five quality dimensions: coherence, evidence support, hallucination, completeness, and traceability. Controlled error injection introduces targeted faults into otherwise correct trajectories to establish causal links between specific reasoning failures and measurable quality degradation. Building on this, step-level filtering based on marginal contribution identifies which individual reasoning steps drive or undermine trajectory quality. Finally, quality-weighted context learning feeds trajectory evaluations back into the model at inference time, allowing it to learn from both strong and weak reasoning demonstrations. Experiments across CareQA, PubMedQA, and CECMed demonstrate that trajectory context consistently improves reasoning coherence, with gains of +0.029 to +0.041 over a zero-shot baseline. On CECMed, quality-weighted context nearly doubles the correctness over the zero-shot baseline while cutting the hallucination ratio by 87%. Marginal-contribution analysis further shows that a small minority of reasoning steps carry most of the quality signal, and that extending chains beyond four steps yields diminishing returns.",
+    "authors": [
+      "Yunqi Zhu",
+      "Wensheng Zhang",
+      "Xuebing Yang"
+    ],
+    "date": "2026-09-04",
+    "updated": "2026-09-04",
+    "url": "https://arxiv.org/abs/2609.05090",
+    "primary_category": "cs.AI",
+    "comment": "",
+    "suggested_category": "process-reward",
+    "suggest_score": 0.378
+  },
+  {
+    "id": "2609.04842",
+    "version_id": "2609.04842v1",
+    "title": "MMTClinic: Multimodal, Multilingual Time Series Question Answering and Reasoning Benchmark for Clinical Domain",
+    "abstract": "Time-series data in clinical settings is crucial for capturing dynamic changes in a patient's health over time, enabling timely diagnosis, personalized treatment, and early detection of critical events. However, the development of clinically reliable and linguistically inclusive medical AI systems remains a significant challenge, primarily due to the lack of multimodal, multilingual, and time-series-grounded benchmarks that reflect the complexity of real-world clinical scenarios. To fill this gap, we present MMTClinic, a benchmark designed to evaluate large language models (LLMs) on complex reasoning and question-answering tasks involving clinical time-series. MMTClinic combines text, medical images, and multivariate physiological signals and includes 30,000 QA pairs (15,000 multiple choice questions (MCQs) and 15,000 open-ended questions) across five languages: English, Hindi, Bengali, Marathi, and Tamil. These questions cover three important clinical tasks---mortality prediction, heart rate forecasting, and SOFA score estimation. We evaluate 13 state-of-the-art LLMs in zero-shot, few-shot, and chain-of-thought settings. Our evaluation reveals notable differences in model performance across tasks, languages, and modalities, highlighting current limitations in clinical reasoning capabilities. MMTClinic provides a valuable resource for advancing multilingual, multimodal, and time-series-aware medical AI research. The dataset will be made publicly available on successful acceptance of the work.",
+    "authors": [
+      "Sourav Malakar",
+      "Harshit Nigam",
+      "Akash Ghosh",
+      "Sriparna Saha",
+      "Amlan Chakrabarti",
+      "Saptarsi Goswami",
+      "Priti Singh"
+    ],
+    "date": "2026-09-04",
+    "updated": "2026-09-04",
+    "url": "https://arxiv.org/abs/2609.04842",
+    "primary_category": "cs.CL",
+    "comment": "",
+    "suggested_category": "prompt-structure",
+    "suggest_score": 0.667
+  },
+  {
+    "id": "2609.04598",
+    "version_id": "2609.04598v1",
+    "title": "PetQA: Benchmarking Veterinary Knowledge and Clinical Reasoning",
+    "abstract": "We introduce PetQA, a Korean long-form question-answering (QA) benchmark for evaluating veterinary knowledge and clinical reasoning in large language models (LLMs) and large vision-language models (LVLMs). PetQA contains 10,076 text-only and 8,751 multimodal QA pairs derived from real-world questions about dogs and cats, paired with answers from expert veterinarians. Its test split, PetQA-Bench, further includes annotations for question types and clinical conditions. We evaluate eighteen models using ROUGE, BERTScore, and LLM-as-a-judge metrics for factuality and helpfulness under three settings: zero-shot inference, retrieval-augmented generation (RAG), and supervised fine-tuning (SFT). The benchmarking results provide an overview of the strengths and limitations of current models in addressing veterinary clinical queries and highlight the need for more effective adaptation methods to develop clinically reliable AI systems for veterinary care. To facilitate broader use, we additionally provide translated versions of PetQA-Bench in five languages.",
+    "authors": [
+      "Taegyun Kim",
+      "Youngwook Ham",
+      "Jungwook Rhim",
+      "Ju-Hyun An",
+      "Sungkyu Park",
+      "Kunwoo Park"
+    ],
+    "date": "2026-09-04",
+    "updated": "2026-09-04",
+    "url": "https://arxiv.org/abs/2609.04598",
+    "primary_category": "cs.CL",
+    "comment": "EMNLP 2026",
+    "suggested_category": "knowledge-grounded",
+    "suggest_score": 0.667
+  },
+  {
+    "id": "2609.05069",
+    "version_id": "2609.05069v1",
+    "title": "A Structured Debate-Mixture-of-Agents Framework for Complex Clinical Diagnostic Decision Support",
+    "abstract": "Large language models (LLMs) show potential for medical tasks, but their single-turn question-answer format does not reflect how clinical diagnosis is performed in practice. As a result, they remain limited in complex diagnostic settings. We developed Debate-Mixture-of-Agents (DMoA), a novel multi-agent framework that structures role-based interaction to support iterative diagnostic reasoning. Base models and DMoA were evaluated on 297 rare disease cases and 1,719 challenging cases. Across both datasets, DMoA improved most likely diagnosis accuracy by 10.21 percentage points and safety rate by 11.36 percentage points over GPT-4o baseline. Ablation experiments showed that the gains were not simply due to the use of more models or longer outputs, but also reflected the contribution of the structured workflow. Further analyses examined how framework design, base model choice, and token budget affected performance. DMoA performed better with a 4*2 structure, stronger base models, and a larger token budget. These findings demonstrate the potential of DMoA for clinical tasks and suggest further investigation of multi-agent frameworks.",
+    "authors": [
+      "Chang Xia",
+      "Leilei Ouyang",
+      "Huimin Wang",
+      "Yong Zhao",
+      "Kang Li"
+    ],
+    "date": "2026-09-04",
+    "updated": "2026-09-04",
+    "url": "https://arxiv.org/abs/2609.05069",
+    "primary_category": "cs.CL",
+    "comment": "13 pages, 6 figures",
+    "suggested_category": "agentic-diagnosis",
+    "suggest_score": 0.949
+  },
+  {
     "id": "2609.03690",
     "version_id": "2609.03690v1",
     "title": "MetaStructAtlas: A Grounded 3D Vision-Language Dataset and Benchmark for Functional and Structural Reasoning in Whole-Body PET/CT",
