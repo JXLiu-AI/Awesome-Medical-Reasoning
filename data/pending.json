@@ -1,5 +1,47 @@
 [
   {
+    "id": "2609.10939",
+    "version_id": "2609.10939v1",
+    "title": "Evaluating Scaffolding-Oriented Multi-Agent Large Language Model System for Clinical Interview Training",
+    "abstract": "Clinical education must prepare medical students to conduct safe and coherent patient interviews under conditions of uncertainty. Traditional standardized patient (SP) training is resource-intensive and difficult to scale. We developed a scaffolding-oriented multi-agent Large Language Model (LLM) AI Standardized Patient (AI-SP) training platform1. The system includes a patient agent for simulated dialog, a tutor agent providing Socratic prompts without disclosing diagnostic information, and a turn-level evaluator agent that monitors clinical progress without revealing summative scores. In a randomized controlled study (N = 100 medical students), participants were assigned to either a multi-agent (MA) scaffolding condition or a control condition. All students completed two learning sessions under their assigned condition followed by an examination conducted in a patient only environment. Performance was assessed using a standardized Objective Structured Clinical Examination (OSCE) based rubric. While no significant difference was observed in final diagnostic accuracy between groups, the multi-agent AI standardized patient system improved final examination scores compared to the control group utilizing structured progressive information disclosure; the most substantial and consistent improvements were observed in communication, the expression of empathy, and specific history-taking behaviors. These findings suggest that specialized LLM agents enhance the process quality of simulated clinical interviews without artificially inflating examination outcomes. To support future research, we release a multi-expert annotated dataset comprising transcripts, checklist annotations, turn-level evaluations, and OSCE-aligned scoring outcomes. This resource aims to facilitate the development of pedagogically grounded AI-SP systems and advance research on AI-supported clinical reasoning training.",
+    "authors": [
+      "Luming Yang",
+      "Haoxian Liu",
+      "Siqing Li",
+      "Rong Jia",
+      "Yue Xiao",
+      "Guanhua Chen",
+      "Li Lu"
+    ],
+    "date": "2026-09-10",
+    "updated": "2026-09-10",
+    "url": "https://arxiv.org/abs/2609.10939",
+    "primary_category": "cs.MA",
+    "comment": "",
+    "suggested_category": "benchmark",
+    "suggest_score": 0.667
+  },
+  {
+    "id": "2609.11185",
+    "version_id": "2609.11185v1",
+    "title": "Can LLMs Follow Medical Expert Logic? A Benchmark for Hierarchical Logical Consistency in Risk-of-Bias Assessment",
+    "abstract": "Evidence-based medicine demands strict logical consistency, yet current evaluations of large language models (LLMs) prioritize superficial label matching over genuine reasoning. We introduce LogiMed-RoB, a benchmark grounded in Cochrane Risk of Bias (RoB) 2.0 expert logic, comprising 860 randomized controlled trials (RCTs) and 14,820 queries. It evaluates models under the Hierarchical Logical Consistency (HLC) framework across four dimensions: Atomic Consistency, Domain Consistency, Aggregation Consistency, and Evidential Faithfulness. Experiments on 10 state-of-the-art LLMs reveal a catastrophic Error Compounding Effect: despite the top model reaching 98.88% Atomic Consistency, its end-to-end consistency collapses to 45.13%, with several open-weight architectures plummeting to nearly 0%. We further uncover a systematic evidence-reasoning gap: even when models retrieve high-quality evidence, they fail to deduce correct outcomes in 18.63-40.05% of cases, while Blind Guess Rates reach 48.28%. LogiMed-RoB demonstrates that high outcome accuracy can conceal critical reasoning flaws, underscoring the necessity of white-box logical verification for clinical deployment.",
+    "authors": [
+      "Jiayu Huang",
+      "Zichen Tang",
+      "Qianhui Ling",
+      "Zemin Kuang",
+      "Haihong E"
+    ],
+    "date": "2026-09-10",
+    "updated": "2026-09-10",
+    "url": "https://arxiv.org/abs/2609.11185",
+    "primary_category": "cs.AI",
+    "comment": "Accepted to EMNLP 2026 Main Conference",
+    "suggested_category": "benchmark",
+    "suggest_score": 0.333
+  },
+  {
     "id": "2609.10315",
     "version_id": "2609.10315v1",
     "title": "TRACE: Training Reasoning Agents for Causal Exploration with Synthesized Rewards",
