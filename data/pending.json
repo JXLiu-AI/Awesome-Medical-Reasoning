@@ -1,5 +1,139 @@
 [
   {
+    "id": "2609.15161",
+    "version_id": "2609.15161v1",
+    "title": "EMR: Self-Evolving Medical Multi-Agent System via Experience Mining and Reuse",
+    "abstract": "Large language model (LLM) driven multi-agent systems have shown promise in complex clinical reasoning, yet existing approaches rely on static strategies and lack persistent clinical memory, preventing self-evolving from prior diagnostic successes and failures. We present EMR, a self-evolving medical multi-agent system via Experience Mining and Reuse. EMR introduces a hierarchical clinical experience library that organizes accumulated knowledge into three levels: clinical principles, diagnostic patterns, and representative cases. During inference, EMR emulates multidisciplinary consultation: a planner agent coordinates domain-specific department agents for specialized reasoning, while a summary agent synthesizes their analyses into a final decision. Critically, EMR automatically extracts correct diagnostic insights and failure-related warnings from multi-agent reasoning trajectories, incrementally updating the experience library to guide future cases. Experiments on medical reasoning benchmarks demonstrate that EMR consistently outperforms state-of-the-art medical multi-agent baselines. Further analysis reveals that the hierarchical experience enables cross-specialty generalization and transfer across diverse LLM backbones, offering a scalable and in",
+    "authors": [
+      "Dongsheng Shi",
+      "Yue Li",
+      "Xin Yi",
+      "Linlin Wang"
+    ],
+    "date": "2026-09-14",
+    "updated": "2026-09-14",
+    "url": "https://arxiv.org/abs/2609.15161",
+    "primary_category": "cs.CL",
+    "comment": "",
+    "suggested_category": "agentic-diagnosis",
+    "suggest_score": 0.632
+  },
+  {
+    "id": "2609.14823",
+    "version_id": "2609.14823v1",
+    "title": "MedTRACE: Tool-Augmented Multimodal Clinical Reasoning Agents for Evidence-Grounded Decision-Making",
+    "abstract": "Multimodal clinical decision-making requires reliable reasoning over heterogeneous evidence from electronic health records, medical images, and physiological signals. Existing models typically map these inputs directly to diagnoses without explicitly assessing evidence sufficiency, tool-use requirements, or diagnostic uncertainty. This paper presents MedTRACE, a tool-augmented multimodal clinical reasoning agent for evidence-grounded decision-making. MedTRACE uses modality-specific encoders to construct a unified patient-state representation and performs an iterative loop of hypothesis formation, toolaware deliberation, and evidence verification. It dynamically invokes visual grounding, evidence retrieval, and structured parsing tools to locate diagnosis-relevant regions, retrieve clinical knowledge and similar cases, and extract structured findings. The acquired evidence enters an evidence memory, where a consistency verifier confirms or revises the current hypothesis. MedTRACE outputs a diagnosis together with supporting evidence, an auditable reasoning trace, and calibrated confidence. Experiments on multiple multimodal clinical diagnosis benchmarks show that MedTRACE improves diagnostic accuracy by 5.4% and AUROC by 4.7 percentage points over the strongest baseline. It also improves evidenceselection F1 by 8.2 percentage points and visual-grounding IoU by 6.5 percentage points, reduces expected calibration error by 31.6%, and decreases unsupported diagnostic errors by 27.8%. These results demonstrate that active evidence acquisition and verification improve the accuracy, interpretability, and reliability of multimodal clinical decisionmaking.",
+    "authors": [
+      "Ji Lu",
+      "Lifei Liu",
+      "Haoran Yu",
+      "Xianglong Wang",
+      "Yiru Fang",
+      "Kuo Yang",
+      "Huiran Duan",
+      "Jianping Gou"
+    ],
+    "date": "2026-09-13",
+    "updated": "2026-09-13",
+    "url": "https://arxiv.org/abs/2609.14823",
+    "primary_category": "cs.CL",
+    "comment": "Accepted to the 22nd International Conference on Advanced Data Mining and Applications (ADMA 2026)",
+    "suggested_category": "knowledge-grounded",
+    "suggest_score": 0.667
+  },
+  {
+    "id": "2609.14441",
+    "version_id": "2609.14441v1",
+    "title": "From Visual Attribution to Clinical Reasoning: Explainable Parkinson's Disease Screening from Hand-Drawn Patterns",
+    "abstract": "Parkinson's disease (PD) manifests early neuromotor impairments that become observable in controlled hand-drawn patterns such as spirals and meanders, where tremor-induced oscillations, stroke irregularity, and curvature instability reflect underlying motor degradation. In this work, we present an explainable framework for PD screening from offline hand-drawn patterns that integrates discriminative visual modeling with clinically grounded reasoning. The predictive model captures distributed structural distortions and fine-grained texture variations. It is evaluated under subject-disjoint protocols to ensure reliable generalization. To move beyond black-box classification, we introduce a multi-stage explainability pipeline that combines visual attribution with structured symptom abstraction. Salient regions are identified using attention- and gradient-based localization, followed by extraction of clinically meaningful motor descriptors quantifying contour roughness, curvature irregularity, stroke variability, and tremor-frequency energy. These descriptors are subsequently translated into coherent clinical rationales through a language-based reasoning module, linking model evidence to established PD symptomatology. By bridging visual attribution and clinical interpretation, the proposed framework advances interpretable document intelligence for neurological screening using hand-drawn patterns. Experimental results on publicly available Parkinson's disease handwriting datasets demonstrate competitive predictive performance and clinically consistent explanations.",
+    "authors": [
+      "Aritra Dey",
+      "Utsav Kumar Nareti",
+      "Chandranath Adak",
+      "Soumi Chattopadhyay",
+      "Krishna Gopal Sasmal",
+      "Saeed Anwar"
+    ],
+    "date": "2026-09-13",
+    "updated": "2026-09-13",
+    "url": "https://arxiv.org/abs/2609.14441",
+    "primary_category": "cs.CV",
+    "comment": "",
+    "suggested_category": "sft-distill",
+    "suggest_score": 0.354
+  },
+  {
+    "id": "2609.14018",
+    "version_id": "2609.14018v1",
+    "title": "VeriDx: Earning the Right to Diagnose with Disease-Centric Verification",
+    "abstract": "A correct diagnosis can still be reached for the wrong reasons. In clinical reasoning, every disease hypothesis creates obligations: key evidence must be checked, alternatives must be ruled out, contradictions must be resolved, useful tests must be considered, and closure must be justified. Current evaluations of medical LLMs mostly focus on final answers, local steps, or isolated facts, and therefore miss these hypothesis-induced commitments. We introduce \\textbf{VeriDx}, a disease-centric verification framework that links free-form diagnostic reasoning to structured disease profiles. VeriDx tracks whether each hypothesis is satisfied, unresolved, or violated its clinical obligations, exposing failures such as missing critical tests, unresolved differentials, ignored contradictions, unsupported claims, and premature closure. We instantiate VeriDx for complex respiratory diagnosis using guideline-derived disease profiles and expert-annotated longitudinal cases. Our results show that many diagnostic errors are not isolated mistakes, but broken commitments made earlier in the reasoning process.",
+    "authors": [
+      "Zhong Cao",
+      "Shuying Chen"
+    ],
+    "date": "2026-09-12",
+    "updated": "2026-09-12",
+    "url": "https://arxiv.org/abs/2609.14018",
+    "primary_category": "cs.AI",
+    "comment": "accepted by EMNLP 2026, 17 pages, 3 figures, 3 tables",
+    "suggested_category": "knowledge-grounded",
+    "suggest_score": 0.333
+  },
+  {
+    "id": "2609.12822",
+    "version_id": "2609.12822v1",
+    "title": "Scaling Clinical Judgment to Evaluate Medical AI",
+    "abstract": "Blinded physician evaluation has been considered by many to be the gold standard for assessing clinical reasoning in large language models (LLMs). This is difficult to scale; thus, prior studies typically rely on small physician panels, often from a single institution or specialty, which both limits the scientific questions investigated and makes it unclear whether findings would be reproduced with a different set of evaluators. To more rigorously and scalably study clinical reasoning in AI models, here we introduce PrecepTron, an LLM fine-tuned for physician-level evaluation of open-ended responses. PrecepTron was trained using low-rank adaptation (LoRA) of a 32-billion-parameter model on a small number of physician examples. We also release GRAND-ROUNDS, a new large-scale physician-annotated benchmark of 9,217 scores by 11 physicians across seven studies. We show that frontier LLMs in typical \"LLM-as-a-judge\" approaches often disagree with physicians and with each other, but fine-tuning PrecepTron on a small number of cases enables physician-level consistent scoring across tasks. We use PrecepTron to reproduce headline findings from five influential studies assessing LLMs for clinical care in JAMA, Science, and Nature Medicine without new human grading. Using PrecepTron, we then pose new questions about how LLMs reason in medicine that would have been infeasible with human grading alone, including measuring the diagnostic accuracy of frontier LLMs when clinical cases are provided piecemeal, even token by token. Together, PrecepTron and GRAND-ROUNDS provide a foundation for reproducible, large-scale study of how LLMs reason in medicine. All code, data, and labels are made freely available for researchers.",
+    "authors": [
+      "Thomas A. Buckley",
+      "Zahir Kanjee",
+      "Peter G. Brodeur",
+      "Byron Crowe",
+      "Anthony M. Pettinato",
+      "Aashna P. Shah",
+      "Adrian D. Haimovich",
+      "Liam G. McCoy",
+      "Daniel Restrepo",
+      "Ethan Goh",
+      "Jonathan H. Chen",
+      "Laura Zwaan",
+      "Katherine E. Goodman",
+      "Daniel J. Morgan",
+      "Raja-Elie E. Abdulnour",
+      "Adam Rodman",
+      "Arjun K. Manrai"
+    ],
+    "date": "2026-09-11",
+    "updated": "2026-09-11",
+    "url": "https://arxiv.org/abs/2609.12822",
+    "primary_category": "cs.AI",
+    "comment": "",
+    "suggested_category": "benchmark",
+    "suggest_score": 0.667
+  },
+  {
+    "id": "2609.12277",
+    "version_id": "2609.12277v1",
+    "title": "Reinforcement Learning over Patient Trajectories for Clinical Reasoning in EHR Foundation Models",
+    "abstract": "Electronic health record (EHR) foundation models trained on longitudinal patient trajectories have demonstrated strong performance across diverse clinical prediction tasks. However, their clinical reasoning capabilities remain constrained by next-token prediction on limited and incomplete EHR data. To address this, we propose a reinforcement learning (RL) fine-tuning framework that treats EHR foundation models as generative policies over patient trajectories. We formulate common clinical prediction problems (e.g., hospital readmission) as event-conditioned, time-windowed reasoning tasks. We then design time-aware, rollout-sensitive rewards to account for finite rollout lengths and temporally inconclusive outcomes. We find that RL fine-tuning consistently improves over pre-trained backbones and strong baselines. Notably, it enables smaller models to surpass larger pre-trained models in data-limited regimes and induces positive transfer across tasks. Further analysis shows that RL fine-tuned models generate trajectories with stronger structural and semantic alignment to ground truth and greater downstream utility.",
+    "authors": [
+      "Yuxin Xiao",
+      "Sheng Zhang",
+      "Chandan Singh",
+      "Tristan Naumann",
+      "Hoifung Poon",
+      "Jianfeng Gao",
+      "Xiaodong Liu"
+    ],
+    "date": "2026-09-10",
+    "updated": "2026-09-10",
+    "url": "https://arxiv.org/abs/2609.12277",
+    "primary_category": "cs.LG",
+    "comment": "",
+    "suggested_category": "rlvr",
+    "suggest_score": 0.316
+  },
+  {
     "id": "2609.10939",
     "version_id": "2609.10939v1",
     "title": "Evaluating Scaffolding-Oriented Multi-Agent Large Language Model System for Clinical Interview Training",
@@ -94,6 +228,23 @@
     "comment": "8 pages, 3 figures. Submitted to ISLES 2026 challenge. To be published in Nature Lecture Notes in Computer Science (LNCS)",
     "suggested_category": "clinical-alignment",
     "suggest_score": 0.302
+  },
+  {
+    "id": "2609.11990",
+    "version_id": "2609.11990v1",
+    "title": "Assessment of Non-Institutional AI Tool Usage Among Clinicians",
+    "abstract": "Generative artificial intelligence (AI) tools are increasingly accessible and have the potential to improve efficiency across clinical workflows. However, clinicians may also use non-institutional AI tools that are not provided, managed, or governed by their healthcare institutions, creating potential concerns related to privacy, security, accuracy, and clinician-AI interaction. Little is known about how clinicians currently use these tools for work-related tasks. We conducted a descriptive survey of clinicians recruited from the University of Arizona College of Medicine-Tucson and Banner University Medical Center-Tucson between May 20 and June 26, 2026. Participants reported their use of AI tool categories and the frequency with which they used AI for specific tasks across five workload categories: administrative work, clinical work, research, studying/continued education, and teaching. Forty-four respondents completed the survey. Forty-three respondents reported using AI for at least one work-related task during the preceding 6 months. Conversational AI and clinical decision support/diagnostic AI were the most used tool categories, each reported by 28 respondents. Administrative and clinical tasks demonstrated the most frequent use. AI was also used for higher-risk activities, including diagnostic assistance and clinical decision support. Non-institutional AI use was common among surveyed clinicians and extended across a broad range of work-related activities, including tasks with potential implications for clinical reasoning and patient care. Further research is needed to characterize how clinicians use these tools, how they evaluate AI-generated outputs, and how AI can be safely and effectively integrated into clinical workflows.",
+    "authors": [
+      "Sarah Pungitore",
+      "Jarrod Mosier"
+    ],
+    "date": "2026-09-08",
+    "updated": "2026-09-08",
+    "url": "https://arxiv.org/abs/2609.11990",
+    "primary_category": "physics.soc-ph",
+    "comment": "",
+    "suggested_category": "clinical-alignment",
+    "suggest_score": 0.603
   },
   {
     "id": "2609.09356",
