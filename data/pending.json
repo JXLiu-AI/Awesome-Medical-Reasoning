@@ -1,5 +1,98 @@
 [
   {
+    "id": "2609.16660",
+    "version_id": "2609.16660v1",
+    "title": "Rewarding Reasoning, Not Answers: Fixing and Bounding Test-Time Reinforcement Learning on Medical QA",
+    "abstract": "Test-time reinforcement learning adapts a model on its own unlabeled test set using majority-vote pseudo-labels and has shown strong results in mathematics. We show that this recipe collapses on medical multiple-choice QA: accuracy stagnates while output diversity rapidly declines. Through a controlled experiment that keeps the questions, model, and optimizer fixed while changing only the answer space, we trace this failure to answer-space structure rather than domain difficulty. In small answer spaces, incorrect rollouts often collide on the same wrong pseudo-label and reinforce it; in large answer spaces, they disperse and receive little reward. This diagnosis motivates PROSE, Process Reward Guided Self-Training, which rewards reasoning quality instead of answer agreement. PROSE scores each reasoning step with a medical process reward model, assigns the trajectory reward as the minimum score across steps, and enforces answer-format constraints. Without labels, PROSE substantially improves a general Llama model, surpassing purpose-built medical models and matching much larger systems. Because the process signal is internalized into the policy, the adapted model requires no reward model at inference and transfers its gains to unseen datasets. We further show that the minimum aggregation is essential: mean aggregation can be exploited, saturating the proxy reward while degrading accuracy.",
+    "authors": [
+      "Kailong Fan",
+      "Anqi Pu",
+      "Yichen Wu",
+      "Wanhua Li",
+      "Yicong Li",
+      "Hanspeter Pfister",
+      "Huafeng Liu",
+      "Xiang Li",
+      "Quanzheng Li",
+      "Ning Guo"
+    ],
+    "date": "2026-09-15",
+    "updated": "2026-09-15",
+    "url": "https://arxiv.org/abs/2609.16660",
+    "primary_category": "cs.CL",
+    "comment": "",
+    "suggested_category": "benchmark",
+    "suggest_score": 0.667
+  },
+  {
+    "id": "2609.15855",
+    "version_id": "2609.15855v2",
+    "title": "K-Bench: a clinically calibrated benchmark for evaluating large language models in high-risk mental health conversations",
+    "abstract": "People increasingly use large language models (LLMs) for mental health support, yet their safety in evolving, high-risk conversations remains poorly characterised. We developed K-Bench, a clinician-calibrated, protected benchmark evaluating 125 model configurations representing 33 base models from 14 providers across a fixed cohort of 200 multi-turn vignettes involving suicide, self-harm, domestic violence, substance misuse, and no-risk presentations. Synthetic patient conversations showed substantial distributional overlap with real human-AI conversations. A frozen GPT-4o judge achieved 94.2% exact agreement with clinician consensus across 6,751 eligible item comparisons from 151 clinician-rated transcripts. Leading models combined strong supportive conversation with combined-risk scores above 95, whereas risk exploration exposed substantial variation among lower-performing configurations. Therapeutic prompting produced configuration-specific gains concentrated among weaker models, while elevated reasoning produced no average improvement. K-Bench combines broader clinical coverage and configuration-scale comparison with a continuously updated public leaderboard whose operational test materials are protected from direct optimisation. The leaderboard is available at www.k-bench.ai.",
+    "authors": [
+      "Laura M. Vowels",
+      "Matthew J. Vowels",
+      "Shivali Sharma",
+      "Apoorv Jha",
+      "Rehnuma Choudhury",
+      "Wasseem El Sarraj",
+      "Rachel Francois-Walcott",
+      "Aruba Hussain",
+      "Sarah Ingram",
+      "Angela Loulopoulou",
+      "Adva Segal",
+      "Elena Volkova"
+    ],
+    "date": "2026-09-14",
+    "updated": "2026-09-15",
+    "url": "https://arxiv.org/abs/2609.15855",
+    "primary_category": "cs.CL",
+    "comment": "",
+    "suggested_category": "benchmark",
+    "suggest_score": 0.667
+  },
+  {
+    "id": "2609.15687",
+    "version_id": "2609.15687v1",
+    "title": "EEG-Xplain: Decoding Neural Black-Boxes of EEG Foundation Models",
+    "abstract": "EEG foundation models such as BIOT, LaBraM, and EEGMamba have achieved remarkable performance in neural signal decoding, but their black-box nature limits clinical trust and neuroscientific validation. We propose a unified attribution framework for interpreting EEG foundation models across heterogeneous architectures. The framework integrates gradient-, perturbation-, and activation-based explanation methods to analyze model behavior in spatial, temporal, and frequency dimensions. Spatially, it identifies critical EEG channels and visualizes their distributions using topographic maps. Temporally, it highlights decision-relevant signal segments through attribution heatmaps. In the frequency domain, it quantifies the contributions of canonical EEG rhythms via spectral perturbation analysis. To assess explanation reliability, we introduce a population-level evaluation combining Area Over the Perturbation Curve (AOPC) and cross-method consistency analysis. The framework further leverages Large Language Models (LLMs) to transform structured attribution outputs into natural-language reports, bridging low-level neural representations and high-level semantic reasoning. Experiments on benchmark datasets, including Mumtaz2016 and TUAB, demonstrate that the generated explanations are consistent with established neurophysiological markers, validating meaningful neural representations while exposing potential dependencies on artifacts and spurious patterns. The proposed framework provides a standardized approach for evaluating the interpretability, reliability, and physiological plausibility of EEG foundation models.",
+    "authors": [
+      "Hansong Ma",
+      "Junxiao Wang"
+    ],
+    "date": "2026-09-14",
+    "updated": "2026-09-14",
+    "url": "https://arxiv.org/abs/2609.15687",
+    "primary_category": "cs.AI",
+    "comment": "",
+    "suggested_category": "benchmark",
+    "suggest_score": 0.667
+  },
+  {
+    "id": "2609.15334",
+    "version_id": "2609.15334v1",
+    "title": "Concept-Grounded Reasoning with Prompt-Driven Localization for Interpretable Structured Report Generation",
+    "abstract": "Medical imaging modalities such as ultrasound and X-ray are widely used in clinical practice, where diagnosis follows a structured, evidence-driven workflow aligned with standardized criteria. While multimodal large language models (MLLMs) show promise for automated medical report generation, most existing systems rely on end-to-end multimodal fusion without modeling clinically defined intermediate attributes, leading to limited grounding and interpretability. To address this issue, we propose CORAL (COncept-grounded ReAsoning with Localization), a multimodal framework that integrates spatial grounding and concept-level supervision into a unified reasoning process. CORAL employs a prompt-driven medical segmentation model to localize lesions and predicts multi-class clinical attributes through a Concept Bottleneck module. The resulting textual concept tokens are combined with mask-modulated visual features within an MLLM to enable structured report generation and diagnostic prediction. Experiments on BUS-CoT and IU X-ray datasets demonstrate consistent improvements in diagnostic accuracy, concept consistency, and report quality over strong general-purpose and medical MLLMs, indicating that concept-grounded reasoning better aligns generation with clinical decision processes.",
+    "authors": [
+      "Xinyue Xu",
+      "Hongbin Lin",
+      "Juangui Xu",
+      "Hualiang Wang",
+      "Lehan Wang",
+      "Lijie Hu",
+      "Weiyang Liu",
+      "Adrian Weller",
+      "Xiaomeng Li"
+    ],
+    "date": "2026-09-14",
+    "updated": "2026-09-14",
+    "url": "https://arxiv.org/abs/2609.15334",
+    "primary_category": "cs.CV",
+    "comment": "",
+    "suggested_category": "mllm-imaging",
+    "suggest_score": 0.905
+  },
+  {
     "id": "2609.15161",
     "version_id": "2609.15161v1",
     "title": "EMR: Self-Evolving Medical Multi-Agent System via Experience Mining and Reuse",
@@ -63,6 +156,45 @@
     "suggest_score": 0.354
   },
   {
+    "id": "2609.14072",
+    "version_id": "2609.14072v1",
+    "title": "Multi-Modal Tumor Survival Prediction via Graph-Guided Mixture of Experts",
+    "abstract": "Large Language Models (LLMs) have displayed impressive capabilities in handling tasks that require few demonstration examples, making them effective few-shot learners. Despite their potential, LLMs face challenges when it comes to addressing complex real-world tasks that involve multiple modalities or reasoning steps. For example, predicting cancer patients' survival period based on clinical data, cell slides, and genomics poses significant logistical complexities. Although several approaches have been proposed to tackle these challenges, they often fall short in achieving promising performance due to their inability to consider all modalities simultaneously or account for missing modalities, variations in modalities, and the integration of multi-modal data, ultimately compromising their effectiveness. This thesis proposes a novel approach for multi-modal tumor survival prediction to address these limitations. Taking inspiration from recent advancements in LLMs, particularly Mixture of Experts (MoE)-based models, a graph-guided MoE framework is introduced. This framework utilizes a graph structure to manage the predictions effectively and combines multiple models to enhance predictive power. Rather than training a single foundation model for end-to-end survival prediction, the approach leverages a MOE-guided ensemble to manage model callings as tools automatically. By leveraging the strengths of existing models and guiding them through a MOE framework, the aim is to achieve better performance and more accurate predictions in complex real-world tasks. Experiments and analysis on the TCGA-LUAD dataset show improved performance over the individual modal and vanilla ensemble models.",
+    "authors": [
+      "H Mathavan",
+      "H Liu"
+    ],
+    "date": "2026-09-12",
+    "updated": "2026-09-12",
+    "url": "https://arxiv.org/abs/2609.14072",
+    "primary_category": "cs.LG",
+    "comment": "",
+    "suggested_category": "benchmark",
+    "suggest_score": 0.667
+  },
+  {
+    "id": "2609.13860",
+    "version_id": "2609.13860v1",
+    "title": "ClinAgent: A ReAct-Based Agent for Conversational Access to Clinical Trial Information",
+    "abstract": "Querying clinical trial registries remains a manual and error-prone process, requiring researchers to navigate large volumes of semi-structured data without support for natural language interaction or cross-source synthesis. To address this, we introduce ClinAgent, a conversational system based on agentic Retrieval-Augmented Generation (RAG) that enables clinicians and researchers to query clinical trial information in plain language and receive grounded, up-to-date responses across multi-turn interactions. The system centers on a Large Language Model (LLM) agent following the ReAct paradigm, which iteratively reasons over queries, selects among a set of integrated tools, and refines its actions based on intermediate outputs. These tools include a ClinicalTrials.gov search interface, a PubMed module, and a Python-based analyzer operating on a locally cached structured dataset of clinical trials. We evaluate the system using a three-phase framework assessing operational effectiveness, planning quality, tool-use efficiency, and expert qualitative judgments, comparing three LLM backends: Gemini 3.0 Flash and two variants of DeepSeek V3.2 (thinking and non-thinking). Results reveal complementary strengths, with DeepSeek (thinking mode) excelling in planning quality, while Gemini achieves the highest overall performance and strongest expert ratings. Overall, our findings highlight the potential of agentic AI systems to improve the accessibility and synthesis of clinical trial information, supporting more efficient and user-centered biomedical research workflows.",
+    "authors": [
+      "Antonino Vaccarella",
+      "Riccardo Cantini",
+      "Domenico Talia",
+      "Paolo Trunfio",
+      "Marianna Talia",
+      "Rosamaria Lappano",
+      "Marcello Maggiolini"
+    ],
+    "date": "2026-09-12",
+    "updated": "2026-09-12",
+    "url": "https://arxiv.org/abs/2609.13860",
+    "primary_category": "cs.AI",
+    "comment": "Accepted at the CIBB 2026 conference (https://cibb2026.teralab.ai/)",
+    "suggested_category": "knowledge-grounded",
+    "suggest_score": 0.667
+  },
+  {
     "id": "2609.14018",
     "version_id": "2609.14018v1",
     "title": "VeriDx: Earning the Right to Diagnose with Disease-Centric Verification",
@@ -78,6 +210,44 @@
     "comment": "accepted by EMNLP 2026, 17 pages, 3 figures, 3 tables",
     "suggested_category": "knowledge-grounded",
     "suggest_score": 0.333
+  },
+  {
+    "id": "2609.12345",
+    "version_id": "2609.12345v1",
+    "title": "ParaRecover: A Process-Level Benchmark for Error Localization and Recovery in Parallel Tool-Use Agents",
+    "abstract": "Existing agent benchmarks mainly evaluate final task success or tool-call correctness, providing limited insight into whether agents can reliably diagnose and recover from intermediate execution failures. This limitation becomes particularly critical in multi-turn parallel tool-use scenarios, where errors may propagate across dependent branches and trigger cascading failures. We introduce ParaRecover, a process-level benchmark for evaluating error localization and recovery in multi-turn parallel tool-use agents. Built upon a fine-grained taxonomy of 14 error types covering planning dependencies, tool selection, and argument matching, the benchmark comprises 10,626 instances spanning two difficulty levels. To enable finegrained, process-oriented evaluation, we further propose the SDE rubric, which measures structural integrity, diagnostic reasoning, and evolutionary strategy during agent execution.Experiments across more than ten mainstream LLMs reveal that even state-of-the-art models still struggle with multi-turn error propagation,implicit tool-use failures, and precise replanning. Moreover, we demonstrate that the SDE rubric provides effective supervision signals for improving agents' reflective recovery capabilities. Our data and code are available at https://github.com/gbw206/ParaRecover.",
+    "authors": [
+      "Bowen Guan",
+      "Zhentao Yin",
+      "Yanming Shen"
+    ],
+    "date": "2026-09-11",
+    "updated": "2026-09-11",
+    "url": "https://arxiv.org/abs/2609.12345",
+    "primary_category": "cs.LG",
+    "comment": "Accepted to EMNLP 2026 Main Conference",
+    "suggested_category": "mllm-multimodal-fusion",
+    "suggest_score": 0.333
+  },
+  {
+    "id": "2609.13005",
+    "version_id": "2609.13005v1",
+    "title": "Tasks over Application Manuals: Revealing Gaps in Long-Horizon Procedural Reasoning for Language Models",
+    "abstract": "Large language models (LLMs) have achieved strong performance on a wide range of natural language tasks, and recent benchmarks suggest that they are increasingly adept at multi-hop reasoning. However, these benchmarks are typically short-horizon, requiring only a small number of retrieval or inference steps, and provide limited evidence of reliability on real-world tasks that involve following manuals spanning hundreds of pages with complex, interdependent guidelines. In this paper, we introduce Tasks over Application Manuals (TAM), a benchmark for evaluating long-horizon procedural reasoning. We construct TAM by curating real-world tasks from two domains: ICD-10-CM clinical coding (mapping medical conditions to diagnostic codes) and U.S. federal sentencing (computing crime sentencing guideline outcomes, specifically offense levels), with human-validated labels. Each task requires following an authoritative manual with tens of thousands of rules and executing a sequence of interdependent steps across different sections to produce an exact answer. We evaluate general-purpose prompting approaches, including retrieval-augmented generation, ReAct-style prompting, and an agent-harness baseline on GPT-5, and find that the best exact-match performance remains extremely low: 1% on ICD-10-CM coding and 15.5% on sentencing tasks. These results show that current benchmarks may overestimate LLM reasoning ability and miss a key challenge: reliably following long, rule-based procedures. The complete TAM data and code are publicly available.",
+    "authors": [
+      "Utkarsh Soni",
+      "Syed Shariyar Murtaza",
+      "Yifan Nie",
+      "Sachin Chandrasekhar",
+      "Eugene Wen"
+    ],
+    "date": "2026-09-11",
+    "updated": "2026-09-11",
+    "url": "https://arxiv.org/abs/2609.13005",
+    "primary_category": "cs.CL",
+    "comment": "",
+    "suggested_category": "knowledge-grounded",
+    "suggest_score": 0.667
   },
   {
     "id": "2609.12822",
