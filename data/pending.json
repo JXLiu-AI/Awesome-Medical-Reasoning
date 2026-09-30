@@ -1,5 +1,159 @@
 [
   {
+    "id": "2609.37283",
+    "version_id": "2609.37283v1",
+    "title": "SAM Meets VLM: Parameter-Decoupled Full-Parameter Training for Unified Medical Reasoning and Segmentation",
+    "abstract": "Medical multimodal large language models (MLLMs) are increasingly expected not only to answer clinical questions, but also to localize the visual evidence behind their predictions. A common strategy connects a vision--language model (VLM) with SAM-style segmentation through a special <SEG> token, yet full-parameter training of this unified architecture is difficult because image-level reasoning and pixel-level segmentation impose different requirements on the shared representation space. To address this issue, we propose a parameter-decoupled training framework for unified medical reasoning and segmentation. The framework treats the <SEG> hidden state as a semantic-to-spatial prompt for the mask decoder and encourages it to become separable from generic language states, reducing ambiguous segmentation prompts and potential disruption to reasoning representations. It first performs medical shallow alignment to adapt visual features to clinical language without disturbing the LLM; then controlled instruction tuning shapes separable <SEG> prompt states, monitored by the Davies--Bouldin Index (DBI), while scaling segmentation gradients entering the language backbone; finally, the SAM branch is specialized with the VLM frozen to improve mask precision without altering reasoning parameters. Experiments on medical referring segmentation, grounding, visual QA, and textual QA benchmarks show that our framework achieves strong language-conditioned segmentation while preserving competitive reasoning ability. Ablations show that two-phase instruction tuning, gradient scaling, and segmentation specialization all contribute to the model.",
+    "authors": [
+      "Xuyang Cao",
+      "Enyou Liu",
+      "Jun Zhao",
+      "Zhuoyun Liu",
+      "Jintao Fei",
+      "Leo"
+    ],
+    "date": "2026-09-29",
+    "updated": "2026-09-29",
+    "url": "https://arxiv.org/abs/2609.37283",
+    "primary_category": "cs.CV",
+    "comment": "",
+    "suggested_category": "mllm-imaging",
+    "suggest_score": 0.603
+  },
+  {
+    "id": "2609.36900",
+    "version_id": "2609.36900v1",
+    "title": "STAR-GRPO: Canonical Anchoring and Reliability-First Advantages against Representation-Dependent Reward Hacking",
+    "abstract": "Reward hacking occurs when policy optimization exploits a brittle reward interface or an overly permissive proxy objective, improving the training score without improving the underlying response quality. This phenomenon is amplified in group-relative policy optimization: an unsupported reward can shift the group baseline and alter the updates of other rollouts, while post-hoc or purely relative weighting cannot represent group-wide uncertainty. We propose \\emph{Self-Tuned Anchored Reliability Group-Relative Policy Optimization} (STAR-GRPO), a reliability-first advantage estimator based on paired assessments of the same rollout. STAR separates the quality signal from its learning influence: score disagreement determines rollout reliability, relative reliability enters a self-tuned robust location--scale fit before group normalization, and absolute group reliability attenuates the resulting bounded advantage. The analysis establishes coordinate and second-moment bounds, characterizes exact centering through the weighted location equation, and gives reliability-dependent attenuation guarantees for outlying rewards. We evaluate STAR-GRPO in two complementary reward-hacking regimes. In token-interface exploitation, STAR prevents runaway optimization of the deployed-interface score while improving the canonical quality signal. In rubric-proxy overoptimization for medical reasoning, STAR improves independent semantic evaluation, narrows the proxy--judge discrepancy, and reduces overclaim while optimizing the same task proxy. Together, these results show that reliability-first normalization offers a principled way to limit unsupported reward influence on both group baselines and policy updates, while retaining the task reward as the optimization target.",
+    "authors": [
+      "Wan Tian",
+      "Zhongyi Li",
+      "Xiang Xu",
+      "Minhao Zou",
+      "Yijie Peng",
+      "Fuzhen Zhuang"
+    ],
+    "date": "2026-09-29",
+    "updated": "2026-09-29",
+    "url": "https://arxiv.org/abs/2609.36900",
+    "primary_category": "cs.AI",
+    "comment": "",
+    "suggested_category": "rlvr",
+    "suggest_score": 0.632
+  },
+  {
+    "id": "2609.37788",
+    "version_id": "2609.37788v1",
+    "title": "A Proposed Rubric for Evaluating Expressed Clinical Reasoning in Large Language Model Responses",
+    "abstract": "Rubrics support the structured evaluation of language models. We propose a rubric for assessing expressed clinical reasoning in model responses, drawing on three bodies of work: medical education assessment frameworks (ART, SCT, Key Feature Problems and OSCE); clinical LLM benchmarks (MedR-Bench, HealthBench, TIMER-Bench, DR.BENCH, PrIME-LLM and PatientSafeBench); and general LLM reasoning evaluation research, including the Factuality-Validity-Coherence-Utility taxonomy, FaithCoT-Bench and C2-Faith. We use groundedness as a clinically oriented adaptation of the taxonomy's factuality category. The rubric brings these concepts together in a multidimensional framework for scoring free-text responses to gold-standard clinical vignettes. It includes provisional behavioural anchors, applicability rules and a separate flag for case-specific safety-critical errors. General-domain frameworks inform its design but are not treated as validated clinical instruments. The rubric does not replace case-specific reference criteria or the task-specific metrics of existing benchmarks. It has not yet been tested for inter-rater reliability, construct validity or clinical utility. Its immediate purpose is to make evaluation decisions explicit and open to scrutiny before empirical testing.",
+    "authors": [
+      "Zhangshu Joshua Jiang",
+      "Zina Ibrahim",
+      "James T. Teo"
+    ],
+    "date": "2026-09-29",
+    "updated": "2026-09-29",
+    "url": "https://arxiv.org/abs/2609.37788",
+    "primary_category": "cs.CL",
+    "comment": "20 pages",
+    "suggested_category": "clinical-alignment",
+    "suggest_score": 0.603
+  },
+  {
+    "id": "2609.36813",
+    "version_id": "2609.36813v1",
+    "title": "RESCUE: Repairing Language Model Errors to Sparse Circuits via Reinforcement Learning",
+    "abstract": "Large language models (LLMs) exhibit strong general capabilities that mechanistic interpretability has attributed to sparse computational circuits. However, existing circuit studies emphasize preserving functionality or explaining safety, leaving the mechanisms underlying failures across a broader range of tasks largely unexplored. Extending circuit analysis from abilities to errors, we explore the perspective that such failures may likewise arise from erroneous internal computations and that targeted tuning of the corresponding parameters can correct such errors while largely preserving other capabilities. Motivated by this insight, we introduce RESCUE (Reasoning-Error Sparse-Circuit Uncovering and Editing), a framework that localizes error-associated circuits and surgically repairs them for performance enhancement. General tasks typically involve multi-step reasoning and long-form generation, where early deviations can cause prefixes to drift from supervised references, leading SFT-based mask optimization to overlook circuits involved in generation-time errors. RESCUE therefore refines these masks through reinforcement learning with multiple masked-model rollouts, improving their relevance to observed task failures. Finally, RESCUE introduces a pruning technique and precisely fine-tunes error circuits to correct task failures, thereby translating error localization into a sparse and targeted model update. We validate RESCUE on heterogeneous repair sets across two domains: (1) mathematical reasoning, identifying a math error circuit of 1.40% density whose repair raises accuracy from 6.0% to 75.5%; and (2) medical QA, where a similarly compact 1.44% circuit improves repair-set accuracy from 0% to 81%. Our code is available at: https://github.com/chuanpupig/RESCUE.",
+    "authors": [
+      "Chuanpu Liu",
+      "Miao Yu",
+      "Yikai Cai",
+      "Yuanhe Zhang",
+      "Zhenhong Zhou",
+      "Li Sun",
+      "Zuming Jiang",
+      "Yufei Guo"
+    ],
+    "date": "2026-09-29",
+    "updated": "2026-09-29",
+    "url": "https://arxiv.org/abs/2609.36813",
+    "primary_category": "cs.LG",
+    "comment": "",
+    "suggested_category": "survey",
+    "suggest_score": 0.378
+  },
+  {
+    "id": "2609.36505",
+    "version_id": "2609.36505v1",
+    "title": "BRIDGE: Bilevel Retrieval-Credit-Aware Agentic Reinforcement Learning",
+    "abstract": "Agentic reinforcement learning (ARL) with verifiable rewards improves the ability of large language models (LLMs) to tackle knowledge-intensive tasks by learning to interleave search and reasoning. However, most existing ARL methods optimize only LLM-generated tokens and treat retrieved evidence as environment observations. This creates an information-credit gap: failures caused by missing or misleading evidence are attributed to the LLM policy rather than to the retriever, which motivates training the LLM and the retriever jointly. In this paper, we show that retrieval and LLM policy learning are order-sensitive: adapting the retriever before optimizing the policy yields a larger reward gain than the reverse order. To preserve this hierarchy while allowing both components to co-adapt, we formulate retrieval-augmented agentic RL as a bilevel optimization problem. To solve it efficiently, we introduce BRIDGE, a memory-efficient first-order bilevel method motivated by a loss-landscape analysis of the RL and retrieval objectives. Across seven open-domain QA benchmarks, BRIDGE achieves the highest average accuracy with both 3B and 7B backbones, improving the multi-hop average over the strongest baseline by 9.6 and 3.4 EM points, respectively. It also achieves the best averaged answer accuracy and reasoning quality across medical QA benchmarks.",
+    "authors": [
+      "Quan Xiao",
+      "Mingda Liu",
+      "Gaowen Liu",
+      "Katsuki Fujisawa",
+      "Tianyi Chen"
+    ],
+    "date": "2026-09-29",
+    "updated": "2026-09-29",
+    "url": "https://arxiv.org/abs/2609.36505",
+    "primary_category": "cs.AI",
+    "comment": "",
+    "suggested_category": "rlvr",
+    "suggest_score": 0.632
+  },
+  {
+    "id": "2609.37351",
+    "version_id": "2609.37351v1",
+    "title": "Port-Hamiltonian Latent Deliberation: Mitigating the Deliberation Drift Cliff in Test-Time Compute Scaling",
+    "abstract": "Test-time compute scaling has emerged as a cornerstone of advanced machine reasoning, yet performing iterative deliberation directly within continuous latent representation spaces reveals a catastrophic pathology: the Deliberation Drift Cliff. While unconstrained recurrent latent models achieve initial reasoning gains at short horizons (K <= 4), their reasoning collapses when extrapolated to deeper thinking steps (K >= 16), dropping by 22% to 62% across standard logical benchmarks. We resolve the trilemma among expressivity, Lyapunov stability, and computational efficiency in test-time latent reasoning through a 22-round empirical and theoretical investigation. We demonstrate that strictly conservative scalar potential gradient flows suppress long-range drift (cliff 3.40%) but bottleneck peak reasoning accuracy at 32.73%, whereas unconstrained rotational flows achieve high symbolic expressivity (82.33%) but suffer a severe 36.87% drift cliff. To resolve this geometric duality, we establish Port-Hamiltonian Latent Deliberation (PH-LD) and propose the Direct-Gradient Pure-Tensor Helmholtz-Hodge Decomposition (DG-HHD). DG-HHD parameterizes the attracting flow as a tangent projection tensor network while orthogonally decoupling non-zero circulation (Hodge machine error 1.65e-17, contraction error 5.55e-17), eliminating runtime autograd dependencies to achieve 1.84x vector field and 2.09x RK45 rollout speedups. In a 15-arm symmetrical Pareto benchmark, DG-HHD achieves 58.67% peak accuracy (+25.94% absolute gain over conservative HHD) and retains 35.27% at K=32. Transferred to small language model (SLM) multi-hop causal reasoning, DG-HHD delivers monotonic compute scaling (49.33% to 51.56%) and suppresses out-of-distribution drift (cliff -0.66%). All 30 Level 0 deterministic invariants are certified.",
+    "authors": [
+      "Zeyu Jia"
+    ],
+    "date": "2026-09-29",
+    "updated": "2026-09-29",
+    "url": "https://arxiv.org/abs/2609.37351",
+    "primary_category": "cs.LG",
+    "comment": "10 pages, 1 figure, 4 tables. Code and evaluation artifacts available",
+    "suggested_category": "mllm-pathology",
+    "suggest_score": 0.378
+  },
+  {
+    "id": "2609.36557",
+    "version_id": "2609.36557v1",
+    "title": "How Medical VLMs Underutilize Their Vision Encoders: A Dermatology Perspective",
+    "abstract": "Medical Vision-Language Models (VLMs) show significant promise for clinical image understanding, offering accurate diagnosis with interpretable reasoning. However, a critical performance gap exists between their strong vision encoders and the full multimodal model: in dermatology, the MedSigLIP encoder outperforms MedGemma by an average of 10.26 percentage points even when both use zero target-task labels; few-shot linear probing provides further evidence of strong visual representations. This gap motivates an investigation of how visual information is used in end-to-end diagnosis and why plausible-sounding predictions can lack grounding in image evidence. Using dermatology as our primary testbed, we systematically investigate three hypotheses for this phenomenon. We further provide a mechanistic analysis of the model's internal attention patterns, showing that a simple describe-then-decide prompting strategy increases vision attention by 30-40% during generation. Task-specific fine-tuning improves dermatology classification but reduces cross-domain medical question-answering performance in our evaluation. To address these challenges, we combine label-free prompting with low-label encoder-assisted reranking while keeping the VLM frozen. We validate the interventions across five VLM backbones in dermatology and provide supporting representation and attention analyses across additional medical modalities.",
+    "authors": [
+      "Janet Wang",
+      "Yunbei Zhang",
+      "Xiao Wang",
+      "Jihun Hamm"
+    ],
+    "date": "2026-09-29",
+    "updated": "2026-09-29",
+    "url": "https://arxiv.org/abs/2609.36557",
+    "primary_category": "cs.CV",
+    "comment": "27 pages, 16 figures",
+    "suggested_category": "mllm-imaging",
+    "suggest_score": 0.905
+  },
+  {
+    "id": "2609.36340",
+    "version_id": "2609.36340v1",
+    "title": "ThuRunel: Dynamic Decoupling for Structured Advisory Dialogue",
+    "abstract": "High-stakes advisory domains such as medical aesthetics, legal consultation, and educational planning exhibit a two-phase structure. The early phase requires empathetic elicitation and emotional support, and the late phase requires authoritative specialist judgment. Neither fully automated agents nor human junior consultants adequately address this structure at scale. We formalize the core design challenge as dynamic decoupling, asking how an AI advisory agent should decide what to ask, when to stop, what to resolve autonomously, and what to forward to the specialist. We present ThuRunel, an advisory agent combining a finite-state belief management framework, a chain-of-thought teacher synthesis protocol, and learned generation adapters. Against eleven baselines, ThuRunel achieves consistent improvements in elicitation completeness and specialist brief quality. ThuRunel is publicly deployed as a bilingual web application in which the same decoupling decisions operate from the client's side, grounded in a curated knowledge base that cites its sources in every answer.",
+    "authors": [
+      "Yuyan Chen"
+    ],
+    "date": "2026-09-28",
+    "updated": "2026-09-28",
+    "url": "https://arxiv.org/abs/2609.36340",
+    "primary_category": "cs.AI",
+    "comment": "14 pages, 22 figures, 8 tables",
+    "suggested_category": "prompt-structure",
+    "suggest_score": 0.333
+  },
+  {
     "id": "2609.34633",
     "version_id": "2609.34633v1",
     "title": "GenMem: Generative Symbolic Memory for Self-Evolving Harness",
@@ -831,6 +985,25 @@
     "comment": "",
     "suggested_category": "clinical-alignment",
     "suggest_score": 0.905
+  },
+  {
+    "id": "2609.35810",
+    "version_id": "2609.35810v1",
+    "title": "TRACE: Deployable Tree-Relational Structure Enhancement for Oncology LLMs",
+    "abstract": "Large language models are increasingly used in oncology applications, but their predictions are often weakly grounded in explicit medical structure. We present TRACE, a deployable tree-relational enhancement framework for oncology LLMs. TRACE separates expensive offline structure learning from lightweight online inference: oncology concepts and relations are organized into an updatable tree-relational structure, refined using LM-loss-derived evidence, and retrieved at inference time as compact prompt evidence. This design supports task-adaptive evidence selection without requiring supervised labels in the zero-shot setting. Across ten oncology classification tasks and one MedQuAD CancerGov QA benchmark, TRACE improves both label-free evaluation and supervised fine-tuning. Additional analyses show that TRACE improves over vanilla RAG and generic GraphRAG, remains useful under leakage-controlled METABRIC inputs, and produces interpretable evidence paths aligned with clinical reasoning. These results suggest that explicit, updatable medical structure is a practical path toward more accurate and auditable oncology LLM deployment.",
+    "authors": [
+      "Jizheng Lai",
+      "Yingyun Li",
+      "Ying Qin",
+      "Haiyang Qian"
+    ],
+    "date": "2026-09-20",
+    "updated": "2026-09-20",
+    "url": "https://arxiv.org/abs/2609.35810",
+    "primary_category": "cs.CL",
+    "comment": "18 pages, 2 figures, 19 tables. Accepted to the EMNLP 2026 Industry Track for oral presentation",
+    "suggested_category": "sft-distill",
+    "suggest_score": 0.354
   },
   {
     "id": "2609.26124",
