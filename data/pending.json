@@ -1,5 +1,144 @@
 [
   {
+    "id": "2610.01938",
+    "version_id": "2610.01938v1",
+    "title": "A rubric landscape for evaluating clinical reasoning in large language models: what exists, what is missing, and what needs to be combined",
+    "abstract": "Exam-style accuracy does not establish whether large language models (LLMs) reason well over clinical records. We define clinical reasoning as integrating and updating evidence across time and sources to form, revise and justify a patient's problem representation and a defensible plan. This structured narrative review maps three literatures: medical education assessment instruments, clinical LLM benchmarks published from 2023 onwards, and general-domain methods for evaluating long-form generation. We examine six dimensions: problem representation, temporal synthesis, differential and management reasoning, counterfactual reasoning, calibrated uncertainty, and reasoning faithfulness. Preprints are included and flagged. No single instrument covers all six dimensions. Problem representation and differential or management reasoning are reasonably covered, although reliability varies by instrument and setting. TIMER-Eval targets temporal synthesis, and ER-Reason assesses sequential diagnostic belief updating. Dedicated uncertainty and counterfactual evaluations are emerging, but their applicability to longitudinal free-text reasoning remains limited. Factual completeness is well theorised in general-domain evaluation, with early clinical evidence of important omissions. Faithfulness remains the weakest dimension, with one identified clinical causal-ablation study on multiple-choice questions. Existing tools should be combined through binary rubric items, separate completeness and correctness scores, case-specific importance weighting with non-compensable safety caps, temporal order-consistency checks, and chance-corrected reliability reporting. Further design work is needed for calibrated uncertainty, counterfactual reasoning and faithfulness over longitudinal free-text records. This review provides a design rationale, not a validated instrument.",
+    "authors": [
+      "Zhangshu Joshua Jiang",
+      "Zina Ibrahim",
+      "James T. Teo"
+    ],
+    "date": "2026-10-01",
+    "updated": "2026-10-01",
+    "url": "https://arxiv.org/abs/2610.01938",
+    "primary_category": "cs.CL",
+    "comment": "13 pages, 1 table. Structured narrative review",
+    "suggested_category": "benchmark",
+    "suggest_score": 0.667
+  },
+  {
+    "id": "2610.01076",
+    "version_id": "2610.01076v1",
+    "title": "GLoC-EHR: Evidence-Cited Clinical Reasoning over Global Context and Local EHR Events",
+    "abstract": "Structured electronic health records (EHRs) contain a patient's clinical trajectory as a sequence of clinical codes. Answering clinical questions from such records requires both the context of the whole trajectory and the specific events that support the answer. We introduce GLoC-EHR, a multimodal language model that reads a contextual encoding of the record through a fixed-size global memory of the trajectory and a local memory of selected events. The model learns to generate hospital-course summaries from the global memory and descriptions of masked concepts from the local memory, aligning both with clinical text. It is then trained to cite evidence before answering, through rationale fine-tuning followed by group relative policy optimization (GRPO) with rewards for correct answers and record-supported evidence. On three MIMIC-IV outcome tasks, GLoC-EHR attains the highest macro AUROC among the compared models when it answers directly, whereas zero-shot LLMs reading the serialized record fall far behind. With evidence-cited reasoning, it stays close to its direct multi-task counterpart in macro AUROC, and the evidence terms of the objective reduce unsupported evidence at a similar macro AUROC. The local memory adds distinct supported findings, particularly under strict matching, without a detectable change in macro AUROC. Without retraining, GLoC-EHR transfers to EHRSHOT on par with EHR-BERT and answers two unseen laboratory questions better than zero-shot prompting of its own backbone.",
+    "authors": [
+      "Chaiho Shin",
+      "Kwangsoo Kim"
+    ],
+    "date": "2026-10-01",
+    "updated": "2026-10-01",
+    "url": "https://arxiv.org/abs/2610.01076",
+    "primary_category": "cs.LG",
+    "comment": "",
+    "suggested_category": "rlvr",
+    "suggest_score": 0.632
+  },
+  {
+    "id": "2610.01234",
+    "version_id": "2610.01234v1",
+    "title": "ASCRIBE: Atomic and Significance-Based Reasoning for Thai Clinical SOAP Note Generation",
+    "abstract": "Automatic SOAP note generation can ease the documentation burden on physicians, but existing reasoning methods often omit clinically important information and generate unsupported content. Progress in Thai is further hindered by the lack of publicly available datasets. We propose ASCRIBE, a physician-inspired reasoning framework that ascribes a clinical-significance level to each extracted atomic fact in the conversation before summarization, making a general-purpose LLM a more reliable scribe. We also release ThaiClinicBench, the first de-identified Thai clinical summarization benchmark of real encounters, together with a synthetic training corpus derived from real clinical notes. As a prompt, ASCRIBE outperforms chain-of-thought prompting on GPT-5.4 and Gemini 3.1 Pro across the physician-aligned LLM-judge metrics and improves on standard prompting by up to 10.3 points on the completeness LLM-judge metric. As a GRPO reward, it enables a Gemma-4-E4B model trained solely on synthetic data to match Gemini 3.1 Pro in factual precision and surpass it in completeness. Code and data can be found at https://github.com/loolootech/ascribe.",
+    "authors": [
+      "Tarm Kalavantavanich",
+      "Teerawut Ponarchar",
+      "Pattaramanee Arsomngern",
+      "Jenta Wonglertsakul",
+      "Watcharakorn Chuthong",
+      "Chiraphat Boonnag",
+      "Knot Pipatsrisawat",
+      "Titipat Achakulvisut"
+    ],
+    "date": "2026-10-01",
+    "updated": "2026-10-01",
+    "url": "https://arxiv.org/abs/2610.01234",
+    "primary_category": "cs.CL",
+    "comment": "",
+    "suggested_category": "prompt-structure",
+    "suggest_score": 0.667
+  },
+  {
+    "id": "2610.01452",
+    "version_id": "2610.01452v1",
+    "title": "Uncertainty-Guided Handshake: Efficient Human-in-the-Loop Refinement for Surgical-Grade Glioma Segmentation",
+    "abstract": "While state-of-the-art automated models for medical image segmentation achieve high mean performance, they frequently suffer from localized, catastrophic failures that preclude safe clinical deployment, particularly in neuro-oncology. Interactive segmentation frameworks mitigate this by incorporating human oversight, but traditionally impose prohibitive cognitive and temporal workloads by requiring clinicians to manually search for errors. In this project, we present an efficient, Hybrid Structural-Aleatoric Human-in-the-Loop framework for glioma segmentation that bridges the gap between automated baseline performance and surgical-grade precision, achieving sub-2.0 mm HD95 on curated benchmarks while providing safety-net routing for structural failures across real-world clinical data. By extracting voxel-wise Test-Time Augmentation (TTA) uncertainty and applying hierarchical topological filtering, our method proactively isolates high-risk structural anomalies. We comprehensively evaluated our approach on a challenging out-of-distribution clinical stress-test cohort (N = 362). Operating under a simulated Human Oracle, the framework improved the Whole Tumor (WT) Dice score from 0.891 to 0.914 and reduced the 95th percentile Hausdorff Distance (HD95) from 5.82 mm to 4.76 mm. Critically for surgical safety, the system rescued severe boundary failures in the Tumor Core, reducing mean HD95 from 17.96 mm to 14.83 mm (improving absolute TC Dice to 0.356). These spatial rescues were achieved while demanding a median interactive workload of just 11.3% of the target volume. Acknowledging this as a simulated upper bound lacking real-world cognitive friction, the framework nevertheless demonstrates a highly Pareto-efficient pathway for safely deploying clinical AI.",
+    "authors": [
+      "Samuel Hart",
+      "Ahmad Yahya",
+      "Ahmed Karam Eldaly"
+    ],
+    "date": "2026-10-01",
+    "updated": "2026-10-01",
+    "url": "https://arxiv.org/abs/2610.01452",
+    "primary_category": "cs.CV",
+    "comment": "12 pages",
+    "suggested_category": "clinical-alignment",
+    "suggest_score": 1.206
+  },
+  {
+    "id": "2610.01166",
+    "version_id": "2610.01166v1",
+    "title": "CineMR: Tool-Integrated Vision-Language Reasoning for Quantitative Cardiac MRI Assessment",
+    "abstract": "Cardiovascular magnetic resonance (CMR), including cine imaging, is a reference standard for the noninvasive assessment of cardiac morphology and ventricular function. Cine CMR interpretation integrates qualitative visual assessment with quantitative measurements of ventricular volumes, ejection fraction, myocardial mass, wall thickness, and regional wall motion. Current medical vision-language models (VLMs) cannot reliably derive quantitative measurements from multidimensional cine images without analysis tools. We present CineMR, a tool-augmented VLM that invokes cardiac image-analysis tools and integrates their outputs into interleaved reasoning for quantitative CMR assessment. We also construct a multi-cohort visual question answering benchmark covering quantitative metric extraction, multiclass diagnosis, and differential diagnosis, together with tools for segmentation, phase selection, volumetry, morphometry, and regional wall motion analysis. CineMR is trained with supervised fine-tuning (SFT) on tool-interaction traces followed by Group Relative Policy Optimization (GRPO) with conditional tool-use rewards. On the multi-cohort cine CMR benchmark, CineMR achieves 35.9% pass@1 and 58.9% pass@4, compared with 1.5% pass@1 for the Qwen3-VL-8B backbone and 0.0% and 7.0% pass@1 for LLaVA-Med v1.5 and MedGemma-4B, respectively. Correct tool invocation reaches 99.8% after GRPO, up from 78.9% after SFT. Live tool outputs improve ventricular measurement accuracy by 20.4--23.7% over direct model predictions, and removing all tools reduces pass@1 from 35.9% to 27.9%. These results highlight the importance of reliable tool use for quantitative cine CMR reasoning and support CineMR as a promising approach for assistive cardiac image assessment. Code, benchmark resources, and model weights are available at https://github.com/AI-MIND-Lab/CineMR.",
+    "authors": [
+      "Kunyang Li",
+      "Hai Nguyen",
+      "Joshua Lowe",
+      "Chenguang Zhao",
+      "Peace C. Madueme",
+      "Mehdi Hedjazi Moghari",
+      "Mubarak Shah",
+      "Pegah Khosravi",
+      "Yuzhang Zhang"
+    ],
+    "date": "2026-10-01",
+    "updated": "2026-10-01",
+    "url": "https://arxiv.org/abs/2610.01166",
+    "primary_category": "cs.CV",
+    "comment": "Code, benchmark resources, and model weights are available at https://github.com/AI-MIND-Lab/CineMR",
+    "suggested_category": "mllm-imaging",
+    "suggest_score": 1.206
+  },
+  {
+    "id": "2610.01497",
+    "version_id": "2610.01497v1",
+    "title": "OpenMTB-Audit: Exposing Over-Refusal and Clinical Expert Perspectives in LLM-Based Molecular Tumor Board Safety Evaluation",
+    "abstract": "Molecular tumor boards integrate genomic findings, clinical context, and therapeutic evidence to support precision oncology. As AI enters this workflow, a key safety challenge is distinguishing truly unsupported recommendations from evidence-supported options that still require oncologist review because of incomplete information, poor ECOG performance status, or other clinical caveats. We introduce OpenMTB-Audit, an open-source benchmark of 500 synthetic non-small cell lung cancer cases spanning five adversarial error categories and four safety labels: Supported, Partially Supported, Unsupported, and Insufficient Information. Across eight large language model configurations, we identify pervasive over-refusal: all LLM configurations failed to retain the Partially Supported label in 83.3-100% of true Partially Supported cases, achieving high aggregate safety scores through label collapse rather than clinically calibrated reasoning. To address this limitation, we developed MTB-AuditAgent, a deterministic seven-module framework separating evidence verification, missing-information detection, safety classification, and abstention. It reduces over-refusal to 6.7% and achieves 91.2% accuracy (95% CI: 88.6-93.6%). A two-oncologist annotation study found disagreement concentrated at the boundary between information sufficiency and treatment optimization, underscoring the need to preserve clinically meaningful distinctions.",
+    "authors": [
+      "Negin Ashrafi",
+      "Jia Luo",
+      "Stacey M. Frumm",
+      "Roxana Daneshjou"
+    ],
+    "date": "2026-10-01",
+    "updated": "2026-10-01",
+    "url": "https://arxiv.org/abs/2610.01497",
+    "primary_category": "cs.AI",
+    "comment": "Accepted for oral presentation and publication at the Pacific Symposium on Biocomputing (PSB) 2027",
+    "suggested_category": "survey",
+    "suggest_score": 0.756
+  },
+  {
+    "id": "2610.00562",
+    "version_id": "2610.00562v1",
+    "title": "Can LLMs Reason Over Long Horizons? An Empirical Evaluation of Context Strategies for Longitudinal Clinical Reasoning",
+    "abstract": "Longitudinal clinical reasoning requires large language models (LLMs) to identify and integrate relevant evidence distributed across extended patient histories. Although long-context models can process increasingly large amounts of information, providing more history does not necessarily make relevant evidence more accessible or improve reasoning. We compare five context strategies (Full, Recent, Episodic, Semantic, and Hybrid) on MedLoCoMo across four open-weight LLMs, examining answer correctness, robustness to query-evidence distance, and abstention on questions with unsupported premises. Episodic and Hybrid generally achieve the strongest overall accuracy, while Recent Context degrades most as supporting evidence becomes more distant; Episodic and Hybrid maintain the highest accuracy at long distances. Analysis of adversarial questions further shows that strong performance on answerable questions does not necessarily translate to successful abstention when the available history does not support the requested conclusion. These findings show that reliable longitudinal reasoning depends not only on how much history an LLM can access, but critically on how relevant evidence is selected and presented for reasoning.",
+    "authors": [
+      "Taye Akinrele",
+      "Noorbakhsh Amiri Golilarz",
+      "Subash Neupane",
+      "Sudip Mittal",
+      "Shahram Rahimi"
+    ],
+    "date": "2026-09-30",
+    "updated": "2026-09-30",
+    "url": "https://arxiv.org/abs/2610.00562",
+    "primary_category": "cs.CL",
+    "comment": "",
+    "suggested_category": "benchmark",
+    "suggest_score": 0.333
+  },
+  {
     "id": "2609.39566",
     "version_id": "2609.39566v1",
     "title": "From Given to Gathered Evidence: Agentic Learning for Longitudinal Medical Reasoning",
