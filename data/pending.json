@@ -1,5 +1,84 @@
 [
   {
+    "id": "2610.02684",
+    "version_id": "2610.02684v1",
+    "title": "Large language models exhibit unreliable updating of clinical judgment as patient evidence evolves",
+    "abstract": "Large language models (LLMs) are increasingly explored for clinical reasoning, but whether they appropriately revise judgments as patient evidence evolves remains unclear. We evaluated longitudinal belief updating using matched intensive-care trajectories from electronic health records. Across diverse LLMs, conditioning on a preceding judgment more often increased than reduced prediction error when estimates changed, replicated for a second endpoint. Controlled interventions revealed two failure modes. First, with preceding assessment fixed, models responded more strongly to worsening than matched improving respiratory evidence; this asymmetry persisted after headroom normalization at moderate and strong evidence levels. Second, with current evidence fixed, increasing prior risk from 10% to 90% shifted estimates by 26.2 percentage points, demonstrating causal influence of prior model beliefs. Prompting did not restore reliable updating. Evidence-Validated Longitudinal Update (EVLU) identified fewer, more reliable revisions, revealing a reliability-coverage trade-off. These findings establish longitudinal belief updating as a distinct dimension of LLM reliability.",
+    "authors": [
+      "Min Zeng",
+      "Rui Zhang"
+    ],
+    "date": "2026-10-02",
+    "updated": "2026-10-02",
+    "url": "https://arxiv.org/abs/2610.02684",
+    "primary_category": "cs.AI",
+    "comment": "",
+    "suggested_category": "prompt-structure",
+    "suggest_score": 0.333
+  },
+  {
+    "id": "2610.02829",
+    "version_id": "2610.02829v1",
+    "title": "Clinical Concept Centers in LLMs",
+    "abstract": "Large language models are increasingly used in clinical settings. However, research into the reliability and performance of these models has focused almost entirely on the language substrate, scoring what the model says. Mechanistic interpretability has found that the latent space carries a higher fidelity of representation than the text: internal representations not only encode substantially more than the output verbalizes, but the stated reasoning also systematically omits features that causally drive the answer. An evaluation of model behavior in terms of mechanistic interpretability has not been explored in clinical decision support. In this work, we extend behavioral evaluation into the latent space and ask whether clinical concepts exist as locatable, causally used representations inside open-weight LLMs. We find dedicated clinical concept centers in the latent space of all eleven open models we test. These concept centers are interpretable, firing only on their aligned clinical narratives, and meaningfully and causally drive model behavior in both constrained and open-ended settings. They are not just analytical representations, but circuits that can be utilized in clinical practice, and we explore their use from the perspective of both evaluation and performance. From the evaluation standpoint, models stay internally coherent and keep using the relevant concept centers even under adversarial role-based priming, while aligned priming improves downstream clinical performance. From a performance perspective, we simulate realistic deployment settings and find that steering models along these centers leads to meaningful downstream improvements. Finally, we conduct a blinded clinician validation and find the activation and usage of these concept centers predicts clinicians preferences.",
+    "authors": [
+      "Aishik Nagar",
+      "Abhishek Vaidyanathan",
+      "Arun-Kumar Kaliya-Perumal",
+      "Elijah Tzen Hsuen Boey",
+      "Stefan Winkler"
+    ],
+    "date": "2026-10-02",
+    "updated": "2026-10-02",
+    "url": "https://arxiv.org/abs/2610.02829",
+    "primary_category": "cs.CL",
+    "comment": "",
+    "suggested_category": "clinical-alignment",
+    "suggest_score": 0.603
+  },
+  {
+    "id": "2610.02263",
+    "version_id": "2610.02263v1",
+    "title": "ZAGNet: Zone-Aware Graph Aggregation Network for Patient-Level Lung Ultrasound Diagnosis",
+    "abstract": "Patient-level lung ultrasound (LUS) diagnosis requires integrating findings acquired across multiple anatomical zones, yet clinical examinations frequently involve variable and incomplete scanning protocols with missing zones. Existing diagnostic AI methods primarily analyze individual frames or video loops, relying on heuristic aggregation strategies such as max or mean pooling that ignore inter-zone relationships for patient-level inference. This paper presents ZAGNet, a Zone- Aware Graph Neural Network that represents temporally tracked pathology findings as graph nodes connected by anatomical zone adjacency. A graph transformer network propagates contextual information across neighboring lung regions, while a virtual global node aggregates graph-level features to predict patientlevel consolidation and pleural effusion using only patient-level supervision. ZAGNet accommodates missing zones by computing on a graph structure without fixed input format or size. We evaluate ZAGNet on a multicenter dataset of 714 subjects (20,256 LUS video loops) with exams varying from 4 to 16 zones across anterior, posterior, and lateral thoracic regions. For consolidation diagnosis, ZAGNet achieved an AUC of 0.803 compared to 0.677 (max pooling) and 0.674 (mean pooling). For pleural effusion, AUC increased to 0.893 from 0.804 (max pooling) and 0.815 (mean pooling). These represent improvements of up to 19% and 11% for consolidation and pleural effusion respectively. The results demonstrate that graph-based inter-zone reasoning provides an effective and clinically consistent framework for automated patient-level LUS assessment.",
+    "authors": [
+      "Li Chen",
+      "Shubham Patil",
+      "Rashid Al Mukaddim",
+      "Jochen Kruecker",
+      "Balasundar Raju",
+      "Alvin Chen"
+    ],
+    "date": "2026-10-01",
+    "updated": "2026-10-01",
+    "url": "https://arxiv.org/abs/2610.02263",
+    "primary_category": "eess.IV",
+    "comment": "The 2026 IEEE International Ultrasonics Symposium (IUS)",
+    "suggested_category": "benchmark",
+    "suggest_score": 0.667
+  },
+  {
+    "id": "2610.02270",
+    "version_id": "2610.02270v1",
+    "title": "Reliability Stress Tests and Decision-Time Routing for Chest X-ray Vision-Language Models",
+    "abstract": "Medical vision-language model (VLM) evaluation is sensitive to workflow design, prompting strategy, and benchmark construction, yet most studies treat these factors in isolation. We introduce a reliability stress test for chest X-ray interpretation built on two balanced datasets (a private report-backed set and a curated MIMIC subset). Three medical VLMs (CheXagent, MedGemma-4B, and MedGemma-27B) are evaluated across three prompt styles and two workflows (single-VLM and multi-agent), producing 36 configurations. We show that exact-match accuracy alone can overstate the effectiveness of conservative models that default to \"Normal\" predictions. Diagnostic reliability also depends heavily on model family and scale: multi-agent reasoning helps some configurations but hurts others. Building on these observations, we propose a decision-time routing framework that selectively escalates to multi-agent inference only when beneficial, improving the cost-quality trade-off over fixed workflows. Our results highlight the need for evaluation protocols that jointly consider prompt sensitivity, failure-mode diversity, and workflow choice before clinical deployment.",
+    "authors": [
+      "Xinye Yang",
+      "Zhusi Zhong",
+      "Scott Collins",
+      "Grayson Baird",
+      "Xuyu Wang",
+      "Zhicheng Jiao"
+    ],
+    "date": "2026-10-01",
+    "updated": "2026-10-01",
+    "url": "https://arxiv.org/abs/2610.02270",
+    "primary_category": "eess.IV",
+    "comment": "6 pages, 4 figures, 5 tables. Accepted version of a workshop paper presented orally at the 2026 IEEE/ACM Conference on Connected Health: Applications, Systems and Engineering Technologies (CHASE). Code and per-case MIMIC-CXR results: https://github.com/Yangxinyee/cxr-vlm-routing",
+    "suggested_category": "mllm-imaging",
+    "suggest_score": 0.905
+  },
+  {
     "id": "2610.01938",
     "version_id": "2610.01938v1",
     "title": "A rubric landscape for evaluating clinical reasoning in large language models: what exists, what is missing, and what needs to be combined",
