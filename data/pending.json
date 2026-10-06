@@ -1,5 +1,155 @@
 [
   {
+    "id": "2610.06571",
+    "version_id": "2610.06571v1",
+    "title": "BrainTRACE: Tracing Longitudinal, Multimodal, and Volumetric Evidence in Brain MRI Clinical Reasoning",
+    "abstract": "Brain MRI interpretation is a longitudinal clinical reasoning problem: radiologists compare serial studies, integrate information across MRI sequences, localize findings within volumetric anatomy, and translate this evidence into report-grounded assessments. Existing medical VQA and 3D imaging benchmarks capture important parts of this workflow, but often evaluate brain MRI through isolated images, static volumes, or ungrounded report-style answers, thereby obscuring failures in the evidence chain that support clinical validity. We introduce BrainTRACE, a report-grounded benchmark for evaluating whether vision-language models can trace the evidence structure required for longitudinal brain MRI interpretation. BrainTRACE contains 7,273 scored VQA instances derived from 1,778 longitudinal patients, 7,299 MRI studies, and approximately 29k co-registered 3D MRI sequence volumes. The benchmark is organized by five levels of clinical reasoning, from acquisition recognition to case-level synthesis, and by evidence demands covering longitudinal comparison, report-grounded references, multi-sequence integration, and volumetric spatial evidence. BrainTRACE supports rendered inputs compatible with standard VLM interfaces, a 3D-evidence condition, and a decomposed case-reasoning track that audits six steps in a longitudinal evidence chain. Evaluation of 20 VLM configurations shows that current systems can identify isolated visual cues but rarely compose them into grounded longitudinal interpretations. We release the benchmark specification, evaluation lists, scoring implementation, scoring rubrics, and audit-record format to support reproducible progress in brain MRI VLM evaluation.",
+    "authors": [
+      "Qizhen Lan",
+      "Mengchen Fan",
+      "Hang Zhang",
+      "Jingwei Duan",
+      "Moule Lin",
+      "Jialin Chen",
+      "Baocheng Geng",
+      "Xiaoqian Jiang"
+    ],
+    "date": "2026-10-05",
+    "updated": "2026-10-05",
+    "url": "https://arxiv.org/abs/2610.06571",
+    "primary_category": "cs.CV",
+    "comment": "35 pages. Accepted to NeurIPS 2026",
+    "suggested_category": "mllm-imaging",
+    "suggest_score": 1.206
+  },
+  {
+    "id": "2610.06695",
+    "version_id": "2610.06695v1",
+    "title": "MedPrune: Topology-Efficient Multimodal Multi-Agent Communication Evolution for Medical VQA Tasks",
+    "abstract": "While medical multimodal large language models (Med-MLLMs) advance medical visual question answering (VQA), existing clinical workflow-inspired multi-agent frameworks suffer from interaction patterns and excessive computational overhead caused by redundant communication topologies. In this paper, we propose MedPrune, an efficient medical multimodal multi-agent collaboration framework that dynamically prunes both nodes and edges from the communication topology to enhance reasoning ability and token efficiency. Specifically, we first formulate the diagnostic process as a heterogeneous communication graph, where nodes represent specialist agents from various departments and edges capture intra- and inter-departmental interactions. Building on this graph, we introduce two sparsification mechanisms to enable adaptive collaborative evolution: (1) Heterogeneous Node Sparsification, which eliminates task-irrelevant specialist agents irrelevant to the current multimodal question via reinforcement learning-driven topological optimization, and (2) Heterogeneous Edge Sparsification, which selectively retains only the most diagnostically salient intra- and inter-departmental connections by jointly optimizing task performance and topological complexity. Extensive medical VQA experiments under full-set and few-shot training settings prove MedPrune surpasses multi-agent baselines and boosts token efficiency with strong adversarial robustness.",
+    "authors": [
+      "Jiuheng Wan",
+      "Runze Li",
+      "Chen Chen",
+      "Tingyuan Hu",
+      "Daiyang Yu",
+      "Yimin Jing",
+      "Taolin Zhang",
+      "Richang Hong"
+    ],
+    "date": "2026-10-05",
+    "updated": "2026-10-05",
+    "url": "https://arxiv.org/abs/2610.06695",
+    "primary_category": "cs.CL",
+    "comment": "",
+    "suggested_category": "agentic-diagnosis",
+    "suggest_score": 0.632
+  },
+  {
+    "id": "2610.06170",
+    "version_id": "2610.06170v1",
+    "title": "MS-Exam-Gen: Source-Grounded Benchmark Construction for Evaluating LLMs on Textual Multiple Sclerosis MRI Knowledge",
+    "abstract": "Biomedical large language model (LLM) evaluation requires auditable assessment of narrow, evolving, source-grounded subspecialty knowledge. Multiple sclerosis MRI (MS-MRI) provides a high-stakes textual-knowledge test case because correct reasoning requires current diagnostic criteria, standardized acquisition and reporting knowledge, longitudinal monitoring concepts, lesion morphology, and recognition of difficult mimics. We present MS-Exam-Gen, a reproducible framework for constructing and auditing a text-based multiple-choice question (MCQ) benchmark for MS-MRI knowledge; it does not evaluate direct MRI image interpretation. MS-Exam-Gen targets source-grounded criteria, protocols, reporting, and differential diagnosis. The framework combines expert-source indexing, exam-oriented topic induction, evidence-grounded MCQ generation, automated quality audits, a same-family consistency screen, and empirical calibration. From a 66-source corpus indexed into 4,289 retrieval chunks, the pipeline produced a locked 3,058-item candidate benchmark spanning 16 topics and 53 subtopics. Evaluation across 12 primary LLM endpoints yielded 36,696 item-level predictions and separated performance over a 42.8-percentage-point accuracy range (89.7% to 46.9%). Across these endpoints, 25.5% of items were missed by at least four. Post-generation audits showed that refreshed construction reduced measurable answer cues, while option-order testing showed that absolute MCQ scores remain position-sensitive. Generated construction labels remain metadata rather than validated psychometric categories. Because expert adjudication and full option-order counterbalancing remain future work, MS-Exam-Gen is not a clinically certified examination. It should be interpreted as an automatically filtered, source-grounded candidate benchmark and reproducible audit workflow for item-level and topic-specific LLM evaluation.",
+    "authors": [
+      "Abdul Basit",
+      "Muhammad Abdullah Hanif",
+      "Muhammad Shafique"
+    ],
+    "date": "2026-10-05",
+    "updated": "2026-10-05",
+    "url": "https://arxiv.org/abs/2610.06170",
+    "primary_category": "cs.AI",
+    "comment": "7 pages, 3 figures. Accepted for publication to BHI 2026",
+    "suggested_category": "benchmark",
+    "suggest_score": 0.667
+  },
+  {
+    "id": "2610.05247",
+    "version_id": "2610.05247v1",
+    "title": "templar: agentic induction and evolution of standardized radiology reporting templates from large-scale clinical corpora",
+    "abstract": "Structured radiology reporting mitigates the heterogeneity of free-text reports, yet its benefits depend on high-quality reporting templates. In practice, such templates are conventionally built through labor-intensive expert consensus and therefore vary across institutions and lag behind evolving clinical practice. Large language models (LLMs) enable automated template induction, but existing approaches remain limited: single-LLM induction is constrained by context length, and the corpus-scale method ASTAR produces a static, closed-corpus template without external grounding or downstream adaptation. To address these limitations, we propose TEMPLAR, a TEMPLate-centric Agentic framework for inducing and evolving standardized Radiology reporting templates from large-scale clinical corpora. TEMPLAR treats the template as a persistent central state maintained alongside two provenance-aware knowledge graphs, namely an anatomical graph that constrains template construction and a diagnostic graph that supports finding-to-diagnosis reasoning. Three agents operate on this state. The Induction Agent derives canonical clinical slots from anatomy-constrained Span-Triple atoms via dual-view similarity clustering; the Evolution Agent then assembles these slots into a hierarchical template and revises it under consistency constraints, external clinical evidence, and downstream structuring feedback; and the Clinical Agent applies the evolved template to report structuring, reconstruction, and diagnostic reasoning. Across four datasets, TEMPLAR outperforms ASTAR, three medical LLMs, and six general-purpose LLMs in coverage, information fidelity, and diagnostic fidelity, while achieving the highest or tied-highest LLM-rated template quality. Its fidelity advantages over ASTAR persist under cross-dataset transfer, and cumulative ablations support complementary contributions of its key components.",
+    "authors": [
+      "Xiaotian Hu",
+      "Mingxuan Liu",
+      "Zhonghan Wang",
+      "Xinfeng Zhang",
+      "Yiming Huang",
+      "Ziang Wang",
+      "Kasidit Anmahaepong",
+      "Yijin Li",
+      "Yifei Chen",
+      "Hongjia Yang",
+      "Zihan Li",
+      "Qiyuan Tian"
+    ],
+    "date": "2026-10-04",
+    "updated": "2026-10-04",
+    "url": "https://arxiv.org/abs/2610.05247",
+    "primary_category": "cs.MA",
+    "comment": "",
+    "suggested_category": "knowledge-grounded",
+    "suggest_score": 0.667
+  },
+  {
+    "id": "2610.04502",
+    "version_id": "2610.04502v1",
+    "title": "Localization Lens for Improving Medical Vision-Language Models",
+    "abstract": "Medical Vision-Language Models (Med-VLMs) have demonstrated strong capabilities in clinical tasks. However, they often struggle to understand anatomical structures and spatial positioning, which are crucial for medical reasoning. To address this, we propose a localization-aware enhancement to the Med-VLM pipeline, introducing improvements at three levels: data,architecture, and alignment. First, we introduce localization lens, a set of expert-validated representations that provide richer anatomical and positional context. However, as these representations increase input complexity, we integrate pixel shuffle within the model architecture to filter and refine representations, enhancing spatial information processing while preserving anatomical continuity. Lastly, to effectively align the localization lens representations with textual features, we incorporate decoupled contrastive loss (DCL) alongside the standard loss function. This ensures better feature discrimination and robustness, particularly in data limited medical settings. Through extensive evaluations on medical visual question answering (Med-VQA) datasets, we show that our methodology improves localization-driven performance across different Med-VLM architectures. Our analysis of localization-based questions further reveals that improvements in anatomy and spatial reasoning directly enhance the overall accuracy of Med-VQA upto 6.2%. The proposed approach is model-agnostic and can be seamlessly integrated into existing Med-VLM pipelines. The dataset, code, and trained models will be made publicly available at https://github.com/CVLABLUMS/localizationlens.",
+    "authors": [
+      "Hasan Farooq",
+      "Murtaza Taj",
+      "Mehwish Nasim",
+      "Arif Mahmood"
+    ],
+    "date": "2026-10-03",
+    "updated": "2026-10-03",
+    "url": "https://arxiv.org/abs/2610.04502",
+    "primary_category": "cs.CV",
+    "comment": "10 pages, 1 figure, Medical Image Computing and Computer Assisted Intervention (MICCAI)",
+    "suggested_category": "mllm-imaging",
+    "suggest_score": 1.206
+  },
+  {
+    "id": "2610.04387",
+    "version_id": "2610.04387v1",
+    "title": "TrustMed-RL: Long-Horizon Reinforcement Learning for Evidence-Grounded Clinical Diagnosis",
+    "abstract": "Medical language models can produce correct diagnoses despite incomplete investigations and unsupported reasoning. To support long-horizon, evidence-grounded diagnosis, we introduce \\textbf{TrustMed-RL}. Built from PubMed rare-disease cases and over 24,000 manually annotated image panels, it integrates interviews, examinations, testing, specialist consultation, and literature search through state-dependent actions. Our 8B vision--language policy, trained with clinically adapted GiGPO and coverage-adjusted diagnostic rewards, achieves 37.1\\% diagnostic accuracy on 2,500 evaluation cases, outperforming all evaluated open-weight baselines and improving over supervised fine-tuning by 12.4 percentage points.. When success additionally requires acquiring at least 50\\% of supporting test evidence, TrustMed-RL achieves 32.5\\%, exceeding GPT-4o by 6.8 percentage points. Furthermore, it surpasses all evaluated baselines on MTMedDialog and multiple larger 27--32B models on AgentClinic. In physician review of 200 diagnostically accepted test-set trajectories, 83.0\\% receive evidential-grounding scores of 4--5 out of 5. Physicians' assessments suggest that these diagnostic trajectories are trustworthy and aligned with human diagnostic reasoning.",
+    "authors": [
+      "Wenxin Zhan",
+      "Yizheng Jiao",
+      "Haifeng Song",
+      "Shuai Xu",
+      "Chencheng Pan",
+      "Jiayi Feng",
+      "Anjie Xie"
+    ],
+    "date": "2026-10-03",
+    "updated": "2026-10-03",
+    "url": "https://arxiv.org/abs/2610.04387",
+    "primary_category": "cs.AI",
+    "comment": "",
+    "suggested_category": "survey",
+    "suggest_score": 0.378
+  },
+  {
+    "id": "2610.03951",
+    "version_id": "2610.03951v1",
+    "title": "Evolving LLM-Generated Features for Interpretable Classification",
+    "abstract": "Large language models (LLMs) are increasingly used as classifiers, yet they operate as opaque systems whose decisions are difficult to interpret, which complicates their use in regulated domains such as credit scoring or medical diagnosis. We propose an evolutionary framework that iteratively discovers natural language feature definitions (rubrics) for interpretable classification. An LLM generates candidate binary features, evaluates each sample against them, and the resulting vectors can be used to train a transparent classifier such as logistic regression. The feature set evolves over multiple iterations guided by classification errors, per-class activation rates, and feature ablation scores. We evaluate across three benchmarks, including a credit risk dataset representative of regulated domains, comparing single-shot LLM rubrics, evolved rubrics, and direct zero-shot LLM classification. Evolved features improve over single-shot rubrics by +2.9 pp on average and outperform zero-shot LLM classification on two of three tasks, while providing fully auditable decision logic. On the credit risk task, the zero-shot LLM performs at chance (50.7%) with a strong bias toward a single class, whereas evolved features achieve balanced, interpretable predictions. Crucially, this failure is invisible in aggregate accuracy and surfaces only under per-class auditing. Analysis reveals that evolution is most effective when label boundaries cannot be inferred from category names alone or when the LLM lacks reliable domain-specific reasoning.",
+    "authors": [
+      "Jack Butler",
+      "Zainab Afolabi",
+      "Nikita Kozodoi"
+    ],
+    "date": "2026-10-02",
+    "updated": "2026-10-02",
+    "url": "https://arxiv.org/abs/2610.03951",
+    "primary_category": "cs.LG",
+    "comment": "",
+    "suggested_category": "benchmark",
+    "suggest_score": 0.667
+  },
+  {
     "id": "2610.02684",
     "version_id": "2610.02684v1",
     "title": "Large language models exhibit unreliable updating of clinical judgment as patient evidence evolves",
