@@ -1,5 +1,126 @@
 [
   {
+    "id": "2610.10203",
+    "version_id": "2610.10203v1",
+    "title": "How to train your model organism",
+    "abstract": "Model organisms of alignment-relevant behaviors (e.g., backdoors, sycophancy, spurious correlations) have emerged as a key tool for evaluating whitebox interpretability techniques. We argue that the prevailing practice of training model organisms to a single objective of installing the target behavior is insufficient and propose validating model organisms with respect to three objectives with associated metrics: target-behavior installation, general-capability preservation (i.e., parametric knowledge, chat quality), and output naturalness (i.e., CoT and activations). We re-visit two publicly released organism suites using this validation framework and show that (1) chat quality and CoT naturalness degrade substantially across training recipes, and (2) validation metrics predict how well interpretability methods recover the installed behavior, e.g., a logit lens readout covaries with an organism's general capabilities. We introduce a multi-objective training approach based on model merging to train more realistic model organisms. Finally, on a new suite of model organisms targeting demographic biases in clinical reasoning, we compare training recipes and find that DPO training stays closer to the base model than supervised finetuning, and the proposed model optimization approach better preserves capabilities and naturalness. Auditing this suite with an investigator agent, we again observe validation metrics tracking bias recovery. In sum, training methods shape the interpretability conclusions an organism supports, and we argue that one should consider multiple objectives to draw generalizable conclusions about interpretability methods using (realistic) model organisms.",
+    "authors": [
+      "Xilin Wang",
+      "David Bau",
+      "Byron C. Wallace"
+    ],
+    "date": "2026-10-07",
+    "updated": "2026-10-07",
+    "url": "https://arxiv.org/abs/2610.10203",
+    "primary_category": "cs.LG",
+    "comment": "",
+    "suggested_category": "faithfulness",
+    "suggest_score": 0.632
+  },
+  {
+    "id": "2610.10335",
+    "version_id": "2610.10335v1",
+    "title": "When to Unpair: Regulating Pairing Dependence in Medical Visual In-Context Learning",
+    "abstract": "Visual in-context learning (ICL), well suited to label-scarce medical imaging, uses support image-label pairs to demonstrate input-output mappings, while the labels collectively indicate the requested task. We diagnose dependence on individual pairings with a test-time derangement that reassigns every support label to another support image while preserving the query, support images, and label multiset. The resulting pairing gap, defined as shuffled-minus-matched performance, shows that all four released models depend on the pairing, to widely varying degrees. Further analysis of a paired-trained model reveals support-associated spurious regions and lesion-size biases even with real, unaltered supports, alongside sensitivity to mis-registered support labels. To regulate this dependence, we introduce a late unpairing curriculum (LUC), which starts with matched training and then applies random unpairing, replacing each support label with that of another support in the same episode. LUC nearly closes the pairing gap on two backbones while maintaining or improving matched-support performance across all evaluated task types, with gains extending to held-out tasks and cross-dataset episodes. It also mitigates these failure modes. On BraTS whole-tumor segmentation, matched-support DSC rises from 0.733 to 0.857 while the gap shrinks from -0.184 to -0.008. In a released model, brief fine-tuning with random unpairing reduces the gap. A reversed curriculum that places the same number of unpairing epochs at the start of training leaves a large gap. This shows that pairing dependence is shaped by the order of training and not only by the amount of unpaired training.",
+    "authors": [
+      "Cheng Wan",
+      "Chenjun Li",
+      "Qingyu Zhao"
+    ],
+    "date": "2026-10-07",
+    "updated": "2026-10-07",
+    "url": "https://arxiv.org/abs/2610.10335",
+    "primary_category": "cs.CV",
+    "comment": "24 pages, 12 figures",
+    "suggested_category": "prompt-structure",
+    "suggest_score": 0.333
+  },
+  {
+    "id": "2610.10286",
+    "version_id": "2610.10286v1",
+    "title": "$Δ$Representation: Geometry Supervised Representation Learning of Phenotypes via Counterfactual Reasoning for Medical VLMs",
+    "abstract": "Medical vision-language models (VLMs) have shown increasing potential for radiological image interpretation. Medical VLMs encode radiological images into visual representations that capture both anatomical and phenotypic information for diagnosis. Existing approaches improve pathological phenotype representations through semantic-guided representation alignment. However, pathological phenotypes arise as lesion-specific visual changes superimposed on underlying normal anatomy. Such semantic alignment approaches fail to model the phenotype-specific increment relative to the corresponding normal anatomical representation. To address this gap, we propose \\textbf{$Δ$Representation}, a visual phenotype representation learning framework based on counterfactual reasoning for medical VLMs. It comprises \\textbf{BaseAnatomy}, a geometry-supervised representation learning module, and \\textbf{$Δ$Phenotype}, a counterfactual incremental representation learning module. BaseAnatomy provides fine-grained geometric supervision through spatial relationships across and within anatomical structures. $Δ$Phenotype computes the representation increment between lesion representations and their corresponding normal anatomical representations, and supervises increments associated with the same phenotype to cluster in the representation space. Experiments on \\textit{ReXGroundingCT} and \\textit{LIDC-IDRI} demonstrate that $Δ$Representation effectively structures pathological phenotype representations and improves lesion grounding and phenotype characterization accuracy in medical VLMs. Code is available at https://anonymous.4open.science/r/deltarep-CF6D.",
+    "authors": [
+      "Hao Wang",
+      "Qiwei Zeng",
+      "Jinghao Lin",
+      "Shuchang Ye",
+      "Yuezhe Yang",
+      "Yige Peng",
+      "Haoyuan Che",
+      "Jinman Kim",
+      "Lei Bi"
+    ],
+    "date": "2026-10-07",
+    "updated": "2026-10-07",
+    "url": "https://arxiv.org/abs/2610.10286",
+    "primary_category": "cs.CV",
+    "comment": "",
+    "suggested_category": "mllm-imaging",
+    "suggest_score": 0.905
+  },
+  {
+    "id": "2610.09643",
+    "version_id": "2610.09643v1",
+    "title": "CircuitATLAS: Agentic reasoning over a systems neuroscience knowledge graph for target discovery in circuitopathies",
+    "abstract": "Drug discovery for neurological disease has traditionally centered on the molecules altered by disease. But the molecules that cause pathology are not necessarily the best points from which to reverse it. Here, we ask which otherwise unaltered molecular control points can be engaged to restore pathological neural circuits toward functional states. We present CircuitATLAS, a provenance-grounded systems-neuroscience knowledge graph and agentic framework for target discovery in circuitopathies. It structures literature-derived relationships across diseases, phenotypes, electrophysiology, circuits, brain regions, cell types and molecular effectors, while deliberately excluding direct disease-gene and disease-protein edges to reduce shortcut reasoning. The graph contains 3.83 million nodes and 7.66 million edges, including 5.31 million LLM-extracted relations, and incorporates structured datasets such as the Human Cell Atlas and new multimodal in vivo measurements. We then introduce an agentic workflow that reasons from measurable disease phenotypes through their circuit and cellular substrates to molecular interventions, therapeutic feasibility and clinical constraints. Finally, we introduce a human-governed in vivo lab-in-the-loop linking hypothesis generation to experimental iteration. Within this framework an agent nominated ATP1A3, the neuronal alpha3 Na+/K+-ATPase, as a control point on cortical excitability; interneuron-restricted expression of ATP1A3 abolished the beta- and gamma-band response to a focal 4-aminopyridine challenge in vivo, and the validated target was then carried into a structure-guided small-molecule campaign terminating in a defined assay to resolve the direction of modulation. CircuitATLAS thus provides a framework for discovering therapeutics based not only on what is molecularly disrupted in disease, but on what can be controlled to restore circuit function.",
+    "authors": [
+      "Gabriel Ocana-Santero",
+      "Marko Tvrdic"
+    ],
+    "date": "2026-10-07",
+    "updated": "2026-10-07",
+    "url": "https://arxiv.org/abs/2610.09643",
+    "primary_category": "q-bio.QM",
+    "comment": "22 pages, 5 figures, 4 tables",
+    "suggested_category": "mllm-pathology",
+    "suggest_score": 0.378
+  },
+  {
+    "id": "2610.09146",
+    "version_id": "2610.09146v1",
+    "title": "Frozen Models, Evolving Expertise: Model-Agnostic Learning from Deployment Experience for Multimodal Medical AI",
+    "abstract": "Large language models (LLMs) and vision-language models (VLMs) are usually frozen after deployment, so they do not learn from the cases they solve. This is especially concerning in medicine, where new clinical evidence, updated guidelines, and new therapies can change established practice. Fine-tuning can update the model, but it requires access to model weights and additional training. Parameter-free methods avoid training, but they may overfit a fixed validation set, lack reliable domain knowledge, or lose visual details by saving experience only as text. To address these limitations, we present a model-agnostic framework that allows frozen LLMs and VLMs to learn from deployment experience through three forms of external expertise: a Skill that guides reasoning and tool use, a Knowledge Memory that stores reliable facts supported by earlier cases or trusted external evidence, and a Multimodal Knowledge Base that keeps visual examples and guides the model to relate each retrieved case to the current image. Instead of relying on a fixed validation set, a validation strategy keeps an update only if it helps on new cases without degrading performance on earlier ones. Across six benchmarks covering clinical diagnosis, clinical workflows, medical reasoning, and medical and non-medical visual reasoning, and with four open-weight and closed-source base models, our framework improves performance during online deployment by up to 34.2% over the base model on medical tasks, generalizes to unseen cases, transfers to other models without further optimization, and works in non-medical domains.",
+    "authors": [
+      "Yexiao He",
+      "Yucheng Tang",
+      "Pengfei Guo",
+      "Yufan He",
+      "Andriy Myronenko",
+      "Can Zhao",
+      "Ang Li",
+      "Daguang Xu",
+      "Dong Yang"
+    ],
+    "date": "2026-10-06",
+    "updated": "2026-10-06",
+    "url": "https://arxiv.org/abs/2610.09146",
+    "primary_category": "cs.AI",
+    "comment": "",
+    "suggested_category": "clinical-alignment",
+    "suggest_score": 0.905
+  },
+  {
+    "id": "2610.09026",
+    "version_id": "2610.09026v1",
+    "title": "BEACON-SP: Ontology-Grounded GraphRAG Framework for Clinical Suicide Risk Assessment",
+    "abstract": "We present BEACON-SP, an ontology-grounded Graph Retrieval-Augmented Generation (GraphRAG) framework for clinician-facing decision support in behavioral health settings such as suicide prevention, where effective assessment requires integrating heterogeneous clinical, behavioral, social, and temporal evidence. BEACON-SP combines patient knowledge graphs with ontology-guided retrieval to support multi-hop reasoning across diagnoses, medications, risk and protective factors, life events, and temporal relationships. The framework is enabled by a comprehensive suicide prevention ontology that integrates the Three-Step Theory, the Integrated Motivational-Volitional Model, and the Suicide Social Determinants of Health Ontology into a unified representation of patient risk factors. We construct ontology-grounded patient knowledge graphs and evaluate BEACON-SP for clinician-facing question answering. Compared with a vector-based retrieval-augmented generation (RAG) baseline on a 1,500-query benchmark spanning 15 clinical categories and 100 patients, BEACON-SP improves completeness, clinical relevance, and evidence grounding under a corrected comparative evaluation protocol, with a small gain on factual accuracy. In paired criterion-level comparisons, GraphRAG is preferred in 76.4% of cases. These results demonstrate the potential of ontology-guided GraphRAG to provide structured, contextualized patient evidence for clinical decision support.",
+    "authors": [
+      "Kemal Davaslioglu",
+      "Nathan Conger",
+      "Sastry Kompella",
+      "Yalin E. Sagduyu",
+      "Nathaniel D. Bastian"
+    ],
+    "date": "2026-10-06",
+    "updated": "2026-10-06",
+    "url": "https://arxiv.org/abs/2610.09026",
+    "primary_category": "cs.AI",
+    "comment": "",
+    "suggested_category": "knowledge-grounded",
+    "suggest_score": 1.667
+  },
+  {
     "id": "2610.08327",
     "version_id": "2610.08327v1",
     "title": "MedZERO: Self-Evolving Agents for Open-Ended Medical Reasoning Through Controlled Knowledge Accumulation",
