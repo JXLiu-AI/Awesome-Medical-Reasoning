@@ -1,5 +1,49 @@
 [
   {
+    "id": "2610.13059",
+    "version_id": "2610.13059v1",
+    "title": "CliQ-RRG: Clinical-Knowledge Guided Disease-aware Visual-Textual Alignment for QA-Style Radiology Report Generation",
+    "abstract": "Radiology reports are essential for diagnostic reasoning and patient care, yet their manual preparation is time-consuming and cognitively demanding. Automatic radiology report generation (RRG) offers a scalable alternative, but existing models often produce lengthy, unstructured narratives that overlook diagnostic cues and multi-view information. We present Clinical-Knowledge Guided Disease-aware Visual-Textual Alignment for QA-Style Radiology Report Generation (CliQ-RRG), a unified two-stage framework for interpretable and clinically grounded reporting. In Stage 1, CliQ-RRG employs a Disease-aware Visual-Textual Alignment module that aligns image and text representations using predicted disease embeddings, reinforced by a Prior-Guided Attention Module (PrAM) to capture multi-view dependencies across current and prior scans. In Stage 2, GraphRAG-guided retrieval augments intermediate textual representations with graph-grounded clinical evidence, and a large language model restructures them into concise, interpretable question-answer (QA) pairs with diagnostic summaries. Experiments on two public chest X-ray benchmarks demonstrate that CliQ-RRG consistently outperforms prior methods across both lexical and clinical metrics, generating accurate and clinically coherent QA-style radiology reports. Code is available at: https://github.com/chandravardhan-singh-raghaw/CliQ-RRG.",
+    "authors": [
+      "Chandravardhan Singh Raghaw",
+      "Shahid Shafi Dar",
+      "Arnav Nishith Sharma",
+      "Shrey Modi",
+      "Nagendra Kumar"
+    ],
+    "date": "2026-10-09",
+    "updated": "2026-10-09",
+    "url": "https://arxiv.org/abs/2610.13059",
+    "primary_category": "cs.CL",
+    "comment": "Accepted: EMNLP Findings 2026",
+    "suggested_category": "mllm-imaging",
+    "suggest_score": 0.905
+  },
+  {
+    "id": "2610.13057",
+    "version_id": "2610.13057v1",
+    "title": "CoBe: A Benchmark For Conversational Counterfactual Text Editing",
+    "abstract": "Counterfactual text editing is the ability to revise a given text in light of a hypothetical change while preserving facts not causally affected by that change. When asked what would have happened if a doctor had not recommended surgery, the model output should retain the patient's medical history and modify only the consequences of the decision. This requires causal understanding: a model must determine, without being explicitly instructed to, what events are affected by the hypothetical change and what should remain fixed. This skill is central to human reasoning, especially in safety-critical domains like healthcare or law. By contrast, the task of associational text generation merely generates text statistically associated with the altered condition. In the medical example, an associational response might make the patient's symptoms less severe because milder cases correlate with no surgery. Such responses produce a plausible scenario, but not the counterfactual version of the given one. Prior counterfactual-text datasets do not clearly separate these modes of reasoning. We introduce the Counterfactual Benchmark (CoBe), a testbed for models' zero-shot ability to counterfactually edit a given textual scenario when prompted to do so in a conversationally natural way. CoBe contains 2000 questions spanning healthcare, science and engineering, business, and everyday scenarios. We test a suite of frontier and smaller models, with frontier systems achieving an average score of $58.05\\%$. Our findings indicate that models frequently default to associational generation rather than preserving the causal structure of the original scenario. Moreover, performance does not scale consistently with either model size or output token length, suggesting that the failure may reflect model training objectives rather than insufficient model capacity.",
+    "authors": [
+      "Arvind Raghavan",
+      "Inwoo Hwang",
+      "Shreyas Havaldar",
+      "Kai-Zhan Lee",
+      "Aurghya Maiti",
+      "Yushu Pan",
+      "Jeffrey Wu",
+      "Mingxuan Li",
+      "Elias Bareinboim"
+    ],
+    "date": "2026-10-09",
+    "updated": "2026-10-09",
+    "url": "https://arxiv.org/abs/2610.13057",
+    "primary_category": "cs.CL",
+    "comment": "accepted to NeurIPS'26 workshops on Trustworthy AI For Good (AI4GOOD) and Trustworthy AI Evaluations (TAE)",
+    "suggested_category": "benchmark",
+    "suggest_score": 1.0
+  },
+  {
     "id": "2610.11317",
     "version_id": "2610.11317v1",
     "title": "DivMoE: Fine-Grained MoE Upcycling via Cross-Domain Expert Composition",
