@@ -1,5 +1,47 @@
 [
   {
+    "id": "2610.20292",
+    "version_id": "2610.20292v1",
+    "title": "Taking the PULSE of Medical Reasoning: Step-Level Retrieval Timing for Knowledge-Grounded Inference",
+    "abstract": "Reliable medical reasoning requires LLMs to dynamically access external biomedical evidence to improve factual trustworthiness and reasoning accuracy. However, indiscriminate retrieval can introduce noise and latency, raising a critical retrieval-timing problem: at each reasoning step, the system must decide whether the model's internal knowledge is reliable or external evidence is needed. We propose PUlSE, a lightweight probing method that uses the model's internal representations as intrinsic signals for step-level retrieval control. Our posterior trajectory analysis reveals that erroneous steps exhibit substantially higher inter-layer volatility than correct ones, suggesting unstable internal knowledge. Based on this finding, PUlSE trains a compact probe on inter-layer geometric features to detect factual errors upon step completion, and uses it as an adaptive trigger for retrieval and step regeneration. Across four medical benchmarks, PUlSE-timed retrieval matches exhaustive per-step retrieval in accuracy while reducing retrieval calls by 72%, and can transfer to an unseen legal domain, indicating potential domain-agnostic generality. Overall, our study provides an initial step toward shifting retrieval-trigger design from surface-level confidence estimates to internal activation dynamics for adaptive access.",
+    "authors": [
+      "Danyang Zhao",
+      "Sendong Zhao",
+      "Yanrui Du",
+      "Haochun Wang",
+      "Ming Ma",
+      "Wenhao Li",
+      "Jingbo Wang",
+      "Jiatong Liu",
+      "Bing Qin"
+    ],
+    "date": "2026-10-14",
+    "updated": "2026-10-14",
+    "url": "https://arxiv.org/abs/2610.20292",
+    "primary_category": "cs.CL",
+    "comment": "",
+    "suggested_category": "process-reward",
+    "suggest_score": 0.378
+  },
+  {
+    "id": "2610.19663",
+    "version_id": "2610.19663v1",
+    "title": "Learning When to Trust Medical Knowledge: Regression-Safe Routing for Clinical Reasoning",
+    "abstract": "Clinical reasoning LLMs need external medical knowledge, but retrieved evidence and reasoning chains can be outdated, poisoned, or hallucinated. Harmful knowledge can cause regression: changing a correct answer into an incorrect one. We construct a medical knowledge-poisoning benchmark covering retrieved evidence and reasoning chains, with seven attack families filtered by a three-judge \"subtle-but-wrong\" vote and paired clean exams that separate poisoning effects from question difficulty. No fixed knowledge-use strategy is robust across these settings: strong RAG methods trade robustness to poisoned evidence against accuracy when evidence is useful. We formulate knowledge use as per-instance routing and introduce Med-TrustRouter, a lightweight controller that keeps the solver frozen. From leakage-free runtime signals, it estimates each action's expected correctness gain and uncertainty, preserving the base answer unless another action is confidently better. Across seven medical reasoning settings, Med-TrustRouter achieves 78.9 macro and 69.2 worst-case accuracy, matching the strongest competitor on macro accuracy while substantially improving the worst-case floor. Its gains transfer across solvers and evidence judges, unlike a hand-coded router using the same signals. Similar performance across linear, tree, and neural action-value heads suggests that the benefit comes from routing rather than estimator complexity. These results support learning when to trust external knowledge for robust clinical reasoning.",
+    "authors": [
+      "Hui Zhang",
+      "Yujia Zeng",
+      "Yuhao Xin"
+    ],
+    "date": "2026-10-14",
+    "updated": "2026-10-14",
+    "url": "https://arxiv.org/abs/2610.19663",
+    "primary_category": "cs.AI",
+    "comment": "19 pages, 8 figures, including supplementary material",
+    "suggested_category": "benchmark",
+    "suggest_score": 0.667
+  },
+  {
     "id": "2610.17690",
     "version_id": "2610.17690v1",
     "title": "MedEvo: Medical Reasoning Evolution through Knowledge Navigation",
