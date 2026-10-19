@@ -1,5 +1,44 @@
 [
   {
+    "id": "2610.23311",
+    "version_id": "2610.23311v1",
+    "title": "Self-Reflective Chain-of-Thought (SRCoT): Evidence-Based Text Generation via a Closed-Loop Retrieve--Reflect--Revise Pipeline on Edge LLMs",
+    "abstract": "Large language models (LLMs) can generate fluent outputs that lack source support or conflict with local operational constraints. We introduce Self-Reflective Chain-of-Thought (SRCoT), a modular architecture that organizes generation as a closed Retrieve--Reflect--Revise loop. SRCoT separates environment state, persistent knowledge, accumulated experience, and short-term memory into provenance-labeled stores. BM25 retrieval supplies local context; subsequent passes expose intermediate drafts, missing-information markers, follow-up queries, and optional claim--evidence mappings. These artifacts inform retrieval, revision, clarification, or abstention decisions. We examine the architecture through qualitative, trace-based case studies in two fully synthetic settings: emergency medical services and Munich-Sim, an emergency-operations simulation. Local prototype runs on an Apple M4-family laptop with 128 GB memory illustrate source-labeled documentation, explicit gap marking, and structured dispatch-style outputs. The traces also reveal provenance-assignment errors, incomplete evidence coverage, and unsafe assumptions that remain possible despite prompting constraints. These cases demonstrate report-level inspectability and local execution, not comparative superiority, hallucination reduction, clinical validity, or operational safety. The architecture separates retrieval and control from the model interface, but behavior across different models remains to be evaluated. SRCoT is a research proof of concept requiring human review, with its principal contribution lying in an inspectable control procedure rather than a new model.",
+    "authors": [
+      "Fabian Broszio",
+      "Michael Hoffmann",
+      "Adrian Paschke"
+    ],
+    "date": "2026-10-16",
+    "updated": "2026-10-16",
+    "url": "https://arxiv.org/abs/2610.23311",
+    "primary_category": "cs.AI",
+    "comment": "28 pages, 2 figures. Extended technical account; a related brief report based on overlapping work has been submitted to Frontiers in Disaster and Emergency Medicine. The two manuscripts do not represent independent empirical studies",
+    "suggested_category": "prompt-structure",
+    "suggest_score": 0.667
+  },
+  {
+    "id": "2610.22659",
+    "version_id": "2610.22659v1",
+    "title": "Exploring The Empirical Privacy Landscape of Synthetic Data",
+    "abstract": "Methods for training language models on sensitive data differ in how they balance capability gains against the risk of leaking private information. In this paper, we present a controlled comparison of data-level and training-level interventions for navigating the capability-privacy tradeoff on synthetic medical records with canaries to probe for leakage. Direct finetuning performs best on capability metrics but leads to the most privacy leakage, while DP-SGD reduces leakage at substantial cost to capabilities. Generating synthetic data from these records offers a more favorable balance, particularly when guided by a uniqueness-aware instruction to replace private details. Relative to naive paraphrasing, privacy-aware rewriting improves privacy protection across a variety of different rewriting models. We also find that more capable rewriting models generally reduce the risks of downstream privacy leakage, although held-out fit does not improve monotonically and increased test-time compute yields inconsistent gains. Overall, these results highlight privacy-aware rewriting as a promising direction for achieving a more favorable trade-off between capabilities and empirical privacy compared to other training-level methods, and our evaluation framework supports comparisons of future models and methods.",
+    "authors": [
+      "Zihao Zhao",
+      "Avi Schwarzschild",
+      "Casey Meehan",
+      "Katherine Lee",
+      "Zhili Feng",
+      "Dylan Sam"
+    ],
+    "date": "2026-10-15",
+    "updated": "2026-10-15",
+    "url": "https://arxiv.org/abs/2610.22659",
+    "primary_category": "cs.CR",
+    "comment": "",
+    "suggested_category": "test-time-scaling",
+    "suggest_score": 0.333
+  },
+  {
     "id": "2610.22298",
     "version_id": "2610.22298v1",
     "title": "AI Consilium: a Benchmark of LLM Clinical Multidisciplinary Second Opinions",
