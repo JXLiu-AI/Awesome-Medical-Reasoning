@@ -1,5 +1,65 @@
 [
   {
+    "id": "2610.31586",
+    "version_id": "2610.31586v1",
+    "title": "Would an LLM Match into a Residency? Uncertainty, Reasoning and Image Use of Open Language Models on the Spanish MIR Examination",
+    "abstract": "Accuracy on medical examinations is common evidence offered for the clinical use of language models, yet a health system that intends to run an open model on its own hardware needs to know considerably more: whether the model recognizes when it is likely to be wrong, whether medical fine-tuning improves this ability, whether its correct answers rest on sound clinical reasoning, or whether it actually uses the images it is given. We examine these questions for four open models of 8 to 27 billion parameters on the Spanish MIR residency examination, scoring 1,552 questions from eight editions under the exam's own rules. Answering every question, the three larger models would rank among roughly the first 600 to 3,000 candidates, with 41 to 43 specialties still open to them. Abstention, however, never pays, because even their least confident answers are right more often than the 25% break-even. Medical fine-tuning reduced overconfidence at the cost of accuracy, without improving how well confidence separates right from wrong answers. Moreover, 13-38% of correct answers rejected a distractor for a clinically unsound reason that confidence did not reflect, and removing or swapping the provided contextual images left accuracy unchanged.",
+    "authors": [
+      "Miguel Fernandez-de-Retana",
+      "Unai Zulaika",
+      "Ruben Sanchez-Corcuera",
+      "Aritz Bilbao-Jayo",
+      "Aitor Almeida"
+    ],
+    "date": "2026-10-22",
+    "updated": "2026-10-22",
+    "url": "https://arxiv.org/abs/2610.31586",
+    "primary_category": "cs.CL",
+    "comment": "13 pages, 8 figures",
+    "suggested_category": "benchmark",
+    "suggest_score": 0.333
+  },
+  {
+    "id": "2610.30947",
+    "version_id": "2610.30947v1",
+    "title": "RetiJev: Fast and Source-Grounded Ophthalmic Decision Models",
+    "abstract": "Ophthalmic clinical decision support requires fast, accurate, and privacy-preserving inference, yet autoregressive large language models (LLMs) incur substantial latency and computational overhead for decisions among predefined actions. We therefore investigate a decision-oriented alternative to generative reasoning. Specifically, we first introduce RetiJev-Data, a source-grounded ophthalmology corpus comprising 78,158 clinical-decision and diagnosis questions derived from articles in PubMed Central and a MeSH vocabulary covering 531 eye diseases, and 50,074 guideline-grading questions spanning 11 grading systems, along with a 24,662-question evaluation benchmark. Based on this, we develop RetiJev, a family of 0.8B-9B decision models that directly score candidate answers without autoregressive decoding. Across all model sizes, RetiJev outperforms both a 27B LLM and the commercial Jev 1.13 decision model on guideline grading by 10.4-23.0 points. RetiJev-9B further achieves the highest accuracy on clinical decisions, improving over both baselines by 5.4-6.5 points while matching them on diagnosis. It answers a case in 158 ms on one GPU, 3.5x faster than LLM generation and 470x faster than reasoning. Models are released at https://github.com/Awenbocc/RetiJev.",
+    "authors": [
+      "Bo Liu",
+      "Lianyu Wang",
+      "Meng Wang",
+      "Ching-Yu Cheng",
+      "Huazhu Fu"
+    ],
+    "date": "2026-10-22",
+    "updated": "2026-10-22",
+    "url": "https://arxiv.org/abs/2610.30947",
+    "primary_category": "cs.CL",
+    "comment": "",
+    "suggested_category": "knowledge-grounded",
+    "suggest_score": 0.333
+  },
+  {
+    "id": "2610.30611",
+    "version_id": "2610.30611v1",
+    "title": "Better Reasoning, Not Just Bigger Models: A Structure-Grounded Framework for Efficient and Reliable Inference",
+    "abstract": "Scaling large language models has substantially improved linguistic fluency, yet reliable autonomous agents require more than fluent generation. In multi-turn inference, current agentic systems often produce semantically plausible but structurally ungrounded reasoning, especially under incomplete observations. We propose Structure-Grounded Uncertainty Reduction (SGUR), a training-free framework that complements token-level generation with active uncertainty reduction over structured hypothesis spaces. SGUR represents incomplete observations as a query graph and aligns them with candidate hypothesis graphs through a prior-weighted partial graph matching mechanism, where database-derived empirical priors assign greater importance to decision-relevant relations rather than treating all graph edges uniformly. The resulting inference state is iteratively refined by an active information-gain strategy that selects the next most informative node to query, systematically pruning the candidate space. We instantiate SGUR on a challenging PrimeKG-derived sequential medical diagnosis benchmark, demonstrating that structural grounding can partially substitute for model scale: starting from only two observed symptoms, SGUR achieves 92.5% Hit@3, outperforming the strongest Graph-RAG baseline by 9.4 percentage points while using approximately 5x fewer tokens. Notably, SGUR enables smaller backbone models to match or exceed the performance of models up to 10x larger, suggesting that structural grounding provides a more robust and efficient paradigm for scaling agent performance than relying exclusively on increasing model size.",
+    "authors": [
+      "Amirhossein Aghaei",
+      "Liangyan Li",
+      "Shiyi Yang",
+      "Shaohua Wang",
+      "Yan Wang"
+    ],
+    "date": "2026-10-22",
+    "updated": "2026-10-22",
+    "url": "https://arxiv.org/abs/2610.30611",
+    "primary_category": "cs.AI",
+    "comment": "",
+    "suggested_category": "knowledge-grounded",
+    "suggest_score": 0.667
+  },
+  {
     "id": "2610.29358",
     "version_id": "2610.29358v1",
     "title": "Reading the Mask: Descriptor-Grounded BI-RADS Rationale Generation for Breast MRI Segmentation",
