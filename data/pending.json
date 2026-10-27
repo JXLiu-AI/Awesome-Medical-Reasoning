@@ -1,5 +1,236 @@
 [
   {
+    "id": "2610.35847",
+    "version_id": "2610.35847v1",
+    "title": "Patient-specific rubric-based evaluation of large language models across longitudinal cancer care",
+    "abstract": "Large language models (LLMs) show promise in specialty medicine, yet existing evaluations largely focus on isolated clinical encounters rather than tracking how clinical responsibilities evolve across a longitudinal care pathway. Here we introduce NPC-RubricBench, a phase-aware benchmark for evaluating multistage clinical reasoning across the cancer care continuum, using nasopharyngeal carcinoma as a defined disease context. Curated from longitudinal records of 405 patients across two cancer centers, the benchmark comprises 941 patient-phase units across six sequential care phases and 17,688 patient-specific atomic criteria spanning five evaluation dimensions, with each assessment strictly restricted to decision-time clinical evidence. Evaluating 30 general-purpose and medical LLMs revealed that strong diagnostic performance does not carry over to downstream care. We evaluated 30 general-purpose and medical LLMs, showing that high diagnostic performance did not translate into improved downstream care. Instead, the dominant failure modes reversed across phases. Explicit decision errors dominated anatomical staging at 48.2%, whereas decision omissions dominated initial work-up and post-treatment follow-up at 33.4% and 30.4%, respectively. In the evaluated model set, medically adapted models showed higher omission rates than general-purpose models. Moreover, varying query granularity exposes a critical specification trade-off: broad open-ended requests degrade Decision Quality across all 30 models, while more detailed, checklist-like prompts raise Decision Quality but reduce Evidence Faithfulness and Safety Adherence. Furthermore, NPC-RubricBench demonstrates that static diagnostic benchmarks are insufficient to ensure consistent clinical reliability over time, highlighting the importance of phase-adaptive safeguards in multistage medical AI.",
+    "authors": [
+      "Wei-Wei Zhang",
+      "Pengkai Wang",
+      "Yan Li",
+      "Zhijie Sang",
+      "Guan-Qun Zhou",
+      "Jun-Yan Li",
+      "Shu-Han Zhou",
+      "Pei-Wen Liu",
+      "Ting-Xi Tang",
+      "Min Tang",
+      "Zhitian Hou",
+      "Jianmin Wu",
+      "Jian Guan",
+      "i Lin",
+      "Hongxia Yang",
+      "Ying Sun"
+    ],
+    "date": "2026-10-26",
+    "updated": "2026-10-26",
+    "url": "https://arxiv.org/abs/2610.35847",
+    "primary_category": "cs.AI",
+    "comment": "",
+    "suggested_category": "benchmark",
+    "suggest_score": 0.333
+  },
+  {
+    "id": "2610.35453",
+    "version_id": "2610.35453v1",
+    "title": "Beyond Federated Learning: Decentralized Agentic Systems for Self-Evolving Clinical Intelligence",
+    "abstract": "Clinical expertise is inherently distributed: it resides not in any single dataset or institution but in the accumulated reasoning experiences of thousands of clinicians navigating diverse patient populations, resource constraints, and evolving treatment protocols. Yet current approaches to scaling medical AI, from centralized large language models to federated learning, remain anchored to a data-centric paradigm that treats knowledge as static parameters to be aggregated. In this Perspective, we argue for a fundamental shift from data aggregation to experience aggregation. We propose Decentralized Agentic Systems (DAS), a framework in which distributed AI agents operating across healthcare institutions synthesize collective clinical intelligence by sharing abstracted reasoning trajectories rather than raw data or model parameters. Unlike federated learning, which averages numerical gradients across homogeneous model architectures, DAS exchanges structured records of clinical reasoning, specifically the sequence of observations, hypotheses, tool invocations, and outcome feedback that constitute diagnostic experience. We examine the architectural principles, deployment considerations, governance requirements, and critical open challenges of this framework, laying the groundwork for a collaborative medical AI ecosystem where distributed expertise autonomously adapts to the complexities of longitudinal patient care.",
+    "authors": [
+      "Haoyuan Li",
+      "Mathias Funk",
+      "Aaqib Saeed"
+    ],
+    "date": "2026-10-26",
+    "updated": "2026-10-26",
+    "url": "https://arxiv.org/abs/2610.35453",
+    "primary_category": "cs.AI",
+    "comment": "",
+    "suggested_category": "benchmark",
+    "suggest_score": 0.667
+  },
+  {
+    "id": "2610.35558",
+    "version_id": "2610.35558v1",
+    "title": "EXCISE: Locating and Excising Distracting Sentences in Medical Question Answering",
+    "abstract": "Language models are increasingly considered for clinical decision support, where their answers should be grounded in clinical evidence and remain robust to irrelevant information. Prior work shows that a single irrelevant sentence can lower the accuracy of medical models, but not where inside the model its effect can be removed, or how to do so without knowing which sentence it is. We find that blocking attention to a known distractor restores the answer, whereas head masking can suppress correct answers. We also show that the model's hidden states mark the distractor as the sentence that least fits the case even when the model follows it. To remove a distractor's effect without knowing which sentence it is, we propose EXCISE, an inference-time method that blocks the sentence most influencing the answer, but only if the model's hidden states mark it as inconsistent with the case. On MedQA-TD (MedQA with Targeted Distractors), a benchmark we construct in which each distractor targets a specific wrong option, EXCISE gains 16.7-22.8 accuracy points at a 1.5-2.1-point cost on the same questions without distractors, outperforming prompting, rewriting, and steering baselines for all three models. Its gains extend to MedDistractQA and BiasMedQA, as well as chain-of-thought generation.",
+    "authors": [
+      "Yerim Hong",
+      "Sohyun Son",
+      "Heeseung Chung",
+      "Mujeen Sung"
+    ],
+    "date": "2026-10-26",
+    "updated": "2026-10-26",
+    "url": "https://arxiv.org/abs/2610.35558",
+    "primary_category": "cs.CL",
+    "comment": "",
+    "suggested_category": "prompt-structure",
+    "suggest_score": 0.667
+  },
+  {
+    "id": "2610.34871",
+    "version_id": "2610.34871v1",
+    "title": "DocTalk: Enhancing Medical Knowledge Retrieval via Fine-tuned Large Language Models with Chain-of-Thought Reasoning for Robust Clinical Decision Support",
+    "abstract": "Objective: The rapid advancement of large language models (LLMs) in healthcare has opened new possibilities for AI-assisted clinical decision-making; however, safe and effective deployment remains challenging because of hallucination and domain misalignment. This study introduces DocTalk, a doctor-assistive question-answering (QA) system designed to generate concise, chart-grounded responses from de-identified discharge summaries. Methods: We developed a high-fidelity data generation pipeline that produces 500 clinically relevant QA pairs through sentence-level decomposition, chain-of-thought-guided question formulation, and expert review. Six open-source LLMs, including three general-purpose and three biomedical models, were evaluated before and after parameter-efficient instruction tuning using Low-Rank Adaptation (LoRA). The framework integrates prompt engineering, in-context learning, and medically aligned evaluation to support factual and interpretable responses. Results: On DocTalk-QA, instruction tuning produced consistent improvements across lexical, semantic, and clinical fidelity metrics. The best-performing tuned model, Llama-3-Med42-8B, achieved ROUGE-L = 0.40, BERTScore-F1 = 0.76, and UMLS-F1 = 0.49. To examine external generalization beyond the DocTalk-QA dataset, the two best-performing models, Llama-3.1-8B-Instruct and Llama-3-Med42-8B, were evaluated on PubMedQA before and after instruction tuning. Accuracy improved from 0.931 to 0.977 for Llama-3.1-8B-Instruct and from 0.935 to 0.943 for Llama-3-Med42-8B. Conclusion: DocTalk was deployed as a secure web-based platform for interactive EHR querying. These findings suggest that clinically grounded instruction tuning can improve medical QA performance and support practical clinical decision support.",
+    "authors": [
+      "Asad Gohar",
+      "Md Ariful Islam Mozumder",
+      "Moon-Il Joo",
+      "Hee-Cheol Kim"
+    ],
+    "date": "2026-10-26",
+    "updated": "2026-10-26",
+    "url": "https://arxiv.org/abs/2610.34871",
+    "primary_category": "cs.AI",
+    "comment": "",
+    "suggested_category": "prompt-structure",
+    "suggest_score": 0.667
+  },
+  {
+    "id": "2610.35355",
+    "version_id": "2610.35355v1",
+    "title": "OneEEG: A Unified Signal-Visual Multimodal Language Model with Task-Aware Mixture of Projectors for Multi-Task EEG Understanding",
+    "abstract": "Electroencephalography (EEG) is widely used in clinical assessment, brain-computer interfaces, and cognitive-state analysis, yet EEG modeling remains fragmented across task paradigms. Recent multimodal large language models (MLLMs) provide a promising interface for flexible multimodal reasoning, but their ability to understand EEG inputs remains limited. In this work, we propose OneEEG, a unified EEG-MLLM framework for multi-task EEG understanding. By training on our curated OneEEG-Instruct, a multi-task EEG instruction-tuning dataset, OneEEG jointly models numerical EEG representations and visual EEG representations, and introduces a task-aware Mixture of Projectors (MoP) to align heterogeneous EEG features across different task families with the LLM embedding space. We further establish OneEEG-Bench, a benchmark for evaluating current MLLMs and our method on multi-task EEG understanding. Experiments show that existing MLLMs have limited ability to interpret EEG inputs, while OneEEG achieves stronger performance by integrating numerical and visual EEG representations with task-aware EEG-to-LLM projection. Extensive ablations and analyses further reveal the effects of visual EEG renderings, MoP variants, router behavior, and feature dispersion across EEG tasks.",
+    "authors": [
+      "Jiacheng Zhang",
+      "Xueyi Zhang",
+      "Xin Lu",
+      "Siqi Cai",
+      "Haizhou Li"
+    ],
+    "date": "2026-10-26",
+    "updated": "2026-10-26",
+    "url": "https://arxiv.org/abs/2610.35355",
+    "primary_category": "cs.LG",
+    "comment": "",
+    "suggested_category": "benchmark",
+    "suggest_score": 0.667
+  },
+  {
+    "id": "2610.34561",
+    "version_id": "2610.34561v1",
+    "title": "GRASP: Group-Adaptive Hybrid RL-SFT Post-Training for Medical VQA without Reasoning Annotations",
+    "abstract": "Adapting general-purpose vision-language models (VLMs) to medical visual question answering (VQA) is valuable for helping clinicians read images and make diagnoses, but annotated data are scarce and provide only short answers, without reasoning annotations. Supervised fine-tuning (SFT) fits these labels but overfits to them and amplifies their biases, eroding out-of-domain (OOD) generalization. Reinforcement learning (RL) better preserves generalization but never uses the gold answer as a training target: GRPO-style algorithms learn from the contrast between correct and incorrect answers within a group of sampled responses, so all-correct or all-wrong groups give no correctness signal. Existing SFT-RL hybrids either apply SFT and RL in separate stages or switch between them per question, or need reasoning traces from experts or stronger models, which medical VQA data lack. We propose GRASP, which combines RL and SFT in every update using only short answers: RL lets the model explore its own reasoning, SFT teaches the gold answer after that reasoning to supply the direct supervision RL lacks, and their balance adapts to how well the model answers each question. Tuning only about 1% of the parameters with LoRA, GRASP outperforms all compared training objectives both in domain and on OOD open-ended questions across Qwen3-VL-8B, InternVL3-8B and Gemma 3-4B. On an OOD benchmark spanning eight imaging modalities, GRASP-trained InternVL3-8B and Qwen3-VL-8B beat all 10 compared general and medical VLMs in open-ended accuracy, including models trained on up to 2,600 times more data or with over 250 times more trainable parameters. We release MedTerse, a dataset of 12.9K short-answer questions, and our code at https://github.com/sea-comet/GRASP-MedVQA.",
+    "authors": [
+      "Wanqi Dong",
+      "Wanyue Dong",
+      "Jingze Ge",
+      "Mehul Motani"
+    ],
+    "date": "2026-10-25",
+    "updated": "2026-10-25",
+    "url": "https://arxiv.org/abs/2610.34561",
+    "primary_category": "cs.CV",
+    "comment": "",
+    "suggested_category": "mllm-imaging",
+    "suggest_score": 1.206
+  },
+  {
+    "id": "2610.34210",
+    "version_id": "2610.34210v1",
+    "title": "MIS-VQA: An Annotation-Driven Surgical Vision-Language Dataset for Complex Surgical Understanding",
+    "abstract": "Modern surgical AI increasingly requires multimodal understanding rather than isolated perception, yet existing datasets remain largely limited to single-task supervision such as recognition or templated question answering. Current medical VQA resources often rely on synthetic templates, lack natural descriptive supervision, or provide sparse annotations that hinder reasoning about spatial relations and procedural context. We introduce MIS-VQA, a surgical vision-language dataset generated through an annotation-driven pipeline that converts heterogeneous surgical annotations into structured textual scene representations. Using EndoVis18 and CholecT50, we transform phase, instrument, interaction, triplet, and segmentation labels into unified contexts that guide large language models to generate clinically coherent question-answer pairs. MIS-VQA supports four response types-concise and detailed descriptions, perception-level grounding, and multi-step reasoning-enabling hierarchical evaluation from atomic visual grounding to compositional reasoning. To address annotation sparsity, we incorporate confidence-filtered segmentation and cross-annotation consistency checks, enabling spatially grounded supervision at scale. MIS-VQA establishes a unified benchmark for surgical vision-language understanding with spatial supervision and multi-tier reasoning evaluation. To demonstrate its utility, we introduce LLaVA-SurgXpert, a family of surgical vision-language models with visual encoders to analyze how visual representations influence multimodal reasoning. Experiments show consistent improvements over existing surgical VQA baselines while revealing capability gaps between perceptual grounding and higher-level reasoning hidden in prior benchmarks.",
+    "authors": [
+      "Mohamed Hamdy",
+      "Iheb Zouari",
+      "Fatmaelzahraa Ahmed",
+      "Muraam Abdel-Ghani",
+      "Muhammed Arsalan",
+      "Ponnuthurai Suganthan",
+      "Khalid Al-Jalham",
+      "Abdulaziz Al-Ali",
+      "Shidin Balakrishnan"
+    ],
+    "date": "2026-10-25",
+    "updated": "2026-10-25",
+    "url": "https://arxiv.org/abs/2610.34210",
+    "primary_category": "cs.CV",
+    "comment": "",
+    "suggested_category": "mllm-imaging",
+    "suggest_score": 0.905
+  },
+  {
+    "id": "2610.33592",
+    "version_id": "2610.33592v1",
+    "title": "Auditing evaluation artifacts and data leakage in large language model systems for rare disease diagnosis",
+    "abstract": "Augmented large language model (LLM) systems have reported high benchmark accuracies in rare disease diagnosis, yet their real-world clinical utility remains unproven. A recent meta-analysis flagged augmented LLM diagnostic evaluations as having a high risk of bias due to suspected data leakage; however, the precise impact of these vulnerabilities on model inference has yet to be fully quantified. In this study, we present a comprehensive empirical audit to quantify evaluation artifacts across prevailing AI paradigms, using a repository of over 60,000 cases from diverse public and independent clinical cohorts. By reconstructing a state-of-the-art agentic framework, we demonstrate that candidate-space contamination artificially inflates performance: enforcing strict cross-dataset isolation resulted in a marked performance decline, with the cross-dataset mean Recall@1 decreasing from 54.3% (under conventional one-vs-rest evaluation) to 40.3% (Hedges' g = 0.94). Similar spatial overfitting in supervised classifiers caused diagnostic accuracy to drop from an internal mean of 42.9% to 16.7% across external cohorts (Cohen's d = 2.01). Furthermore, we quantify how LLMs infer diagnoses by exploiting retrospective therapeutic cues in clinical narratives, and how temporal misalignment in foundational knowledge bases leads to performance fluctuations. We conclude that prevailing evaluation protocols for augmented LLM systems inadvertently reflect data leakage rather than genuine medical reasoning. To address these systematic artifacts, we propose a rigorous evaluation framework - coupling strict data-isolation protocols with standardized benchmarking safeguards - to ensure future diagnostic AI for rare diseases is evaluated on actual clinical robustness.",
+    "authors": [
+      "Jian Yang",
+      "Peilin Liu",
+      "Xiaohan Li",
+      "Songda Li",
+      "Yu Cao",
+      "Yuqing Feng",
+      "Haomin Li"
+    ],
+    "date": "2026-10-24",
+    "updated": "2026-10-24",
+    "url": "https://arxiv.org/abs/2610.33592",
+    "primary_category": "cs.AI",
+    "comment": "18 page, 3 figures",
+    "suggested_category": "benchmark",
+    "suggest_score": 0.667
+  },
+  {
+    "id": "2610.33544",
+    "version_id": "2610.33544v1",
+    "title": "Learning When to Collaborate: Selective Multi-Agent Medical Reasoning via Uncertainty-Aware Routing",
+    "abstract": "Multi-agent systems have emerged as a promising paradigm for multimodal medical reasoning, but existing methods rely on two assumptions that hinder practical deployment: (i) always-active dense collaboration among multiple agents, and (ii) dependence on large cloud-based models that raise privacy and efficiency concerns. In this paper, we challenge both assumptions and propose SMART-Med, a fully local multi-agent method that treats collaboration as a learnable decision rather than a default behavior. Our key insight is that not every medical query requires costly multi-agent deliberation: many can be reliably solved by a single well-trained agent, while only uncertain cases benefit from expert collaboration. Based on this insight, SMART-Med introduces an uncertainty-driven routing mechanism that adaptively decides when to answer directly and when to recruit a small subset of expert agents, effectively converting dense multi-agent reasoning into selective, query-adaptive coordination. To make this routing reliable, we curate a new multimodal medical dataset MedVR-3K with high-quality reasoning traces and a difficulty hierarchy, and then fine-tune local agents using GRPO with two complementary rewards: a certainty-aware accuracy reward and a vision-language reward model for correctness and reasoning quality respectively. Experiments on four medical visual question answering benchmarks show that SMART-Med achieves competitive performance compared to existing MAS approaches while substantially reducing inference cost (reducing inference time by more than 3.8x and token usage by 72%). Moreover, after fine-tuning on MedVR-3K, SMART-Med yields an average improvement of 6.7% across Slake, PathVQA, VQA-RAD, and PMC-VQA.",
+    "authors": [
+      "Jiacheng Hou",
+      "Xueliang Cui",
+      "Dan Lu",
+      "Ruxin Wang"
+    ],
+    "date": "2026-10-24",
+    "updated": "2026-10-24",
+    "url": "https://arxiv.org/abs/2610.33544",
+    "primary_category": "cs.AI",
+    "comment": "Accepted to NeurIPS 2026",
+    "suggested_category": "mllm-imaging",
+    "suggest_score": 0.905
+  },
+  {
+    "id": "2610.33691",
+    "version_id": "2610.33691v1",
+    "title": "PathKGen: Pathology Knowledge Assisted MLLM for Explainable Histopathology",
+    "abstract": "Whole Slide Image (WSI) analysis serves as the fundamental method for the clinical diagnosis of cancer in digital histopathology. Recent advances in Multimodal Large Language Models (MLLMs) have enabled state-of-the-art (SOTA) automated histopathology report generation. However, MLLMs reason purely through distributions encoded in their neural parameters, limiting the amount of knowledge and reasoning logic they can contain given the model scale. Their black-box reasoning poses another challenge to the human interpretation of intermediate reasoning. We address these issues by utilizing knowledge graphs to inject external structured knowledge for MLLMs to reason over, while making this reasoning component visible. Knowledge graphs are capable of partially externalizing the containment of medical knowledge, an area that remains underexplored in pathology report generation. We introduce PathKGen, a knowledge graph-assisted MLLM for histopathology report generation. PathKGen has two main branches: (1) a visual path that learns visual token inputs to the MLLM using pathology foundation models, and (2) a knowledge path that learns knowledge token inputs by extracting key morphological features of WSIs through querying a pathology-specific knowledge graph. A comprehensive evaluation on WSI-Bench dataset shows that PathKGen surpasses previous SOTA methods while revealing diagnostic reasoning as visually intuitive graphs. Due to its modular design, the proposed knowledge path is complementary to vision-aligned MLLMs and can be extended to other applications by curating domain-specific knowledge graphs to generate knowledge tokens.",
+    "authors": [
+      "Nadun Rajapaksha",
+      "Sandun Herath",
+      "Devnith Wijesinghe",
+      "Isiri Amani Withanawasam",
+      "Hasindri Watawana",
+      "Ranga Rodrigo"
+    ],
+    "date": "2026-10-24",
+    "updated": "2026-10-24",
+    "url": "https://arxiv.org/abs/2610.33691",
+    "primary_category": "cs.CV",
+    "comment": "Accepted to the WACV 2027. Source code is available at https://github.com/nadunnr/PathKGen",
+    "suggested_category": "mllm-pathology",
+    "suggest_score": 1.512
+  },
+  {
+    "id": "2610.33801",
+    "version_id": "2610.33801v1",
+    "title": "Are We Done with UMLS Injection into Language Models for Medical Question Answering?",
+    "abstract": "Maybe not. The Unified Medical Language System (UMLS) has become an oracle for millions of clinicians and health system developers worldwide. Researchers have increasingly used knowledge graphs derived from UMLS to enhance language models' factual accuracy and reasoning traceability in high-stakes tasks. Medical Question Answering (MQA) is a prime testbed for integration, with benchmarks usually involving professional exercises such as disease diagnosis and drug prescription from patient history. Despite the assumed benefits, empirical evidence shows that UMLS-based graph injection typically yields modest performance gains. This paper reviews existing MQA work, critically analyzing the selected UMLS sources and their usage with language models, and probes each of these choices in isolation. We uncover methodological issues never discussed in prior work, from low UMLS coverage to weak subgraph retrieval pipelines. Based on our findings, we provide actionable recommendations to unlock the untapped potential of UMLS as an external knowledge source.",
+    "authors": [
+      "Yiran Zeng",
+      "Giacomo Frisoni",
+      "Lorenzo Molfetta",
+      "Gianluca Moro"
+    ],
+    "date": "2026-10-24",
+    "updated": "2026-10-24",
+    "url": "https://arxiv.org/abs/2610.33801",
+    "primary_category": "cs.AI",
+    "comment": "20 pages, 10 figures, 13 tables. Code and literature annotations: https://disi-unibo-nlp.github.io/are-we-done-with-umls",
+    "suggested_category": "knowledge-grounded",
+    "suggest_score": 0.667
+  },
+  {
     "id": "2610.32880",
     "version_id": "2610.32880v1",
     "title": "Multimodal Generative AI Assists Comprehensive Echocardiographic Interpretation",
