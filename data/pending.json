@@ -1,5 +1,82 @@
 [
   {
+    "id": "2611.02581",
+    "version_id": "2611.02581v1",
+    "title": "SMILE: A Structured Multi-Agent Clinical Reasoning for Liver Ultrasound Understanding",
+    "abstract": "Automated liver ultrasound report generation improves the diagnosis of liver diseases by producing clinically structured descriptions of anatomical and disease-related findings. However, current generative vision-language models (VLMs) often rely on a single reasoning pathway that maps ultrasound appearance directly to textual descriptions. In addition to the inherent vision-language modality gap, this design is limited for liver ultrasound because disease interpretation is constrained by subtle visual evidence, heterogeneous disease patterns, and limited paired supervision. To address these limitations, we propose SMILE, a Structured Multi-agent clInicaL rEasoning framework that uses multiple complementary specialist agents to interpret ultrasound images and consolidates their outputs through a judge-guided consensus mechanism. Our approach employs three specialized agents: an image interpretation agent for morphological descriptions, a clinical-stage reasoning agent, and a visual question answering (VQA) agent for targeted queries. These agent responses are then aggregated and scrutinized by a judge VLM using a consensus filtering prompt to produce a unified, clinically coherent output. Across a public liver ultrasound dataset and an internal clinical dataset, SMILE consistently outperforms state-of-the-art VLMs, achieving up to 19.0\\% improvement in ROUGE-1 and 18.8\\% improvement in clinical F1-score, while reaching VQA F1-scores of 0.82 and 0.65 on public and internal datasets, respectively. These results demonstrate the potential of SMILE for data-scarce and limited-supervision clinical settings. Our models, datasets, and code are available \\href{https://github.com/CMME-Lab/SMILE}{here}.",
+    "authors": [
+      "Haris Ghafoor",
+      "Minjee Seo",
+      "Seonaeng cho",
+      "Keungmo Yang",
+      "Jaejun Lee",
+      "Kyungho Yoon"
+    ],
+    "date": "2026-11-02",
+    "updated": "2026-11-02",
+    "url": "https://arxiv.org/abs/2611.02581",
+    "primary_category": "cs.CV",
+    "comment": "Accepted at Winter Conference on Applications of Computer Vision (WACV) 2027",
+    "suggested_category": "mllm-imaging",
+    "suggest_score": 1.508
+  },
+  {
+    "id": "2611.02011",
+    "version_id": "2611.02011v1",
+    "title": "MedPsy: State-of-the-Art Small Medical Language Models for Efficient Edge Deployment",
+    "abstract": "Medical language models promise expert clinical support, but the strongest open-source LLMs remain too large for private edge-device deployment, while compact medical models still trail substantially on knowledge-intensive and real-world healthcare tasks. Reasoning models that fit edge memory budgets can produce long reasoning traces, increasing sequential decoding, end-to-end latency, energy consumption, and KV-cache memory pressure. We present MedPsy, a family of text-only 1.7B and 4B medical language models designed for edge deployment, targeting this accuracy-generation-efficiency trade-off. Our recipe combines a synthetic medical data pipeline over biology, medicine, and health seeds with chain-of-thought targets from a 235B medical-focused LLM teacher; a four-stage post-training curriculum comprising two SFT stages followed by two RL stages with hard-sample mining; and an edge deployment evaluation spanning multiple GGUF quantization variants and real-device inference on laptop and smartphone hardware. On seven closed-ended medical benchmarks, MedPsy-4B surpasses MedGemma-1.5-4B by 19.34 points and matches MedGemma-27B while being 6.75x smaller; MedPsy-1.7B outperforms MedGemma-1.5-4B by 11.42 points despite being less than half its size. On HealthBench-Hard, MedPsy-4B surpasses MedGemma-27B by 15.33 points, while MedPsy-1.7B surpasses it by 11.66 points despite being ~16x smaller. Beyond accuracy, MedPsy reduces average response length by 1.7x (1.7B) and 3.2x (4B) versus its Qwen3 backbones, while Q4_K_M quantization preserves the aggregate score within 1 point of BF16 with ~69% lower disk footprint. In real-device inference, MedPsy-4B's shorter generations translate into 75% lower median end-to-end latency and estimated energy per answer than its Qwen3 backbone at matched quantization, while peak RAM remains below 5 GB across our tested laptop and smartphone configurations.",
+    "authors": [
+      "Davide Vitabile",
+      "Alexandro Buffa",
+      "Akshay Nambiar",
+      "Amril Nazir"
+    ],
+    "date": "2026-11-01",
+    "updated": "2026-11-01",
+    "url": "https://arxiv.org/abs/2611.02011",
+    "primary_category": "cs.CL",
+    "comment": "Accepted at NeurIPS 2026 (main conference)",
+    "suggested_category": "prompt-structure",
+    "suggest_score": 0.333
+  },
+  {
+    "id": "2611.01474",
+    "version_id": "2611.01474v1",
+    "title": "Accounting for Irregular State Transitions through Belief Estimation in Online Medical Consultation",
+    "abstract": "While online medical consultation broadens access, unprompted patient disclosures and topic shifts frequently disrupt clinician inquiry, leaving clinical states progressively revealed. We characterize these dynamics using both existing evaluation metrics and task-specific interaction metrics designed in this work. Through an empirical study across 16 medical dialogue datasets, we show that authentic online interactions exhibit substantially lower contextual continuity and higher unpredictability than offline and simulated benchmarks. We propose PRISM (Policy Reasoning with Inferred States for Medicine), a framework inspired by partially observable Markov decision processes that decouples latent state estimation from action selection to address drifting dialogue trajectories. Specifically, PRISM factorizes clinical triage into belief estimation, policy optimization, and response realization. By maintaining an evolving posterior belief over consultation states and conditioning action selection on the maximum a posteriori state, PRISM advances clinical goals while accommodating patient-initiated shifts. Extensive evaluations show that PRISM substantially outperforms frontier LLMs and clinical agents, achieving a 22.40 percentage point gain in clinical decision accuracy alongside decisive improvements in response generation, surpassing the strongest baseline by 5.51 points in BERTScore_F1. Furthermore, ablation studies show that providing oracle consultation states consistently boosts response quality across all evaluated baselines by guiding their action reasoning, yielding average gains of 5.58 points in BERTScore_F1.",
+    "authors": [
+      "Mingzhe Lu",
+      "Xiangru Chen",
+      "Jian Qin",
+      "Yunpeng Li",
+      "Xihan Gao"
+    ],
+    "date": "2026-11-01",
+    "updated": "2026-11-01",
+    "url": "https://arxiv.org/abs/2611.01474",
+    "primary_category": "cs.CL",
+    "comment": "12 pages, 2 figures, 3 tables",
+    "suggested_category": "benchmark",
+    "suggest_score": 0.667
+  },
+  {
+    "id": "2611.00460",
+    "version_id": "2611.00460v1",
+    "title": "From Small to Large: Assessing Medical Reasoning, Benchmark Contamination, and Model Size in Language Models",
+    "abstract": "Large language models (LLMs) now answer medical exam questions at or above expert level, but it is unclear whether such scores reflect clinical competence, or are instead affected by the format of the questions being asked (e.g., multiple-choice versus open-ended), prior exposure to the benchmarks, and the difficulty of the questions. These benchmarks are also public and widely used online, which may be resulting in LLM memorization. Models may perform better on questions that they have seen before. It is also not evident whether smaller models, which are more locally deployable in HIPAA-compliant hospital settings, have achieved human performance. In this study, we evaluate fourteen current models from six leading providers, one smaller and one larger model from each provider with two additional open-weight models, on 3,076 questions from four medical benchmarks (MedQA-USMLE, MedMCQA, PubMedQA, and MedBullets) under standard multiple choice, the same questions with the answer choices withheld, and reconstruction of a hidden question from its choices alone. In the standard multiple-choice setting, the strongest models exceed the human-expert baseline on MedQA-USMLE and PubMedQA, but the smaller models trail their larger models by 8.7 percentage points and only two of the six pass the human-expert bar on the licensing examination. Withholding the answer choices, however, makes every model struggle: mean accuracy falls from 82.3% to 50.9%, and the two largest drops belong to the medically specialised models. On memorization, the strongest models reconstruct one question in four from the answer choices alone, yet accuracy holds on the questions they cannot reconstruct. We further weigh accuracy against inference cost and test whether ensembling several models improves medical question answering.",
+    "authors": [
+      "Navapat Nananukul",
+      "Mayank Kejriwal"
+    ],
+    "date": "2026-10-30",
+    "updated": "2026-10-30",
+    "url": "https://arxiv.org/abs/2611.00460",
+    "primary_category": "cs.AI",
+    "comment": "",
+    "suggested_category": "benchmark",
+    "suggest_score": 1.0
+  },
+  {
     "id": "2610.39835",
     "version_id": "2610.39835v1",
     "title": "Aligning Medical Vision Language Models at the Capability Boundary with Entropy Adaptive Rubric Grounding",
