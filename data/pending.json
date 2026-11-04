@@ -1,5 +1,52 @@
 [
   {
+    "id": "2611.03948",
+    "version_id": "2611.03948v1",
+    "title": "Balancing Chain-of-Thought and Answer Supervision for Small Language Models on Medical Question Answering",
+    "abstract": "Small language models (<=9B parameters) can support local medical question answering (QA) while reducing privacy and latency concerns, but effective fine-tuning remains challenging. This paper compares two chain-of-thought (CoT) supervised fine-tuning methods: Uniform-across-Sequence (UaS), which applies equal loss weighting to the full CoT-and-answer sequence, and Segment-weighted (SwS), which separately weights CoT and answer losses. We evaluate six general- and medical-domain models on multiple-choice QA (MedQA and EMS-MCQA) and free-text QA (Med-O1). Results show that neither method is universally best: on multiple-choice QA (MedQA and EMS-MCQA), SwS generally performs better, with general-purpose models benefiting most; notably, Qwen3.5-4B improves by up to 44.8% over its zero-shot baseline on MedQA. In contrast, medical-domain models show smaller or even negative gains on MCQs. On free-text QA (Med-O1), UaS performs best for nearly all models and provides consistent improvements across both model types, with the 3B Llama-3.2 model approaching the performance of much larger 7B medical-domain models. We also find that excessively long CoT generation is associated with lower performance in some models on either multiple-choice or free-text QA tasks, suggesting that limiting the CoT length during training may benefit selected models. Overall, the results show that CoT loss weighting should be matched to the task format and the knowledge already encoded in the base model, rather than using a single fine-tuning strategy for all clinical QA tasks.",
+    "authors": [
+      "Le Zhou",
+      "Xiao Luo",
+      "Chinmay Chandra",
+      "Zhan Zhang"
+    ],
+    "date": "2026-11-02",
+    "updated": "2026-11-02",
+    "url": "https://arxiv.org/abs/2611.03948",
+    "primary_category": "cs.CL",
+    "comment": "",
+    "suggested_category": "sft-distill",
+    "suggest_score": 0.354
+  },
+  {
+    "id": "2611.04087",
+    "version_id": "2611.04087v1",
+    "title": "ScienceVision: Can AI Observe and Reason Like a Scientist?",
+    "abstract": "Scientific discovery builds on accurate observations interpreted through domain knowledge and reasoning. For scientific 3D data, this requires understanding structures and spatial relationships, from protein contacts to anatomical organization. Existing multimodal benchmarks largely evaluate text and 2D images, while scientific 3D evaluations vary in representations and protocols across disciplines, limiting cross-disciplinary comparison. To assess these foundational capabilities, we introduce ScienceVision, a cross-domain benchmark for scientific 3D understanding and reasoning through expert-level visual question answering (VQA). We construct 250 questions, with 50 each from Biology, Chemistry, Medical Imaging, Mechanical CAD, and Architecture, through a pipeline combining synthetic question generation with domain-expert review and annotation. Each task pairs a native 3D artifact with a scientific question, a specified response format, and a task-specific reference answer, requiring domain knowledge to be applied to geometric or topological evidence. We evaluate 12 models on the same questions in three settings: visual question answering with native 3D artifacts accessed through an agent harness's file and code-execution tools; the same workflow augmented with expert-inspired viewer inspection and measurement tools exposed through the Model Context Protocol (MCP); and visual question answering from prescribed rendered 2D images using an agent harness. All settings use the same task-specific deterministic final-answer scoring. The inspection environment supports view changes, target isolation, and slice inspection. In this main comparison, the best mean answer score is 0.53 out of 1. Mean scores in the native-artifact workflow without additional MCP tools exceed those in the rendered-image workflow for every model, by 17.2 percentage points on average.",
+    "authors": [
+      "Tianyi Ma",
+      "Jing Gu",
+      "Haozhe Zhao",
+      "Liang Chen",
+      "Yunfan Zhang",
+      "Haijun Su",
+      "Jialong Wu",
+      "Le Xue",
+      "Arnav Das",
+      "Dustin Tran",
+      "Yinfei Yang",
+      "Andrew Dai",
+      "Kuan Li"
+    ],
+    "date": "2026-11-02",
+    "updated": "2026-11-02",
+    "url": "https://arxiv.org/abs/2611.04087",
+    "primary_category": "cs.CV",
+    "comment": "",
+    "suggested_category": "mllm-imaging",
+    "suggest_score": 0.603
+  },
+  {
     "id": "2611.02581",
     "version_id": "2611.02581v1",
     "title": "SMILE: A Structured Multi-Agent Clinical Reasoning for Liver Ultrasound Understanding",
