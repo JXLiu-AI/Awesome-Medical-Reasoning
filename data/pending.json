@@ -1,5 +1,129 @@
 [
   {
+    "id": "2611.12478",
+    "version_id": "2611.12478v1",
+    "title": "AuDiR: Diagnosing Audio Reasoning with Rule and Percept Interventions",
+    "abstract": "Answer accuracy alone does not distinguish failures in acoustic perception, rule knowledge, and rule application. AuDiR (Audio Diagnostic Reasoning) examines these distinctions through controlled input interventions. Each item contains an audio clip, a multiple-choice question, a task-general rule, and a textual description of the acoustic observations needed to answer. Three conditions progressively supply the rule and observations; a fourth removes the audio while retaining the question and rule. The first correct diagnostic condition assigns an operational response label, without identifying a unique internal cause. The current benchmark contains 201 items in 18 families drawn from 9 sources, with answer references documented separately from percept extraction. In a preliminary evaluation of Gemini-3.8-flash, accuracy is 29.3% without supplied information, 31.3% with the rule, and 98.5% with the observations also supplied. No-audio accuracy is 23.9%, with a confidence interval containing the 25.0% chance rate. A family-level knowledge probe associates incomplete rule recall with larger gains from rule provision. These results show the benefit of supplying acoustic observations as text, while incomplete validation, possible recognition shortcuts, and non-monotonic responses limit stronger failure-attribution claims.",
+    "authors": [
+      "Chengwei Wei",
+      "Yi Ma",
+      "Nancy F. Chen"
+    ],
+    "date": "2026-11-09",
+    "updated": "2026-11-09",
+    "url": "https://arxiv.org/abs/2611.12478",
+    "primary_category": "cs.AI",
+    "comment": "",
+    "suggested_category": "benchmark",
+    "suggest_score": 0.667
+  },
+  {
+    "id": "2611.12728",
+    "version_id": "2611.12728v1",
+    "title": "Safe Reinforcement Learning for Multi-Turn Clinical Agents: When Dense Rewards Beat Outcome Rewards",
+    "abstract": "Reinforcement learning with verifiable rewards is increasingly used to improve language model reasoning, yet its effects on sequential decision procedures remain poorly understood. We study this problem in clinical multi-turn agents that must decide what information to request, when to stop gathering evidence, and which action to take. We introduce three controlled environments: medication refill triage, acute diagnostic work-up, and dosing titration, each with hidden clinical states, query costs, exact adaptive oracles, and deterministic outcome verifiers. Across these tasks, outcome-only group relative policy optimization often improves aggregate reward while producing undesirable procedures, including premature commitment, one-question collapse, and failures on rare high-risk cases. In diagnostics, assigning dense credit to questions that reduce uncertainty improves held-out value and moderate-case support across three training seeds relative to outcome-only reinforcement learning, without the high-risk seed collapse observed under outcome-only training. Separating exploration from exploitation further increases high-risk support at its best checkpoint, but at the cost of excessive information gathering on low-acuity cases. Additional experiments show that the optimal strength of process credit is task-dependent; that after a supervised warmup that already gathers carefully, reinforcement learning raises aggregate reward by trimming questions while degrading high-risk performance; and that reinforcement learning does not reliably repair rare behavior gaps inherited from biased supervised data. Verifiable final outcomes are therefore insufficient for training reliable multi-turn agents: reward design must account for the procedure used to reach an answer, and evaluation must distinguish adaptive information gathering from reward-exploiting shortcuts.",
+    "authors": [
+      "Brendan P. Murphy",
+      "Agustina Saenz"
+    ],
+    "date": "2026-11-09",
+    "updated": "2026-11-09",
+    "url": "https://arxiv.org/abs/2611.12728",
+    "primary_category": "cs.LG",
+    "comment": "31 pages, 11 figures. Code: https://github.com/csbrendan/Safe-Reinforcement-Learning-for-Multi-Turn-Clinical-Agents",
+    "suggested_category": "rlvr",
+    "suggest_score": 0.949
+  },
+  {
+    "id": "2611.12574",
+    "version_id": "2611.12574v1",
+    "title": "Evaluating Cross-Signal Coherence in Mammography Vision-Language Models",
+    "abstract": "As vision-language models (VLMs) move toward interpreting medical images directly, their outputs increasingly include not just a label but a stated confidence and a written justification. Yet the field still predominantly evaluates VLMs using just accuracy. We evaluate the coherence between answer, confidence, and explanation across four VLMs on breast density and BI-RADS categorization, using two mammography datasets. We perform controlled perturbations of the question, multiple choice option orders, and the images and assess changes in the three outputs. Our results suggest confidence does not decrease even as the mammography image is changed. Shuffling the options also changes most VLMs' answers. Notably, there are cases where a model's own stated reasoning contradicts its final answer, a distinction accuracy alone cannot capture but one that governs whether an AI-generated answer can be trusted.",
+    "authors": [
+      "Rebeca Nam",
+      "Chase M. Fensore",
+      "Christian A. Fauria-Robinson",
+      "Judy Gichoya",
+      "Joyce C. Ho"
+    ],
+    "date": "2026-11-09",
+    "updated": "2026-11-09",
+    "url": "https://arxiv.org/abs/2611.12574",
+    "primary_category": "cs.CV",
+    "comment": "",
+    "suggested_category": "mllm-imaging",
+    "suggest_score": 0.603
+  },
+  {
+    "id": "2611.11833",
+    "version_id": "2611.11833v1",
+    "title": "Answer or Defer? Testing VLMs' Stated Confidence on Brain MRI",
+    "abstract": "Vision-language models (VLMs) could support medical-image interpretation, but their use requires deciding which interpretations to accept and which images to refer to a clinician. We test whether thresholding stated confidence can retain useful coverage while limiting errors among accepted answers, and how this depends on the population. Eight open-weight VLMs, including two reasoning models, assess 3,888 brain MRI slices from post-treatment glioma patients (BraTS 2024) and healthy volunteers (IXI) for tumor or gross abnormality. BraTS labels are mask-derived; IXI slices are treated as negatives. On BraTS, no threshold selects a nonempty set with at most 5% empirical error for any model, even when chosen retrospectively. This also holds for four models evaluated on a large-lesion, distant-negative subset. At a 10% error budget, Gemma-4-12B retains 24.4% of slices and every other model at most 2.5%. To investigate this limited selection ability, we separate confidence differences between predicted answers from differences within each answer. For four models with available outcome-level summaries, pooled mean confidence differs more between answers than between correct and incorrect responses within each answer. A covariance decomposition explains how this pattern can produce opposite confidence-correctness associations across populations. At a 20% error budget, accepting every \"tumor\" answer covers more slices than any confidence threshold for two models. These findings caution against using unvalidated stated confidence as a standalone deferral signal and support population-specific validation before deployment. Code is available at https://github.com/amir-sbg/VLM-Answer-or-Defer.",
+    "authors": [
+      "Amir Sabbaghziarani",
+      "Parsa Ghazvinian",
+      "Sepehr Salem",
+      "Sergey Plis"
+    ],
+    "date": "2026-11-09",
+    "updated": "2026-11-09",
+    "url": "https://arxiv.org/abs/2611.11833",
+    "primary_category": "cs.CV",
+    "comment": "Accepted to the WACV 2027 FABRIC Workshop",
+    "suggested_category": "mllm-imaging",
+    "suggest_score": 0.905
+  },
+  {
+    "id": "2611.11802",
+    "version_id": "2611.11802v1",
+    "title": "HiddenPathQA: A Benchmark for Knowledge Graph Question Answering When Questions Hide Their Paths",
+    "abstract": "Knowledge graph question answering (KGQA) systems are typically evaluated on questions whose surface tokens lexically expose the gold KG path. Users, however, may ask questions without knowing the underlying schema: \"Which condition could Andrew have due to family history?\" compresses a 4-hop chain \"Andrew --[father]--> parent --[father]--> grandparent --[medical condition]--> disease --[subclass of]--> hereditary disorder\" into a single phrase (family history) that names none of those relations. We identify this collapse of path-question alignment as a blind spot in existing KGQA evaluation. Three major LLM-KG paradigms, hop-by-hop exploration, plan-then-retrieve, and similarity-based retrieval, implicitly rely on such lexical cues, an assumption rarely tested in practice. We make three contributions. (i) We introduce HiddenPathQA, a manually verified benchmark of 1,055 questions spanning 2-6 hops and multiple domains, constructed so that question wording does not reveal the gold path's relations. (ii) We propose Holistic Path Selection, which compares questions against candidate relation chains in the local subgraph as complete units, replacing irreversible per-hop relation scoring with globally informed chain-level reasoning. We develop two implementations, TieredHolistic and FlatHolistic. (iii) We conduct a pseudoword stress test that replaces entity names with meaningless placeholders to distinguish KG-grounded reasoning from entity-level memorization. Holistic Path Selection outperforms six strong KGQA baselines (ToG, PoG, FiDeLiS, R2-KG, KAPING, and KARPA) by 8.8-17.9 accuracy points across two LLM backbones and both original and pseudoword settings. Its advantage under pseudoword replacement shows that the gains cannot be explained by entity-level memorization alone.",
+    "authors": [
+      "Sumin Jo",
+      "Edward Choi"
+    ],
+    "date": "2026-11-09",
+    "updated": "2026-11-09",
+    "url": "https://arxiv.org/abs/2611.11802",
+    "primary_category": "cs.CL",
+    "comment": "",
+    "suggested_category": "knowledge-grounded",
+    "suggest_score": 0.333
+  },
+  {
+    "id": "2611.10626",
+    "version_id": "2611.10626v1",
+    "title": "EndoSCOP-V: A Multi-Turn Video Understanding Evaluation Framework for Multimodal Models in Endoscopy Reporting and Clinical Reasoning",
+    "abstract": "Endoscopic diagnosis unfolds over native video, where a single positive finding during traversal of the gastrointestinal tract sets off a multi-minute chain of reasoning over location, morphology, severity and intervention. Existing endoscopy multimodal benchmarks test only static images or single-disease videos, which miss the temporal and clinical reasoning that real-world reporting demands. We introduce EndoSCOP-V, a video-grounded multi-turn evaluation framework for structured endoscopy reporting and clinical reasoning. It contains 1,307 real-world endoscopy and colonoscopy videos (63.2 h; 97% 1080p) averaging about 174 s. Its 20,274 question-answer turns are instantiated deterministically from clinician-filled structured endoscopy-reporting EHRs, so no per-case annotation is synthetic or LLM-rephrased. They come from 1,033 clinician-reviewed templates, about 18 per disease, that span a clinically aligned 9-task x 30-sub-task reporting taxonomy over 54 World Endoscopy Organization (WEO) MST 3.0 diseases. 22% of procedures carry co-existing pathologies, up to six per case. A Markovian context-pruned oracle-forcing protocol evaluates the dialogue turn by turn, injecting the gold answer before each subsequent turn so that per-turn reasoning is isolated from cascading dialogue errors. A panel of 15 board-certified endoscopists sets a 78% strict-accuracy baseline on 1,500 questions. Across 14 open-weight LMMs, the best 27B-class model reaches 59.8% strict accuracy, falling to 53.4% once format-trivial disease-rejection items are excluded. On a between-subjects spot-check, the best of 3 frontier proprietary models trails the clinician panel by 23 pp on strict NDR accuracy. Sub-task analysis reveals consistent gaps in quantitative measurement, multi-variable grading and intervention reasoning on long-horizon video. Data: Hugging Face (EndoSCOP-V). Code: GitHub (abhi25t/EndoSCOP-V).",
+    "authors": [
+      "Abhishek Tyagi",
+      "Tanmay Jain",
+      "Vilas Biradar",
+      "Krithi Krishna Koduri",
+      "Misba Hul Bashir Masoodi",
+      "Swetha Rapolu",
+      "Hardik Rughwani",
+      "Rachana Kotha",
+      "Anjan Kumar Kaipa",
+      "Anudeep Katrevula",
+      "Rakesh Garlapati",
+      "Aniruddha Pratap Singh",
+      "Rajendra Patel",
+      "Abhay Tyagi",
+      "Sundeep Lakhtakia",
+      "Mohan Ramchandani",
+      "Rakesh Kalapala",
+      "D. Nageshwar Reddy"
+    ],
+    "date": "2026-11-07",
+    "updated": "2026-11-07",
+    "url": "https://arxiv.org/abs/2611.10626",
+    "primary_category": "cs.CV",
+    "comment": "NeurIPS 2026",
+    "suggested_category": "survey",
+    "suggest_score": 0.378
+  },
+  {
     "id": "2611.09117",
     "version_id": "2611.09117v1",
     "title": "PathXAI: Evidence-guided structured pathology reporting by transferable tissue segmentation",
