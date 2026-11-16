@@ -1,5 +1,55 @@
 [
   {
+    "id": "2611.18264",
+    "version_id": "2611.18264v1",
+    "title": "MamaReason: Unfinished Reasoning and Answer Recovery in Clinical Language Models",
+    "abstract": "Answer continuation often returns a diagnosis already stated in unfinished clinical reasoning. We study this behavior in MamaReason, adapted from dense Gemma 4 31B, on MamaBench's 217 paired maternal and child-health presentations. An explicit-commitment extractor identifies a diagnosis in 75 of 94 failed RL first passes and 75 of 93 failed SFT first passes. The continuation matches that diagnosis in 67/75 RL cases and 58/75 SFT cases, using diagnosis strings alone. Reading these commitments without additional generation recovers 30 of the 40 RL pairs restored by continuation under the archived correctness labels. Recurrence controls distinguish routine mentions from repeated answer selection. An offline second-commitment trigger measures the tradeoff between earlier readout and paired accuracy. The resulting decomposition separates diagnostic content already present in a trace, completion of an accepted answer, and paired diagnostic correctness. For clinical language-model evaluation, these are distinct outcomes that become visible when the same reasoning trace is examined through multiple readouts.",
+    "authors": [
+      "Thanni Adewuyi",
+      "Adepoju Jeremiah Moyondafoluwa",
+      "Dorcas Amapu",
+      "Dieko Whenu",
+      "Sylvia Essessien",
+      "Sandra Oko-Oba",
+      "Pelumi Onafadeji",
+      "Lily Aimas-Love",
+      "Samuel Omolaiye",
+      "Abiodun Adereni"
+    ],
+    "date": "2026-11-13",
+    "updated": "2026-11-13",
+    "url": "https://arxiv.org/abs/2611.18264",
+    "primary_category": "cs.CL",
+    "comment": "",
+    "suggested_category": "benchmark",
+    "suggest_score": 0.333
+  },
+  {
+    "id": "2611.17852",
+    "version_id": "2611.17852v1",
+    "title": "PADSNet: Physics-Aware Dual-Stream Network with Biomechanical Priors for Laryngeal Lesion Classification",
+    "abstract": "Precise classification of laryngeal lesions is clinically crucial yet highly challenging, as inter-class visual differences are often subtle. While abnormalities in vocal fold vibratory dynamics provide complementary discriminative information, existing deep learning models predominantly rely on visual appearance and lack explicit mechanisms for modeling clinically meaningful vibratory dynamics. To address this, we propose PADSNet, a Physics-Aware Dual-Stream Network for laryngeal lesion classification that integrates visual representations with explicit biomechanical reasoning. Specifically, a Wavelet-Attention Enhancement Module (WAEM) is designed to bridge the spectral-semantic gap, enabling complementary learning of spatial texture and dynamic frequency representations. Meanwhile, a Knowledge Computing Module (KCM) extracts interpretable biomechanical indices from temporal glottal distance waveforms, including indicators of mobility, symmetry, glottal closure, and vibration stability. These descriptors are subsequently incorporated into a Physics-Aware Gating Module (PAGM) as biomechanical priors to adaptively recalibrate visual feature toward pathology-relevant vibratory patterns. Extensive experiments on a clinical dataset demonstrate that PADSNet achieves an accuracy of 0.8452, an F1-score of 0.8090, a sensitivity of 0.7953, and a specificity of 0.8866. These results indicate that explicitly integrating biomechanical priors with deep visual representations provides a more accurate, robust, and clinically interpretable framework for automated laryngeal lesion classification.",
+    "authors": [
+      "Zhenzhen You",
+      "Weifeng Yu",
+      "Zhenghao Shi",
+      "Shuangli Du",
+      "Minghua Zhao",
+      "Yingcheng Zhao",
+      "Xinhong Hei",
+      "Demin Kong",
+      "Xiaoyong Ren",
+      "Jin Hou"
+    ],
+    "date": "2026-11-13",
+    "updated": "2026-11-13",
+    "url": "https://arxiv.org/abs/2611.17852",
+    "primary_category": "cs.CV",
+    "comment": "",
+    "suggested_category": "mllm-pathology",
+    "suggest_score": 0.378
+  },
+  {
     "id": "2611.17128",
     "version_id": "2611.17128v1",
     "title": "Parameter-Efficient Conciseness Adaptation: Differentiable Length Control for Concise Clinical Reasoning in Smaller Language Models",
