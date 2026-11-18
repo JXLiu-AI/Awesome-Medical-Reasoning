@@ -1,5 +1,64 @@
 [
   {
+    "id": "2611.22219",
+    "version_id": "2611.22219v1",
+    "title": "Fine-Grained Japanese Clinical Named Entity Recognition: A Controlled Comparison of BERT and Open-Weight Large Language Models",
+    "abstract": "Background: Generative large language models (LLMs) offer an alternative to encoder-based clinical named entity recognition (NER), but their performance on fine-grained Japanese extraction tasks and sensitivity to generation settings remain uncertain. Methods: We compared two fine-tuned BERT-CRF baselines with nine open-weight LLMs on iCorpus, which defines 113 entity categories. The evaluation used 433 sentences from 36 test documents; 1,672 sentences were used for training. LLMs were evaluated using zero-shot prompting with and without JSON Schema constraints and three-seed QLoRA fine-tuning. Fine-tuned models were assessed under different output-token limits, including 900 and larger model-specific limits of 2,600 or 4,096 tokens. Performance was measured using sentence-level label-surface matching with relaxed and exact-surface F1. Results: The highest zero-shot relaxed F1 was 0.337, compared with 0.836-0.841 for the BERT baselines. At the larger output limits, all eight fine-tuned LLMs with at least 13B total parameters exceeded both BERT baselines (relaxed F1, 0.882-0.914; exact-surface F1, 0.840-0.880). Across three-seed means, increasing the output limit improved relaxed F1 by 0.052-0.085, alongside higher recall and fewer length-limited outputs. JSON Schema constraints changed relaxed F1 by -0.014 to +0.008 among seven models outside the two reasoning-oriented configurations, while medical-general model pairs showed no consistent advantage for medical specialization. Conclusions: On this historical Japanese case-report benchmark, task-specific fine-tuning combined with adequate generation capacity was associated with stronger LLM extraction performance. Output-token limits materially affected comparisons with BERT, whereas enforcing output structure alone did not overcome low zero-shot accuracy.",
+    "authors": [
+      "Feng Han",
+      "Ayako Yagahara",
+      "Kenji Hirata",
+      "Atsushi Yoshida",
+      "Kohsuke Kudo"
+    ],
+    "date": "2026-11-17",
+    "updated": "2026-11-17",
+    "url": "https://arxiv.org/abs/2611.22219",
+    "primary_category": "cs.AI",
+    "comment": "33 pages, 3 figures, 5 tables; includes appendices with supplementary tables and one supplementary figure",
+    "suggested_category": "prompt-structure",
+    "suggest_score": 0.333
+  },
+  {
+    "id": "2611.22069",
+    "version_id": "2611.22069v1",
+    "title": "MedGuardBench: A Patient-Oriented Benchmark for Personalized Guardrail Development",
+    "abstract": "Safety is personal: the same action can be safe for one person but unsafe for another. Yet current guardrails judge content without considering who is affected. Using medication safety, we introduce \\textit{patient-conditioned medication guarding}, which predicts a safety verdict and 17 risk categories from a patient profile and prescription. We release \\textbf{MedGuardBench}, a drug-disjoint benchmark of 5{,}001 scenarios across 87 medications. We find that standard guardrails rely on surface cues, such as wording and profile presence, rather than patient facts. To address this, we develop \\textit{personalized reasoning guardrails} with three components. \\textbf{Personalized Reasoning Distillation} links risks to relevant patient fields. \\textbf{Context Unrolling (CU)} makes models check each field themselves, reducing false alarms on most backbones; controls show that providing the check does not yield the same benefit. A \\textbf{rule-based reward (guided GRPO)} improves unsafe recall and complex-risk detection, including allergies and adverse reactions, on some backbones, but increases false alarms on others. Our models outperform base models and matched no-profile controls in accuracy, while reducing false alarms relative to no-profile controls. Profile removal and swapping confirm that gains come from patient information, not fine-tuning alone.",
+    "authors": [
+      "Sara Khosravi",
+      "Xiaofei Wen",
+      "Majid Sarrafzadeh",
+      "Muhao Chen"
+    ],
+    "date": "2026-11-17",
+    "updated": "2026-11-17",
+    "url": "https://arxiv.org/abs/2611.22069",
+    "primary_category": "cs.AI",
+    "comment": "",
+    "suggested_category": "rlvr",
+    "suggest_score": 0.632
+  },
+  {
+    "id": "2611.22009",
+    "version_id": "2611.22009v1",
+    "title": "DiagTrace: An Interactive Benchmark for Clinical Decision Making",
+    "abstract": "Large language models (LLMs) have shown strong performance on medical question answering and diagnostic reasoning benchmarks. However, existing evaluations typically provide all patient information upfront and assess only the final diagnosis or rationale. This setup ignores the need to acquire diagnostic evidence incrementally from incomplete information in real-world diagnosis. To bridge this gap, we introduce DiagTrace, a source-grounded benchmark for evaluating whether LLMs can reconstruct the documented diagnostic trajectory through interactive information seeking. Each benchmark instance is built from a PubMed Central case report and includes an initial presentation, an event bank, a clinical course, and diagnostic references. DiagTrace contains 510 cases across eight specialties, with 225 used to evaluate four LLMs on clinical-course alignment, interaction quality, and efficiency. Results reveal trade-offs in coverage, source-consistent ordering, and turn use.",
+    "authors": [
+      "Yufan Wang",
+      "Rui Yang",
+      "Yi Lin",
+      "Chunhua Weng",
+      "Yifan Peng"
+    ],
+    "date": "2026-11-16",
+    "updated": "2026-11-16",
+    "url": "https://arxiv.org/abs/2611.22009",
+    "primary_category": "cs.CL",
+    "comment": "Accepted to Findings of EACL 2027",
+    "suggested_category": "benchmark",
+    "suggest_score": 0.667
+  },
+  {
     "id": "2611.21218",
     "version_id": "2611.21218v1",
     "title": "InclusionMed: Benchmarking AI for Inclusive Healthcare",
