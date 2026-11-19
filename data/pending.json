@@ -1,5 +1,66 @@
 [
   {
+    "id": "2611.24535",
+    "version_id": "2611.24535v1",
+    "title": "ProbMedTOD: A Bayesian Network Guided Task-Oriented Dialogue System for Patient History Taking",
+    "abstract": "Patient history taking is a strategic, multi-turn process that refines diagnostic hypotheses through iterative questioning, mirroring clinical reasoning where each inquiry updates beliefs over candidate diagnoses. Deploying AI in this setting is constrained by privacy, cost, and latency, making Small Language Models (SLMs) a more desirable backbone compared to larger LLMs. However, SLMs capture only the fast, intuitive \"System 1\" side of this process and lack explicit mechanisms for the deliberative \"System 2\" reasoning needed to maintain and update diagnostic uncertainty over time. Bayesian Networks (BayesNets) offer a natural complement, providing an interpretable framework for auditable probabilistic belief tracking. Yet, clinical BayesNets are difficult to construct due to their reliance on expert curated structure, dependencies, and parameters. We introduce ProbMedTOD, which automatically synthesizes a clinical BayesNet from a small number of clinical notes in three stages: ontology building, structure prediction, and parameter estimation. ProbMedTOD then integrates the resulting BayesNet with SLMs, enabling probabilistic reasoning in multi-turn dialogues. A BayesNet Agent maintains real-time posterior distributions over diagnoses, while a Policy Agent picks diagnostically informative questions. Experiments on DDXPlus and MIMIC-IV Notes show that ProbMedTOD outperforms LLM-only and retrieval-based baselines, with especially strong gains for smaller models.",
+    "authors": [
+      "Vishal Vivek Saley",
+      "Bhavesh Gurnani",
+      "Dinesh Raghu",
+      "Mausam"
+    ],
+    "date": "2026-11-18",
+    "updated": "2026-11-18",
+    "url": "https://arxiv.org/abs/2611.24535",
+    "primary_category": "cs.CL",
+    "comment": "",
+    "suggested_category": "agentic-diagnosis",
+    "suggest_score": 0.632
+  },
+  {
+    "id": "2611.24650",
+    "version_id": "2611.24650v1",
+    "title": "Self-Rewarded Reinforcement Learning for Better-Structured Medical Explanations in Small Language Models",
+    "abstract": "Small language models (SLMs) can run on commodity hardware and support privacy-preserving, on-premises clinical deployment, but their medical explanations are often short and poorly structured compared with large language models. Recent supervised approaches such as Meerkat transfer chain-of-thought reasoning into 7B-8B backbones, yet their training objective does not directly target the style or organization of the generated rationales. Building on the instruction-tuned Mistral-7B backbone, we investigate whether a lightweight reinforcement learning (RL) step can improve explanation structure without human preference labels.We apply Proximal Policy Optimization (PPO) with LoRA adaptation to 2,000 Meerkat-derived medical prompts, guided by a simple self-supervised reward that favors longer, lexically diverse, and well-punctuated responses while penalizing very short ones. Training for about 170 PPO steps on a single NVIDIA A100 GPU yields a stable increase in the average reward. Quantitative and qualitative comparisons show that the RL-tuned model produces longer, more organized, multi-point explanations while preserving the underlying medical content.We discuss the promise and the limitations of self-rewarded RL for shaping the style of medical explanations.",
+    "authors": [
+      "Prakhar Mishra",
+      "Bhavya Yajush Awasthi",
+      "Tanuja",
+      "Nishant"
+    ],
+    "date": "2026-11-18",
+    "updated": "2026-11-18",
+    "url": "https://arxiv.org/abs/2611.24650",
+    "primary_category": "cs.AI",
+    "comment": "14 Pages, 10 Figures",
+    "suggested_category": "rlvr",
+    "suggest_score": 0.949
+  },
+  {
+    "id": "2611.24443",
+    "version_id": "2611.24443v1",
+    "title": "NativeSeg: Native Vision Language Segmentation of 3D Computed Tomography via Spatial Visual Tokens and Verified Local Zoom",
+    "abstract": "Text prompted 3D computed tomography (CT) segmentation requires both full slice context and fine boundary precision across volumes where over $80\\%$ of organ prompted slices lack the queried target. Existing medical vision language models (VLMs) are largely non native segmenters: they delegate pixel delineation outside the VLM by compressing reasoning into a 1D [SEG] vector for an external Segment Anything Model (SAM) decoder, quantizing masks into lossy discrete codebooks, or issuing box prompts to stateless external SAM tools without empty slice screening or spatial state memory. We introduce NativeSeg, a native vision language segmentation framework on Low Rank Adaptation (LoRA) adapted Qwen3.8-27B that performs dense mask decoding, volumetric triage, spatial error self diagnosis, and multiround local zoom directly over the VLM's 2D spatial visual tokens without external SAM decoders. NativeSeg decodes confidence maps from upper layer 2D spatial tokens fused with a five slice U-Net pathway, halts at zero zooms on $>91\\%$ of standalone evaluations via a native presence gate (<pres>), localizes uncertain boundaries via a 20 cell multiscale error gate (<err>), and accepts zoomed updates only when predicted error decreases. Trained solely on adult CT, NativeSeg improves Round $0$ DSC by $+19.81$ and $+7.04$ points over discrete codebook and 1D [SEG] readouts on the identical backbone, reaches $86.81\\%$ adult and $87.04\\%$ zero shot pediatric DSC, and safely refines 2D nnU-Net ($89.52\\%$ adult; $86.86\\%$ pediatric), 3D SegVol ($86.81\\%$), and 3D VoxTell ($89.85\\%$).",
+    "authors": [
+      "Chengqian Ma",
+      "Gaole Dai",
+      "Zijie Meng",
+      "Weixuan Jin",
+      "Yijie Du",
+      "Yuexiao Ma",
+      "Xiawu Zheng",
+      "Fei Chao"
+    ],
+    "date": "2026-11-18",
+    "updated": "2026-11-18",
+    "url": "https://arxiv.org/abs/2611.24443",
+    "primary_category": "cs.CV",
+    "comment": "13 pages, 5 figures, 4 tables. Code: https://github.com/step-out/NativeSeg ; Weights: https://huggingface.co/ChengqianMa/NativeSeg",
+    "suggested_category": "mllm-imaging",
+    "suggest_score": 0.603
+  },
+  {
     "id": "2611.22219",
     "version_id": "2611.22219v1",
     "title": "Fine-Grained Japanese Clinical Named Entity Recognition: A Controlled Comparison of BERT and Open-Weight Large Language Models",
